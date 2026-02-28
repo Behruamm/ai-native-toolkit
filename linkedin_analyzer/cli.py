@@ -101,6 +101,11 @@ def main():
     post_parser.add_argument(
         "--pdf", type=str, help="Path to save PDF report (optional, e.g. report.pdf)"
     )
+    post_parser.add_argument(
+        "--no-cta",
+        action="store_true",
+        help="Omit the CTA page from the PDF",
+    )
 
     # Command: pdf
     pdf_parser = subparsers.add_parser("pdf", help="Generate 8-page PDF report")
@@ -131,6 +136,11 @@ def main():
     )
     pdf_parser.add_argument(
         "--output", type=str, required=True, help="Path to save PDF report"
+    )
+    pdf_parser.add_argument(
+        "--no-cta",
+        action="store_true",
+        help="Omit the CTA page from the PDF",
     )
 
     args = parser.parse_args()
@@ -208,7 +218,7 @@ def main():
                 print(output_json)
 
             if args.pdf:
-                pdf_bytes = generate_post_pdf(result)
+                pdf_bytes = generate_post_pdf(result, include_cta=not args.no_cta)
                 with open(args.pdf, "wb") as f:
                     f.write(pdf_bytes)
                 print(f"Saved PDF to {args.pdf}")
@@ -243,7 +253,7 @@ def main():
                     )
                 )
 
-            pdf_bytes = generate_pdf(analysis)
+            pdf_bytes = generate_pdf(analysis, include_cta=not args.no_cta)
 
             with open(args.output, "wb") as f:
                 f.write(pdf_bytes)

@@ -56,6 +56,15 @@ ian_*.pdf
 test_*.json
 test_*.pdf
 
+# Talent scout outputs
+*_report.json
+*_brief.pdf
+raw_candidates.json
+talent_*.json
+talent_*.pdf
+scout_*.json
+scout_*.pdf
+
 # Logs
 *.log
 

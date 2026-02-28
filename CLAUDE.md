@@ -4,7 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AI Native Toolkit is a LinkedIn Content Strategy Analyzer that extracts LinkedIn posts via Apify, computes deterministic metrics (cadence, engagement, post types, hooks, CTAs), generates AI-powered insights (content pillars, archetypes, formulas), and produces an 8-page PDF report. It's designed as both a CLI tool and an installable skill for AI agents (Claude Code, Codex, Cursor, etc.).
+AI Native Toolkit contains two CLI tools:
+
+1. **linkedin-analyzer** — LinkedIn Content Strategy Analyzer. Extracts LinkedIn posts via Apify, computes deterministic metrics (cadence, engagement, post types, hooks, CTAs), generates AI-powered insights (content pillars, archetypes, formulas), and produces an 8-page PDF report.
+
+2. **talent-scout** — Competitor Talent Intelligence. Scrapes a LinkedIn company people page via Apify (`memo23~linkedin-company-people-scraper`), filters by job title, uses AI to rank top 5 targets, generates personalized outreach DMs, analyzes team structure, and produces a 6-page PDF brief.
+
+Both are designed as CLI tools and installable skills for AI agents (Claude Code, Codex, Cursor, etc.).
 
 ## Environment Setup
 
@@ -59,9 +65,39 @@ linkedin-analyzer post --url <post_url> --pdf report.pdf
 
 # Deconstruct a single post, JSON only
 linkedin-analyzer post --url <post_url> --output deconstruct.json
+
+# Generate PDF without CTA page
+linkedin-analyzer pdf --file analysis.json --output report.pdf --no-cta
+linkedin-analyzer post --url <post_url> --pdf report.pdf --no-cta
+```
+
+### Talent Scout Commands
+```bash
+# Full scout: scrape + AI ranking + outreach DMs + PDF
+talent-scout scout \
+  --url "https://www.linkedin.com/company/google/people/" \
+  --title "Senior Software Engineer" \
+  --output report.json \
+  --pdf brief.pdf
+
+# Extract raw candidates only (no AI)
+talent-scout extract \
+  --url "https://www.linkedin.com/company/stripe/people/" \
+  --title "Product Manager" \
+  --output raw_candidates.json
+
+# Run from local JSON (skip scraping)
+talent-scout scout --file raw_candidates.json --title "Engineer" --output report.json
+
+# Generate PDF from existing report
+talent-scout pdf --file report.json --output brief.pdf
+
+# Skip AI (deterministic filter + clean list only)
+talent-scout scout --url <company_url> --title <title> --skip-ai --output candidates.json
 ```
 
 ### Scraping Controls
+
 ```bash
 # Limit posts per source
 --limit-per-source 10

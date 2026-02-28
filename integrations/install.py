@@ -9,6 +9,11 @@ AGENTS = {
         "install_dir": "~/.claude/skills/linkedin-analyzer",
         "files": ["claude-code/SKILL.md"],
     },
+    "claude-code-talent-scout": {
+        "check_dir": "~/.claude",
+        "install_dir": "~/.claude/skills/talent-scout",
+        "files": ["claude-code/talent-scout/SKILL.md"],
+    },
     "codex": {
         "check_dir": "~/.codex",
         "install_dir": "~/.codex/skills/linkedin-analyzer",

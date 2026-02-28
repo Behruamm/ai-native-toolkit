@@ -47,9 +47,10 @@ Issues = "https://github.com/behramshukur/ai-native-toolkit/issues"
 
 [project.scripts]
 linkedin-analyzer = "linkedin_analyzer.cli:main"
+talent-scout = "talent_scout.cli:main"
 
 [tool.setuptools]
-packages = ["linkedin_analyzer"]
+packages = ["linkedin_analyzer", "linkedin_analyzer.providers", "talent_scout", "talent_scout.providers"]
 
 [build-system]
 requires = ["setuptools>=61.0"]

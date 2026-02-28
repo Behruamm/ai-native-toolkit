@@ -431,7 +431,7 @@ def add_post_list(pdf: ReportPDF, label: str, posts: list):
     pdf.ln(2)
 
 
-def generate_pdf(a: FullAnalysis) -> bytes:
+def generate_pdf(a: FullAnalysis, include_cta: bool = True) -> bytes:
     pdf = ReportPDF()
 
     def set_bg():
@@ -706,7 +706,8 @@ def generate_pdf(a: FullAnalysis) -> bytes:
     # =========================================================
     # FINAL PAGE: OFFER / CTA
     # =========================================================
-    _add_cta_page(pdf)
+    if include_cta:
+        _add_cta_page(pdf)
 
     return bytes(pdf.output(dest="S"))
 
@@ -776,7 +777,7 @@ def _add_cta_page(pdf: ReportPDF):
     pdf.cell(140, 14, "Book your 1-v-1 Strategy Audit ->  cal.com/behram-antifragile/30min", fill=True, align="C", ln=1, link="https://cal.com/behram-antifragile/30min")
 
 
-def generate_post_pdf(d: PostDeconstruction) -> bytes:
+def generate_post_pdf(d: PostDeconstruction, include_cta: bool = True) -> bytes:
     """Generate a 2-page PDF for a single post deconstruction + CTA page."""
     pdf = ReportPDF()
     pdf.set_background_color(C_BLACK)
@@ -877,6 +878,7 @@ def generate_post_pdf(d: PostDeconstruction) -> bytes:
     # =========================================================
     # PAGE 2: CTA / Offer
     # =========================================================
-    _add_cta_page(pdf)
+    if include_cta:
+        _add_cta_page(pdf)
 
     return bytes(pdf.output(dest="S"))
