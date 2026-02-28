@@ -5,7 +5,7 @@ from typing import Dict, Any, List, Optional
 
 
 APIFY_BASE = "https://api.apify.com/v2"
-ACTOR_ID = "memo23~linkedin-company-people-scraper"
+ACTOR_ID = "harvestapi/linkedin-company-employees"
 
 
 def _coerce_str(value: Any) -> str:
@@ -30,18 +30,33 @@ def _normalize_candidate(raw: Dict[str, Any]) -> Dict[str, Any]:
         name = "LinkedIn Member"
 
     profile_url = _coerce_str(
-        pick("profileUrl", "linkedinUrl", "linkedin_url", "url", "profileLink")
+        pick("linkedinUrl", "profileUrl", "linkedin_url", "url", "profileLink")
     )
+
+    # headline is the job title field for harvestapi/linkedin-company-employees
     title = _coerce_str(
-        pick("title", "jobTitle", "job_title", "headline", "occupation", "currentTitle")
+        pick("headline", "title", "jobTitle", "job_title", "occupation", "currentTitle")
     )
-    location = _coerce_str(
-        pick("location", "geoLocation", "geo_location", "country", "city")
-    )
-    avatar = _coerce_str(
-        pick("avatarUrl", "avatar_url", "profileImage", "profilePicture", "photo")
-    )
-    summary = _coerce_str(pick("summary", "about", "description", "bio"))
+
+    # location is a nested object: {"linkedinText": "...", "parsed": {...}}
+    raw_location = pick("location", "geoLocation", "geo_location")
+    if isinstance(raw_location, dict):
+        location = _coerce_str(
+            raw_location.get("linkedinText")
+            or raw_location.get("city")
+            or raw_location.get("country")
+        )
+    else:
+        location = _coerce_str(raw_location)
+
+    # profilePicture is a nested object: {"url": "...", "sizes": [...]}
+    raw_avatar = pick("profilePicture", "avatarUrl", "avatar_url", "profileImage", "photo")
+    if isinstance(raw_avatar, dict):
+        avatar = _coerce_str(raw_avatar.get("url"))
+    else:
+        avatar = _coerce_str(raw_avatar)
+
+    summary = _coerce_str(pick("about", "summary", "description", "bio"))
 
     return {
         "name": name,
@@ -63,7 +78,7 @@ def scrape_company_people(
     limit: Optional[int] = None,
 ) -> List[Dict[str, Any]]:
     """
-    Scrapes LinkedIn company people via Apify memo23/linkedin-company-people-scraper.
+    Scrapes LinkedIn company employees via Apify harvestapi/linkedin-company-employees.
     Returns a list of normalized candidate dicts.
     """
     token = api_key or os.environ.get("APIFY_API_KEY")
@@ -71,11 +86,12 @@ def scrape_company_people(
         raise ValueError("APIFY_API_KEY not configured or passed")
 
     payload: Dict[str, Any] = {
-        "url": company_url,
-        "titleFilter": target_title,
+        "companies": [company_url],
+        "jobTitles": [target_title],
+        "recentlyChangedJobs": False,
     }
     if limit is not None:
-        payload["maxResults"] = limit
+        payload["maxItems"] = limit
 
     with httpx.Client() as client:
         # 1. Start actor run
@@ -130,6 +146,8 @@ def scrape_company_people(
         raw_items = items_res.json()
 
         if not raw_items:
-            raise ValueError(f"No people found at {company_url} for title '{target_title}'")
+            raise ValueError(
+                f"No people found at {company_url} for title '{target_title}'"
+            )
 
         return [_normalize_candidate(item) for item in raw_items]
