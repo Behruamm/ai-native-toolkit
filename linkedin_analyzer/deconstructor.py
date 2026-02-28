@@ -33,7 +33,7 @@ async def _ai_deconstruct(
 
     clean_text = clean_for_llm(text)
 
-    prompt = f"""You are a LinkedIn content strategist. Deconstruct why this post performed well.
+    prompt = f"""You are a senior LinkedIn content strategist and viral post analyst. Your job is to reverse-engineer exactly why this post outperformed — not just describe it, but expose the mechanism.
 
 POST STATS:
 - Type: {post_type}
@@ -52,20 +52,20 @@ FULL POST:
 
 Return ONLY a JSON object:
 {{
-  "whyItWorked": "2-3 sentences explaining the core reasons this post outperformed. Be specific to the actual content.",
+  "whyItWorked": "2-3 sentences exposing the core mechanism — name the specific psychological trigger (curiosity gap / loss aversion / social proof / authority / urgency / pain / aspiration) and explain how this post activated it. Reference the actual content, not generic advice.",
   "contentPillar": "The main content theme (e.g. Founder Lessons, AI Automation, Career Advice)",
   "archetype": "The post format/structure (e.g. Personal Story, Tactical List, Contrarian Take, Behind-the-Scenes)",
-  "hookFormula": "The reusable hook pattern as a template (e.g. 'I [did X] and learned [insight]')",
-  "ctaFormula": "The reusable CTA pattern as a template (e.g. 'Ask reflective question + invite comment')",
+  "hookFormula": "The reusable hook pattern as a fill-in-the-blank template (e.g. 'I [did X] and learned [insight]'). Name the trigger it uses.",
+  "ctaFormula": "The reusable CTA pattern as a fill-in-the-blank template (e.g. '[Reflective question]? Drop [X] below'). Explain why it drives comments.",
   "replicationGuide": [
-    "Step 1: ...",
-    "Step 2: ...",
-    "Step 3: ...",
-    "Step 4: ..."
+    "Step 1: [Concrete action — what to write, research, or decide first]",
+    "Step 2: [Next concrete action]",
+    "Step 3: [Next concrete action]",
+    "Step 4: [Final concrete action — hook/CTA placement or publish decision]"
   ]
 }}
 
-Be specific and actionable. Return ONLY valid JSON."""
+Return ONLY valid JSON. Every field must be specific to this post — no generic advice."""
 
     raw = await provider.generate(prompt)
     try:

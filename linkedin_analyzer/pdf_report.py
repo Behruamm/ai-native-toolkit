@@ -1,6 +1,6 @@
 from datetime import datetime
 from fpdf import FPDF
-from .types import FullAnalysis
+from .types import FullAnalysis, PostDeconstruction
 
 # Brand colors
 C_BLACK = (28, 28, 30)
@@ -12,19 +12,18 @@ C_MUTED = (85, 85, 85)
 C_DARK_BG = (40, 40, 42)
 C_POST_BG = (240, 237, 230)
 C_POST_TXT = (28, 28, 30)
+C_ACCENT = (230, 160, 50)  # gold accent for "steal this" hooks
 
 
 class ReportPDF(FPDF):
     def __init__(self):
         super().__init__(format="A4")
         self.set_auto_page_break(auto=True, margin=15)
-        # Using standard fonts as fpdf defaults
         self.set_font("Helvetica", size=10)
         self._bg_color = None
 
     def set_background_color(self, color):
         self._bg_color = color
-        # Paint current page background if already started
         if self.page_no() > 0:
             self.set_fill_color(*color)
             self.rect(0, 0, self.w, self.h, "F")
@@ -39,14 +38,11 @@ class ReportPDF(FPDF):
         pass
 
     def footer(self):
-        if (
-            self.page_no() > 1
-        ):  # Skip title page footer if desired, but we'll add to all for consistency
+        if self.page_no() > 1:
             self.set_y(-15)
             self.set_draw_color(*C_MUTED)
             self.set_line_width(0.2)
             self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
-
             self.set_y(-12)
             self.set_font("Helvetica", size=8)
             self.set_text_color(*C_MUTED)
@@ -56,7 +52,6 @@ class ReportPDF(FPDF):
         self.ln(5)
         self.set_font("Helvetica", "B", 8)
         self.set_text_color(*C_RED)
-        # letter spacing faux
         spaced_label = " ".join(label.upper())
         self.cell(0, 8, sanitize_pdf_text(spaced_label), ln=1)
 
@@ -68,22 +63,16 @@ class ReportPDF(FPDF):
 
     def add_metric_row(self, label: str, value: str):
         self.set_font("Helvetica", size=10)
-
-        # Bottom border
         start_y = self.get_y()
         self.set_draw_color(*C_BORDER)
         self.line(self.l_margin, start_y + 8, self.w - self.r_margin, start_y + 8)
-
         self.set_text_color(*C_CREAM)
         self.cell(100, 8, sanitize_pdf_text(label))
-
         self.set_text_color(*C_WHITE)
         self.cell(0, 8, sanitize_pdf_text(value), align="R", ln=1)
         self.ln(2)
 
     def add_stat_card_row(self, cards):
-        # cards is list of dicts: {'label': str, 'value': str, 'sub': str}
-        # Max 3 in a row
         width = (self.w - self.l_margin - self.r_margin - 20) / 3
         start_x = self.get_x()
         start_y = self.get_y()
@@ -98,23 +87,18 @@ class ReportPDF(FPDF):
             self.set_xy(x, start_y)
             self.set_fill_color(*C_DARK_BG)
             self.set_draw_color(*C_BORDER)
-
-            # Draw rect
             self.rect(x, start_y, width, 25, "DF")
 
-            # Label
             self.set_xy(x + 5, start_y + 3)
             self.set_font("Helvetica", size=8)
-            self.set_text_color(180, 180, 180)  # Faded cream
+            self.set_text_color(180, 180, 180)
             self.cell(width - 10, 5, card["label"])
 
-            # Value
             self.set_xy(x + 5, start_y + 8)
             self.set_font("Helvetica", "B", 14)
             self.set_text_color(*C_WHITE)
             self.cell(width - 10, 8, card["value"])
 
-            # Sub
             if "sub" in card and card["sub"]:
                 self.set_xy(x + 5, start_y + 16)
                 self.set_font("Helvetica", size=8)
@@ -131,7 +115,6 @@ class ReportPDF(FPDF):
 
         start_y = self.get_y()
 
-        # Calculate height needed
         self.set_font("Helvetica", size=9)
         safe_body = sanitize_pdf_text(body)
         num_lines = len(
@@ -144,7 +127,6 @@ class ReportPDF(FPDF):
         )
         height = 10 + (num_lines * 5) + 10
 
-        # Don't break across pages if possible
         if start_y + height > self.page_break_trigger:
             self.add_page()
             start_y = self.get_y()
@@ -170,9 +152,129 @@ class ReportPDF(FPDF):
 
         self.ln(5)
 
+    def add_hook_card(self, number: int, hook: str, archetype: str, why: str):
+        """Styled card for 'Steal This Hook' section."""
+        self.set_fill_color(*C_DARK_BG)
+        self.set_draw_color(*C_BORDER)
+
+        start_y = self.get_y()
+        safe_hook = sanitize_pdf_text(hook)
+        safe_why = sanitize_pdf_text(why)
+
+        hook_lines = len(
+            self.multi_cell(
+                self.w - self.l_margin - self.r_margin - 20,
+                6,
+                safe_hook,
+                split_only=True,
+            )
+        )
+        height = 8 + (hook_lines * 6) + 14
+
+        if start_y + height > self.page_break_trigger:
+            self.add_page()
+            start_y = self.get_y()
+
+        self.rect(
+            self.l_margin, start_y, self.w - self.l_margin - self.r_margin, height, "DF"
+        )
+
+        # Number badge
+        self.set_xy(self.l_margin + 5, start_y + 5)
+        self.set_font("Helvetica", "B", 16)
+        self.set_text_color(*C_ACCENT)
+        self.cell(12, 8, str(number))
+
+        # Hook text
+        self.set_xy(self.l_margin + 18, start_y + 5)
+        self.set_font("Helvetica", "B", 10)
+        self.set_text_color(*C_WHITE)
+        self.multi_cell(self.w - self.l_margin - self.r_margin - 23, 6, safe_hook)
+
+        # Archetype + why
+        self.set_xy(self.l_margin + 18, self.get_y() + 1)
+        self.set_font("Helvetica", size=8)
+        self.set_text_color(*C_ACCENT)
+        self.cell(0, 4, sanitize_pdf_text(f"[{archetype}]  "), ln=1)
+
+        self.set_xy(self.l_margin + 18, self.get_y() + 1)
+        self.set_font("Helvetica", "I", 8)
+        self.set_text_color(*C_MUTED)
+        self.cell(0, 4, safe_why, ln=1)
+
+        self.set_y(start_y + height + 4)
+
+    def add_agent_card(self, number: int, name: str, pillar: str, description: str, skeleton: str):
+        """Styled card for AI-Native Blueprint workflows."""
+        self.set_fill_color(*C_DARK_BG)
+        self.set_draw_color(*C_BORDER)
+
+        start_y = self.get_y()
+        safe_desc = sanitize_pdf_text(description)
+        safe_skeleton = sanitize_pdf_text(skeleton)
+
+        desc_lines = len(
+            self.multi_cell(
+                self.w - self.l_margin - self.r_margin - 10,
+                5,
+                safe_desc,
+                split_only=True,
+            )
+        )
+        skel_lines = len(
+            self.multi_cell(
+                self.w - self.l_margin - self.r_margin - 10,
+                5,
+                safe_skeleton,
+                split_only=True,
+            )
+        )
+        height = 14 + (desc_lines * 5) + (skel_lines * 5) + 16
+
+        if start_y + height > self.page_break_trigger:
+            self.add_page()
+            start_y = self.get_y()
+
+        self.rect(
+            self.l_margin, start_y, self.w - self.l_margin - self.r_margin, height, "DF"
+        )
+
+        # Header row: number + name
+        self.set_xy(self.l_margin + 5, start_y + 5)
+        self.set_font("Helvetica", "B", 11)
+        self.set_text_color(*C_RED)
+        self.cell(10, 6, f"{number}.")
+        self.set_text_color(*C_WHITE)
+        self.cell(0, 6, sanitize_pdf_text(name), ln=1)
+
+        # Pillar tag
+        self.set_xy(self.l_margin + 15, self.get_y() + 1)
+        self.set_font("Helvetica", size=8)
+        self.set_text_color(*C_ACCENT)
+        self.cell(0, 4, sanitize_pdf_text(f"Pillar: {pillar}"), ln=1)
+
+        # Description
+        self.set_xy(self.l_margin + 5, self.get_y() + 3)
+        self.set_font("Helvetica", size=9)
+        self.set_text_color(*C_CREAM)
+        self.multi_cell(self.w - self.l_margin - self.r_margin - 10, 5, safe_desc)
+
+        # Skeleton label
+        self.set_xy(self.l_margin + 5, self.get_y() + 3)
+        self.set_font("Helvetica", "B", 8)
+        self.set_text_color(*C_RED)
+        self.cell(0, 4, "STARTER PROMPT SKELETON:", ln=1)
+
+        # Skeleton body
+        self.set_xy(self.l_margin + 5, self.get_y() + 1)
+        self.set_font("Helvetica", "I", 8)
+        self.set_text_color(160, 160, 160)
+        self.multi_cell(self.w - self.l_margin - self.r_margin - 10, 5, safe_skeleton)
+
+        self.set_y(start_y + height + 4)
+
     def add_post_card(self, text: str):
         self.set_fill_color(*C_POST_BG)
-
         self.set_font("Helvetica", size=9)
         safe_text = sanitize_pdf_text(text)
         num_lines = len(
@@ -199,6 +301,41 @@ class ReportPDF(FPDF):
         self.multi_cell(0, 5, safe_text)
         self.ln(5)
 
+    def add_opportunity_banner(self, text: str):
+        """Full-width banner for 'Big Strategic Opportunity'."""
+        self.set_fill_color(*C_RED)
+        safe_text = sanitize_pdf_text(text)
+        self.set_font("Helvetica", size=9)
+        num_lines = len(
+            self.multi_cell(
+                self.w - self.l_margin - self.r_margin - 10,
+                5,
+                safe_text,
+                split_only=True,
+            )
+        )
+        height = 10 + (num_lines * 5) + 6
+
+        start_y = self.get_y()
+        if start_y + height > self.page_break_trigger:
+            self.add_page()
+            start_y = self.get_y()
+
+        self.rect(
+            self.l_margin, start_y, self.w - self.l_margin - self.r_margin, height, "F"
+        )
+
+        self.set_xy(self.l_margin + 5, start_y + 5)
+        self.set_font("Helvetica", "B", 9)
+        self.set_text_color(*C_WHITE)
+        self.cell(0, 5, "THE BIG STRATEGIC OPPORTUNITY", ln=1)
+
+        self.set_xy(self.l_margin + 5, self.get_y() + 2)
+        self.set_font("Helvetica", size=9)
+        self.multi_cell(self.w - self.l_margin - self.r_margin - 10, 5, safe_text)
+
+        self.set_y(start_y + height + 6)
+
 
 def truncate(text: str, length: int) -> str:
     if len(text) > length:
@@ -210,19 +347,18 @@ def sanitize_pdf_text(text: str) -> str:
     if text is None:
         return ""
     replacements = {
-        "•": "-",
-        "–": "-",
-        "—": "-",
-        "“": '"',
-        "”": '"',
-        "‘": "'",
-        "’": "'",
-        "…": "...",
+        "\u2022": "-",
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u2026": "...",
         "\u00a0": " ",
     }
     for src, dst in replacements.items():
         text = text.replace(src, dst)
-    # FPDF core fonts expect Latin-1; replace unsupported chars.
     return text.encode("latin-1", "replace").decode("latin-1")
 
 
@@ -259,7 +395,7 @@ def add_post_list(pdf: ReportPDF, label: str, posts: list):
             0,
             5,
             sanitize_pdf_text(
-                f"{p.numLikes} likes • {p.numComments} comments • {p.numShares} reposts"
+                f"{p.numLikes} likes  {p.numComments} comments  {p.numShares} reposts"
             ),
             ln=1,
         )
@@ -269,27 +405,20 @@ def add_post_list(pdf: ReportPDF, label: str, posts: list):
 def generate_pdf(a: FullAnalysis) -> bytes:
     pdf = ReportPDF()
 
-    # Base background color for all pages
     def set_bg():
         pdf.set_background_color(C_BLACK)
 
     pdf.add_page()
     set_bg()
 
-    # -------------------------------------------------------------
-    # PAGE 1: TITLE
-    # -------------------------------------------------------------
-    pdf.set_y(pdf.h / 2 - 40)
+    # =========================================================
+    # PAGE 1: COVER — Title + Profile
+    # =========================================================
+    pdf.set_y(pdf.h / 2 - 50)
 
     pdf.set_font("Helvetica", "B", 10)
     pdf.set_text_color(*C_RED)
-    pdf.cell(
-        0,
-        10,
-        "L I N K E D I N   C O M P E T I T O R   A N A L Y S I S",
-        align="C",
-        ln=1,
-    )
+    pdf.cell(0, 10, "L I N K E D I N   S T R A T E G Y   A N A L Y S I S", align="C", ln=1)
 
     pdf.set_font("Helvetica", "B", 30)
     pdf.set_text_color(*C_WHITE)
@@ -300,9 +429,7 @@ def generate_pdf(a: FullAnalysis) -> bytes:
     pdf.cell(0, 8, sanitize_pdf_text(a.profileHeadline), align="C", ln=1)
 
     date_str = (
-        datetime.fromisoformat(a.analyzedAt.replace("Z", "+00:00")).strftime(
-            "%B %d, %Y"
-        )
+        datetime.fromisoformat(a.analyzedAt.replace("Z", "+00:00")).strftime("%B %d, %Y")
         if a.analyzedAt
         else "Today"
     )
@@ -310,25 +437,27 @@ def generate_pdf(a: FullAnalysis) -> bytes:
     pdf.set_text_color(*C_MUTED)
     pdf.cell(0, 20, sanitize_pdf_text(f"Report generated {date_str}"), align="C", ln=1)
 
-    pdf.ln(20)
+    pdf.ln(8)
     pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_MUTED)
     pdf.cell(
         0,
         10,
         sanitize_pdf_text(
-            f"{a.cadence.totalPosts} posts analyzed | {a.cadence.periodStart} to {a.cadence.periodEnd}"
+            f"{a.cadence.totalPosts} posts analyzed  |  {a.cadence.periodStart} to {a.cadence.periodEnd}"
         ),
         align="C",
         ln=1,
     )
 
-    # -------------------------------------------------------------
-    # PAGE 2: PERFORMANCE
-    # -------------------------------------------------------------
+    # =========================================================
+    # PAGE 2: EXECUTIVE SUMMARY + BIG STRATEGIC OPPORTUNITY
+    # =========================================================
     pdf.add_page()
     pdf.add_section_label("SECTION 1")
-    pdf.add_section_title("Performance Snapshot")
+    pdf.add_section_title("The Strategic Picture")
 
+    # Key performance stats at a glance
     pdf.add_stat_card_row(
         [
             {
@@ -349,11 +478,133 @@ def generate_pdf(a: FullAnalysis) -> bytes:
         ]
     )
 
+    pdf.add_section_label("EXECUTIVE SUMMARY")
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.multi_cell(0, 6, sanitize_pdf_text(a.executiveSummary))
+    pdf.ln(4)
+
+    if a.bigStrategicOpportunity:
+        pdf.add_opportunity_banner(a.bigStrategicOpportunity)
+
+    # Top 5 + Worst 3 (truncated — no fluff)
+    add_post_list(pdf, "TOP 5 POSTS (AGE-ADJUSTED SCORE)", a.topPosts[:5])
+    add_post_list(pdf, "WORST 3 POSTS (WHAT TO AVOID)", a.worstPosts[:3])
+
+    # =========================================================
+    # PAGE 3: TOP 3 CONTENT PILLARS — DEEP DIVE
+    # =========================================================
+    pdf.add_page()
+    pdf.add_section_label("SECTION 2")
+    pdf.add_section_title("Content Pillars — Deep Dive")
+
+    pdf.set_font("Helvetica", size=9)
+    pdf.set_text_color(*C_MUTED)
+    pdf.cell(
+        0, 6,
+        "These are not just topics. They are the strategic positions this creator owns in the feed.",
+        ln=1,
+    )
+    pdf.ln(4)
+
+    for p in a.contentPillars[:3]:
+        pdf.add_card(
+            p.name,
+            p.description,
+            f"~{p.percentageOfPosts}% of posts  |  {p.engagementLevel} engagement",
+        )
+
+    pdf.add_section_label("POST ARCHETYPES")
+    pdf.set_font("Helvetica", size=9)
+    pdf.set_text_color(*C_MUTED)
+    pdf.cell(
+        0, 6,
+        "The formats that do the heavy lifting — how the pillars are packaged for the feed.",
+        ln=1,
+    )
+    pdf.ln(2)
+
+    for ar in a.postArchetypes:
+        pdf.add_card(
+            ar.name,
+            ar.description,
+            f"{ar.count} posts  |  {ar.engagementLevel} engagement",
+        )
+
+    # =========================================================
+    # PAGE 4: AI-NATIVE BLUEPRINT
+    # =========================================================
+    pdf.add_page()
+    pdf.add_section_label("SECTION 3")
+    pdf.add_section_title("The AI-Native Blueprint")
+
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.multi_cell(
+        0, 6,
+        sanitize_pdf_text(
+            "A solo operator with the right AI agents can produce this creator's entire "
+            "content output in a fraction of the time. Here are 3 specific agent workflows "
+            "mapped directly to their top pillars."
+        ),
+    )
+    pdf.ln(6)
+
+    if a.agentWorkflows:
+        for i, wf in enumerate(a.agentWorkflows, 1):
+            pdf.add_agent_card(i, wf.name, wf.pillar, wf.description, wf.prompt_skeleton)
+    else:
+        pdf.set_font("Helvetica", size=9)
+        pdf.set_text_color(*C_MUTED)
+        pdf.cell(0, 6, "Agent workflows not available (AI skipped or analysis failed).", ln=1)
+
+    # =========================================================
+    # PAGE 5: STEAL THESE HOOKS
+    # =========================================================
+    pdf.add_page()
+    pdf.add_section_label("SECTION 4")
+    pdf.add_section_title("Steal These Hooks")
+
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.multi_cell(
+        0, 6,
+        sanitize_pdf_text(
+            "5 ready-to-publish hooks modeled on this creator's best-performing archetypes. "
+            "Copy, adapt the context, post."
+        ),
+    )
+    pdf.ln(6)
+
+    if a.stealTheseHooks:
+        for i, h in enumerate(a.stealTheseHooks, 1):
+            pdf.add_hook_card(i, h.hook, h.archetype, h.why_it_works)
+    else:
+        pdf.set_font("Helvetica", size=9)
+        pdf.set_text_color(*C_MUTED)
+        pdf.cell(0, 6, "Hooks not available (AI skipped or analysis failed).", ln=1)
+
+    pdf.ln(6)
+
+    # Hook formula callout
+    if a.hookStrategy.formula and a.hookStrategy.formula not in ("AI skipped", "Analysis unavailable"):
+        pdf.add_card(
+            "WINNING HOOK FORMULA",
+            a.hookStrategy.formula,
+            "",
+            tag_color=C_RED,
+        )
+
+    # =========================================================
+    # PAGE 6+: REFERENCE DATA
+    # =========================================================
+    pdf.add_page()
+    pdf.add_section_label("REFERENCE DATA")
+    pdf.add_section_title("Raw Metrics")
+
     pdf.add_section_label("CONTENT CADENCE")
     pdf.add_metric_row("Posts Analyzed", str(a.cadence.totalPosts))
-    pdf.add_metric_row(
-        "Time Period", f"{a.cadence.periodStart} -> {a.cadence.periodEnd}"
-    )
+    pdf.add_metric_row("Time Period", f"{a.cadence.periodStart} -> {a.cadence.periodEnd}")
     pdf.add_metric_row("Weeks Covered", str(a.cadence.weeksCovered))
     pdf.add_metric_row("Total Reactions", f"{a.engagement.totalReactions:,}")
     pdf.add_metric_row("Total Comments", f"{a.engagement.totalComments:,}")
@@ -362,58 +613,18 @@ def generate_pdf(a: FullAnalysis) -> bytes:
     for pt in a.postTypes:
         pdf.add_metric_row(
             f"{pt.type.upper()} ({pt.percentage}%)",
-            f"{pt.count} posts • avg {pt.avgReactions} reactions",
+            f"{pt.count} posts  avg {pt.avgReactions} reactions",
         )
-
-    add_post_list(pdf, "TOP 5 POSTS (AGE-ADJUSTED)", a.topPosts)
-    add_post_list(pdf, "BOTTOM 5 POSTS (AGE-ADJUSTED)", a.worstPosts)
-
-    # -------------------------------------------------------------
-    # PAGE 3: CONTENT STRATEGY
-    # -------------------------------------------------------------
-    pdf.add_page()
-    pdf.add_section_label("SECTION 2")
-    pdf.add_section_title("Content Strategy")
-
-    pdf.add_section_label("EXECUTIVE SUMMARY")
-    pdf.set_font("Helvetica", size=10)
-    pdf.set_text_color(*C_CREAM)
-    pdf.multi_cell(0, 6, sanitize_pdf_text(a.executiveSummary))
-
-    pdf.add_section_label("CONTENT PILLARS")
-    for p in a.contentPillars:
-        pdf.add_card(
-            p.name,
-            p.description,
-            f"~{p.percentageOfPosts}% of posts • {p.engagementLevel} engagement",
-        )
-
-    pdf.add_section_label("POST ARCHETYPES")
-    for ar in a.postArchetypes:
-        pdf.add_card(
-            ar.name,
-            ar.description,
-            f"{ar.count} posts • {ar.engagementLevel} engagement",
-        )
-
-    # -------------------------------------------------------------
-    # PAGE 4: TEXT ANALYSIS
-    # -------------------------------------------------------------
-    pdf.add_page()
-    pdf.add_section_label("SECTION 3")
-    pdf.add_section_title("Text Analysis")
 
     pdf.add_section_label("TEXT PATTERNS")
     pdf.add_metric_row("Avg Word Count", str(a.textPatterns.avgWordCount))
     pdf.add_metric_row(
         "Posts with CTA", f"{a.textPatterns.postsWithCTA}/{a.cadence.totalPosts}"
     )
-
     lift_sign = "+" if a.textPatterns.ctaEngagementLift > 0 else ""
     pdf.add_metric_row(
         "CTA Engagement Lift", f"{lift_sign}{a.textPatterns.ctaEngagementLift}%"
     )
-
     pdf.add_metric_row(
         "Posts with Hook", f"{a.textPatterns.postsWithHook}/{a.cadence.totalPosts}"
     )
@@ -422,13 +633,29 @@ def generate_pdf(a: FullAnalysis) -> bytes:
         f"{a.textPatterns.postsWithQuestions}/{a.cadence.totalPosts}",
     )
 
+    pdf.add_section_label("HOOK ANALYSIS")
+    h = a.hookAnalysis
+    pdf.add_metric_row("Avg Hook Length", f"{h.avgHookLength} words")
+    pdf.add_metric_row("Urgency Rate", f"{h.urgencyRate}% of posts")
+    top_hook_type = h.hookTypes[0] if h.hookTypes else None
+    pdf.add_metric_row(
+        "Top Hook Type",
+        f"{top_hook_type.type if top_hook_type else 'N/A'} ({top_hook_type.percentage if top_hook_type else 0}%)",
+    )
+    pdf.add_metric_row("Top First Words", ", ".join(w.word for w in h.topFirstWords[:5]))
+
+    pdf.add_section_label("CTA ANALYSIS")
+    cta = a.ctaAnalysis
+    pdf.add_metric_row("No CTA Rate", f"{cta.noCTARate}% of posts")
+    pdf.add_metric_row("Best CTA Type", cta.bestCTAType)
+    pdf.add_metric_row("Top Action Words", ", ".join(w.word for w in cta.topActionWords[:5]))
+
     pdf.add_section_label("TOP 25 WORDS (NLP FREQUENCY)")
-    # Draw simple grid 2 columns
     pdf.set_font("Helvetica", size=9)
     col_w = (pdf.w - pdf.l_margin - pdf.r_margin - 10) / 2
     y_start = pdf.get_y()
 
-    for i, w in enumerate(a.wordFrequency):
+    for i, wf in enumerate(a.wordFrequency):
         col = 0 if i % 2 == 0 else 1
         row = i // 2
 
@@ -440,124 +667,187 @@ def generate_pdf(a: FullAnalysis) -> bytes:
         pdf.line(x, y + 6, x + col_w, y + 6)
 
         pdf.set_text_color(*C_CREAM)
-        pdf.cell(col_w - 20, 6, f"{i+1}. {w.word}")
+        pdf.cell(col_w - 20, 6, f"{i+1}. {wf.word}")
 
         pdf.set_text_color(*C_WHITE)
-        pdf.cell(20, 6, str(w.count), align="R")
+        pdf.cell(20, 6, str(wf.count), align="R")
 
     pdf.set_y(pdf.get_y() + 10)
 
-    # -------------------------------------------------------------
-    # PAGE 5: BLUEPRINT
-    # -------------------------------------------------------------
+    # =========================================================
+    # FINAL PAGE: OFFER / CTA
+    # =========================================================
+    _add_cta_page(pdf)
+
+    return bytes(pdf.output(dest="S"))
+
+
+def _add_cta_page(pdf: ReportPDF):
+    """Shared CTA / offer page — reused by both report types."""
     pdf.add_page()
-    pdf.add_section_label("SECTION 4")
-    pdf.add_section_title("Hook Blueprint")
+    pdf.set_y(pdf.h / 2 - 75)
 
-    h = a.hookAnalysis
-    pdf.add_section_label("HOOK ANALYSIS (FIRST SENTENCE)")
-    pdf.add_metric_row("Avg Hook Length", f"{h.avgHookLength} words")
-    pdf.add_metric_row("Urgency Rate", f"{h.urgencyRate}% of posts")
-
-    top_hook_type = h.hookTypes[0] if h.hookTypes else None
-    pdf.add_metric_row(
-        "Top Hook Type",
-        f"{top_hook_type.type if top_hook_type else 'N/A'} ({(top_hook_type.percentage if top_hook_type else 0)}%)",
-    )
-    pdf.add_metric_row(
-        "Top First Words", ", ".join(w.word for w in h.topFirstWords[:5])
-    )
-
-    hs = a.hookStrategy
-
-    pdf.add_section_label("TOP HOOK PATTERNS")
-    if hs.patterns:
-        for p in hs.patterns:
-            pdf.add_card(p.name, p.description, f"{p.engagementLevel} engagement")
-    else:
-        pdf.set_font("Helvetica", size=9)
-        pdf.set_text_color(*C_MUTED)
-        pdf.cell(0, 6, "No hook patterns available.", ln=1)
-        pdf.ln(2)
-
-    pdf.add_card("WINNING HOOK FORMULA", hs.formula, "", tag_color=C_RED)
-
-    pdf.add_section_label("TOP HOOK EXAMPLES")
-    if hs.bestExamples:
-        for ex in hs.bestExamples:
-            pdf.add_post_card(truncate(ex.text, 220))
-    else:
-        pdf.set_font("Helvetica", size=9)
-        pdf.set_text_color(*C_MUTED)
-        pdf.cell(0, 6, "No hook examples available.", ln=1)
-        pdf.ln(2)
-
-    # -------------------------------------------------------------
-    # PAGE 6: CTA BLUEPRINT
-    # -------------------------------------------------------------
-    pdf.add_page()
-    pdf.add_section_label("SECTION 5")
-    pdf.add_section_title("CTA Blueprint")
-
-    cta = a.ctaAnalysis
-    cs = a.ctaStrategy
-
-    pdf.add_section_label("CTA ANALYSIS (LAST SENTENCE)")
-    pdf.add_metric_row("No CTA Rate", f"{cta.noCTARate}% of posts")
-    pdf.add_metric_row("Best CTA Type", cta.bestCTAType)
-    pdf.add_metric_row(
-        "Top Action Words", ", ".join(w.word for w in cta.topActionWords[:5])
-    )
-
-    pdf.add_card("WINNING CTA FORMULA", cs.formula, "", tag_color=C_RED)
-
-    pdf.add_section_label("TOP CTA PATTERNS")
-    if cs.patterns:
-        for p in cs.patterns:
-            pdf.add_card(p.name, p.description, f"{p.engagementLevel} engagement")
-    else:
-        pdf.set_font("Helvetica", size=9)
-        pdf.set_text_color(*C_MUTED)
-        pdf.cell(0, 6, "No CTA patterns available.", ln=1)
-        pdf.ln(2)
-
-    pdf.add_section_label("TOP CTA EXAMPLES")
-    if cs.bestExamples:
-        for ex in cs.bestExamples:
-            pdf.add_post_card(truncate(ex.text, 220))
-    else:
-        pdf.set_font("Helvetica", size=9)
-        pdf.set_text_color(*C_MUTED)
-        pdf.cell(0, 6, "No CTA examples available.", ln=1)
-        pdf.ln(2)
-
-    # -------------------------------------------------------------
-    # PAGE 7: OFFER
-    # -------------------------------------------------------------
-    pdf.add_page()
-
-    pdf.set_y(pdf.h / 2 - 50)
     pdf.set_font("Helvetica", "B", 8)
     pdf.set_text_color(*C_RED)
     pdf.cell(0, 10, "W H A T ' S   N E X T ?", align="C", ln=1)
 
-    pdf.set_font("Helvetica", "B", 24)
+    pdf.set_font("Helvetica", "B", 22)
     pdf.set_text_color(*C_WHITE)
-    pdf.cell(0, 15, "UNLOCK YOUR FULL POTENTIAL", align="C", ln=1)
+    pdf.cell(0, 14, "BUILD YOUR AI-NATIVE CONTENT ENGINE", align="C", ln=1)
 
-    pdf.set_font("Helvetica", size=11)
+    pdf.ln(6)
+
+    pdf.set_font("Helvetica", "B", 9)
+    pdf.set_text_color(*C_RED)
+    pdf.cell(0, 7, "THE REALITY CHECK", align="C", ln=1)
+    pdf.set_font("Helvetica", size=10)
     pdf.set_text_color(*C_CREAM)
-    text = "Understanding your competitor's content is the first step. The next is building systems to create and distribute your own with maximum efficiency.\n\nWe're launching a Skool community for creators and entrepreneurs focused on Vibe Coding Automation — learning how to build agentic systems and AI tools just like the one that generated this report.\n\nJoin the waitlist today and get an exclusive 50% launch discount."
+    pdf.set_x(pdf.w / 2 - 75)
+    pdf.multi_cell(150, 5, sanitize_pdf_text(
+        "Analyzing the data is the first step. Operating with the leverage of a 10-person team is the transformation. "
+        "Most solo operators spend 10+ hours a week manually drafting, editing, and guessing what works. "
+        "You don't have to."
+    ), align="C")
 
-    # Center text body
-    pdf.set_x(pdf.w / 2 - 70)
-    pdf.multi_cell(140, 6, sanitize_pdf_text(text), align="C")
+    pdf.ln(5)
 
-    pdf.ln(10)
+    pdf.set_font("Helvetica", "B", 9)
+    pdf.set_text_color(*C_RED)
+    pdf.cell(0, 7, "THE SOLUTION", align="C", ln=1)
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.set_x(pdf.w / 2 - 75)
+    pdf.multi_cell(150, 5, sanitize_pdf_text(
+        "I help solo founders build the exact AI Agent systems found in this report. "
+        "We automate your research, hook generation, and content pillars -- "
+        "so you can spend your time on sales and building, not scrolling."
+    ), align="C")
+
+    pdf.ln(5)
+
+    pdf.set_font("Helvetica", "B", 9)
+    pdf.set_text_color(*C_RED)
+    pdf.cell(0, 7, "THE 30-DAY SPRINT", align="C", ln=1)
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.set_x(pdf.w / 2 - 75)
+    pdf.multi_cell(150, 5, sanitize_pdf_text(
+        "I'm taking on 3 solo operators this month for a 1-v-1 high-ticket transformation.\n"
+        "  AUDIT: A deep-dive into your specific niche.\n"
+        "  BUILD: We'll build the agents to automate your strategy.\n"
+        "  SCALE: Launch your AI-native content engine in 30 days."
+    ), align="C")
+
+    pdf.ln(8)
+
     pdf.set_fill_color(*C_RED)
     pdf.set_text_color(*C_WHITE)
-    pdf.set_font("Helvetica", "B", 12)
-    pdf.set_x(pdf.w / 2 - 40)
-    pdf.cell(80, 12, "JOIN THE WAITLIST ->", fill=True, align="C", ln=1)
+    pdf.set_font("Helvetica", "B", 11)
+    pdf.set_x(pdf.w / 2 - 70)
+    pdf.cell(140, 14, "Book your 1-v-1 Strategy Audit ->  cal.com/behram-antifragile/30min", fill=True, align="C", ln=1)
+
+
+def generate_post_pdf(d: PostDeconstruction) -> bytes:
+    """Generate a 2-page PDF for a single post deconstruction + CTA page."""
+    pdf = ReportPDF()
+    pdf.set_background_color(C_BLACK)
+
+    # =========================================================
+    # PAGE 1: Post Deconstruction
+    # =========================================================
+    pdf.add_page()
+    pdf.set_y(18)
+
+    # Header label
+    pdf.set_font("Helvetica", "B", 8)
+    pdf.set_text_color(*C_RED)
+    pdf.cell(0, 8, "V I R A L   P O S T   D E C O N S T R U C T I O N", align="C", ln=1)
+
+    # Author + date
+    pdf.set_font("Helvetica", "B", 18)
+    pdf.set_text_color(*C_WHITE)
+    pdf.cell(0, 11, sanitize_pdf_text(d.authorName), align="C", ln=1)
+    pdf.set_font("Helvetica", size=10)
+    pdf.set_text_color(*C_CREAM)
+    pdf.cell(0, 6, sanitize_pdf_text(d.authorHeadline), align="C", ln=1)
+    pdf.set_font("Helvetica", size=8)
+    pdf.set_text_color(*C_MUTED)
+    analyzed = datetime.fromisoformat(d.analyzedAt).strftime("%B %d, %Y")
+    pdf.cell(0, 6, f"Analyzed {analyzed}", align="C", ln=1)
+
+    pdf.ln(6)
+
+    # Stat cards
+    pdf.add_stat_card_row([
+        {"label": "Likes", "value": str(d.numLikes)},
+        {"label": "Comments", "value": str(d.numComments)},
+        {"label": "Shares", "value": str(d.numShares)},
+    ])
+    pdf.ln(4)
+
+    # Hook + CTA
+    pdf.add_section_label("HOOK")
+    pdf.set_font("Helvetica", size=9)
+    pdf.set_text_color(*C_WHITE)
+    pdf.multi_cell(0, 5, sanitize_pdf_text(f'"{d.hook}"'))
+    pdf.set_font("Helvetica", size=8)
+    pdf.set_text_color(*C_MUTED)
+    pdf.cell(0, 5, f"Type: {d.hookType}  |  Length: {d.hookLength} words", ln=1)
+
+    pdf.ln(2)
+    pdf.add_section_label("CALL TO ACTION")
+    pdf.set_font("Helvetica", size=9)
+    pdf.set_text_color(*C_WHITE)
+    cta_text = d.cta if d.cta else "No CTA detected"
+    pdf.multi_cell(0, 5, sanitize_pdf_text(f'"{cta_text}"'))
+    pdf.set_font("Helvetica", size=8)
+    pdf.set_text_color(*C_MUTED)
+    pdf.cell(0, 5, f"Type: {d.ctaType}", ln=1)
+
+    # AI section
+    if d.ai:
+        pdf.ln(2)
+        pdf.add_section_label("WHY IT WORKED")
+        pdf.set_font("Helvetica", size=9)
+        pdf.set_text_color(*C_CREAM)
+        pdf.multi_cell(0, 5, sanitize_pdf_text(d.ai.whyItWorked))
+
+        pdf.ln(2)
+        pdf.add_section_label("CONTENT PILLAR  /  ARCHETYPE")
+        pdf.set_font("Helvetica", "B", 10)
+        pdf.set_text_color(*C_WHITE)
+        pdf.cell(0, 6, sanitize_pdf_text(f"{d.ai.contentPillar}  /  {d.ai.archetype}"), ln=1)
+
+        pdf.ln(2)
+        pdf.add_section_label("HOOK FORMULA")
+        pdf.set_font("Helvetica", size=9)
+        pdf.set_text_color(*C_ACCENT)
+        pdf.multi_cell(0, 5, sanitize_pdf_text(d.ai.hookFormula))
+
+        pdf.ln(2)
+        pdf.add_section_label("CTA FORMULA")
+        pdf.set_font("Helvetica", size=9)
+        pdf.set_text_color(*C_ACCENT)
+        pdf.multi_cell(0, 5, sanitize_pdf_text(d.ai.ctaFormula))
+
+        pdf.ln(2)
+        pdf.add_section_label("REPLICATION GUIDE")
+        for step in d.ai.replicationGuide:
+            pdf.set_font("Helvetica", size=9)
+            pdf.set_text_color(*C_CREAM)
+            pdf.multi_cell(0, 5, sanitize_pdf_text(f"  {step}"))
+            pdf.ln(1)
+
+    # Post URL
+    if d.postUrl:
+        pdf.ln(4)
+        pdf.set_font("Helvetica", size=8)
+        pdf.set_text_color(*C_MUTED)
+        pdf.cell(0, 5, sanitize_pdf_text(f"Source: {d.postUrl}"), ln=1, link=d.postUrl)
+
+    # =========================================================
+    # PAGE 2: CTA / Offer
+    # =========================================================
+    _add_cta_page(pdf)
 
     return bytes(pdf.output(dest="S"))

@@ -51,7 +51,12 @@ linkedin-analyzer profile --url <profile_url> --output analysis.json
 ### 3. Deconstruct a Single Post
 
 ```bash
+# JSON output only
 linkedin-analyzer post --url <post_url> --output deconstruct.json
+
+# JSON + 2-page PDF (deconstruction + offer page)
+linkedin-analyzer post --url <post_url> --pdf report.pdf
+
 # Optional: --skip-ai
 ```
 

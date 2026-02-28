@@ -2,19 +2,11 @@ import argparse
 import sys
 import json
 import asyncio
-from pathlib import Path
-
 from .scraper import extract
 from .pipeline import run_full
-from .pdf_report import generate_pdf
+from .pdf_report import generate_pdf, generate_post_pdf
 from .types import FullAnalysis
 from .deconstructor import deconstruct_post
-
-
-def dict_factory(obj):
-    if hasattr(obj, "model_dump"):
-        return obj.model_dump()
-    return obj
 
 
 def main():
@@ -105,6 +97,9 @@ def main():
     )
     post_parser.add_argument(
         "--output", type=str, help="Path to save JSON output (optional)"
+    )
+    post_parser.add_argument(
+        "--pdf", type=str, help="Path to save PDF report (optional, e.g. report.pdf)"
     )
 
     # Command: pdf
@@ -211,6 +206,12 @@ def main():
                 print(f"Saved deconstruction to {args.output}")
             else:
                 print(output_json)
+
+            if args.pdf:
+                pdf_bytes = generate_post_pdf(result)
+                with open(args.pdf, "wb") as f:
+                    f.write(pdf_bytes)
+                print(f"Saved PDF to {args.pdf}")
 
         except Exception as e:
             print(f"Post deconstruction failed: {e}", file=sys.stderr)

@@ -1,5 +1,5 @@
 from typing import List, Dict, Optional, Literal, Any
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, ConfigDict
 
 # ============================================================
 # RAW APIFY OUTPUT — what comes back from the scraper
@@ -145,17 +145,6 @@ class PostArchetype(BaseModel):
     engagementLevel: Literal["high", "medium", "low"]
 
 
-# Section 3: Deep Dive
-class TopPostAnalysis(BaseModel):
-    post: ScoredPost
-    whyItWorked: List[str]  # 3 bullet points from Gemini
-
-
-class WorstPostAnalysis(BaseModel):
-    post: ScoredPost
-    whyItFlopped: str  # 1-2 sentences from Gemini
-
-
 # Section 4: Comment Analysis
 class TopCommenter(BaseModel):
     name: str
@@ -264,6 +253,22 @@ class ChunkAnalysisResult(BaseModel):
     summary_bullets: List[str]
 
 
+class AgentWorkflow(BaseModel):
+    """An AI agent workflow a solo operator can use to replicate a content pillar."""
+    name: str          # e.g. "Research Agent for Thought Leadership"
+    pillar: str        # which content pillar this maps to
+    archetype: str     # which post archetype it generates
+    description: str   # what the agent does and why it creates leverage
+    prompt_skeleton: str  # a starter prompt/workflow skeleton
+
+
+class StealThisHook(BaseModel):
+    """A pre-written LinkedIn hook tailored to the profile's best archetypes."""
+    hook: str          # the ready-to-use hook line
+    archetype: str     # which archetype this is based on
+    why_it_works: str  # one sentence on the psychology behind it
+
+
 class ConsolidatedAnalysis(BaseModel):
     """Consolidated result from all chunks."""
     pillars: List[ContentPillar]
@@ -271,6 +276,7 @@ class ConsolidatedAnalysis(BaseModel):
     hookStrategy: HookStrategy
     ctaStrategy: CTAStrategy
     executiveSummary: str
+    bigStrategicOpportunity: str = ""
 
 
 # ============================================================
@@ -294,8 +300,9 @@ class FullAnalysis(BaseModel):
     scoredPostsAgeAdjusted: List[ScoredPost]
     textPatterns: TextPatternMetrics
 
-    # Section 2: Content Strategy (Gemini)
+    # Section 2: Content Strategy (AI)
     executiveSummary: str
+    bigStrategicOpportunity: str = ""
     contentPillars: List[ContentPillar]
     postArchetypes: List[PostArchetype]
 
@@ -309,13 +316,15 @@ class FullAnalysis(BaseModel):
     # Section 5: Text Analysis (deterministic)
     wordFrequency: List[WordFrequency]
 
-    # Section 6: Hook & CTA Blueprint (deterministic + Gemini)
+    # Section 6: Hook & CTA Blueprint (deterministic + AI)
     hookAnalysis: HookAnalysis
     ctaAnalysis: CTAAnalysis
     hookStrategy: HookStrategy
     ctaStrategy: CTAStrategy
 
-    # Section 7: Growth Strategy (removed for profile-only analysis)
+    # Section 7: AI-Native Blueprint (new)
+    agentWorkflows: List[AgentWorkflow] = []
+    stealTheseHooks: List[StealThisHook] = []
 
 
 # ============================================================
@@ -356,39 +365,3 @@ class PostDeconstruction(BaseModel):
     # AI analysis (None when --skip-ai)
     ai: Optional[PostDeconstructionAI] = None
 
-
-# ============================================================
-# CLEANED OUTPUT — aggregated for the preview route
-# ============================================================
-
-
-class ScrapedProfile(BaseModel):
-    profileUrl: str
-    name: str
-    headline: str
-    posts: List[ApifyPost]
-
-
-# ============================================================
-# PREVIEW — subset shown before email gate
-# ============================================================
-
-
-class AnalysisPreview(BaseModel):
-    profileUrl: str
-    profileName: str
-    profileHeadline: str
-    totalPosts: int
-    avgLikes: float
-    avgComments: float
-    topPost: ApifyPost
-    postingFrequency: str
-    dominantMediaType: str
-    contentThemes: List[str]
-    summary: str
-    scrapedAt: str
-    postTypeBreakdown: Dict[str, float]
-    postingByDay: Dict[str, float]
-
-
-AnalysisPreviewData = AnalysisPreview

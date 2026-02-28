@@ -1,7 +1,7 @@
 import os
 import json
 import re
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any
 
 from .types import (
     CleanPost,
@@ -13,6 +13,8 @@ from .types import (
     ChunkAnalysisResult,
     ConsolidatedAnalysis,
     StrategyPattern,
+    AgentWorkflow,
+    StealThisHook,
 )
 from .providers.base import LLMProvider
 from .metrics import extract_hook_text, extract_cta_text
@@ -239,12 +241,19 @@ def _coerce_consolidated(
         or "Analysis unavailable"
     )
 
+    big_opportunity = str(
+        data.get("bigStrategicOpportunity")
+        or data.get("big_strategic_opportunity")
+        or ""
+    )
+
     return ConsolidatedAnalysis(
         pillars=pillars,
         archetypes=archetypes,
         hookStrategy=hook_strategy,
         ctaStrategy=cta_strategy,
         executiveSummary=exec_summary,
+        bigStrategicOpportunity=big_opportunity,
     )
 
 
@@ -270,15 +279,20 @@ async def analyze_chunk_optimized(
         )
     context = "\n\n".join(parts)
 
-    prompt = f"""Analyze these {len(chunk)} LinkedIn posts comprehensively.
+    prompt = f"""You are a senior LinkedIn content strategist. Analyze these {len(chunk)} LinkedIn posts and identify the underlying content system.
 
 Posts:
 {context}
 
+IMPORTANT: Weight your analysis toward posts with higher likes/comments — they reveal what actually resonates.
+
 Return ONLY a JSON object with:
 {{
-  "pillar_candidates": ["AI Automation", "Founder Lessons", ...],  // 3-5 content themes/topics
-  "archetype_candidates": ["Listicle", "Personal Story", ...],     // 3-4 post formats
+  "pillar_candidates": [
+    {{"name": "AI Automation", "description": "Practical how-to content on automating business workflows — drives authority and inbound leads"}},
+    ...
+  ],
+  "archetype_candidates": ["Listicle", "Personal Story", ...],
   "hook_patterns": [
     {{"name": "Money Hook", "description": "Mentions specific $ amount", "engagementLevel": "high"}},
     ...
@@ -301,7 +315,8 @@ Return ONLY a JSON object with:
 IMPORTANT:
 - Use the exact index numbers 0 to {len(chunk)-1} in post_assignments
 - Assign every post to ONE pillar and ONE archetype from your candidates
-- Base engagementLevel on the likes/comments you see in the posts
+- Each pillar_candidate must have both "name" and "description" — description explains WHY this topic drives engagement
+- Base engagementLevel on the actual likes/comments you see in the posts
 - Return ONLY valid JSON, no markdown or extra text
 """
 
@@ -339,7 +354,11 @@ async def consolidate_chunk_results(
     all_summary_bullets = []
 
     for result in chunk_results:
-        all_pillar_candidates.extend(result.pillar_candidates)
+        for pc in result.pillar_candidates:
+            if isinstance(pc, dict):
+                all_pillar_candidates.append(pc)
+            else:
+                all_pillar_candidates.append({"name": str(pc), "description": ""})
         all_archetype_candidates.extend(result.archetype_candidates)
         all_hook_patterns.extend(result.hook_patterns)
         all_cta_patterns.extend(result.cta_patterns)
@@ -347,7 +366,8 @@ async def consolidate_chunk_results(
 
     hook_cta_context = build_hook_cta_context(posts, scored_posts, limit=50)
 
-    prompt = f"""You are consolidating multiple chunk analyses into a final LinkedIn content strategy.
+    prompt = f"""You are a senior content strategist and AI-native business advisor consolidating a LinkedIn profile analysis.
+Your tone is sharp, opinionated, and ROI-focused. You're writing for a reader who wants to understand WHY this profile wins — not just WHAT they post.
 
 Pillar candidates from all chunks:
 {json.dumps(all_pillar_candidates, ensure_ascii=False)}
@@ -370,17 +390,27 @@ Hook and CTA data (for best examples):
 Return ONLY a JSON object:
 {{
   "pillars": [
-    {{"name": "AI Automation", "description": "...", "percentageOfPosts": 40, "engagementLevel": "high"}},
+    {{
+      "name": "AI Automation",
+      "description": "Sharp, opinionated description of what this pillar is, WHY it drives engagement, and what strategic ROI it creates for the creator (e.g. 'Positions them as the go-to operator in AI — every post here compounds authority and inbound')",
+      "percentageOfPosts": 40,
+      "engagementLevel": "high"
+    }},
     ...
   ],
   "archetypes": [
-    {{"name": "Listicle", "description": "...", "count": 45, "engagementLevel": "high"}},
+    {{
+      "name": "Listicle",
+      "description": "Describe not just the format but WHY this archetype converts — the psychology and engagement mechanic behind it",
+      "count": 45,
+      "engagementLevel": "high"
+    }},
     ...
   ],
   "hookStrategy": {{
-    "formula": "One sentence describing the winning hook approach",
+    "formula": "One punchy, actionable sentence summarizing the hook formula — make it sound like a trade secret",
     "patterns": [
-      {{"name": "Money Hook", "description": "...", "engagementLevel": "high"}},
+      {{"name": "Money Hook", "description": "Specific mechanism: why this pattern stops the scroll and what it triggers in the reader", "engagementLevel": "high"}},
       ...
     ],
     "bestExamples": [
@@ -389,9 +419,9 @@ Return ONLY a JSON object:
     ]
   }},
   "ctaStrategy": {{
-    "formula": "One sentence describing the winning CTA approach",
+    "formula": "One punchy, actionable sentence summarizing the CTA formula",
     "patterns": [
-      {{"name": "Comment-gated", "description": "...", "engagementLevel": "high"}},
+      {{"name": "Comment-gated", "description": "Why this drives algorithmic reach AND builds the creator's authority simultaneously", "engagementLevel": "high"}},
       ...
     ],
     "bestExamples": [
@@ -399,10 +429,15 @@ Return ONLY a JSON object:
       ...
     ]
   }},
-  "executiveSummary": "3-4 sentences consolidating the summary bullets into one cohesive overview"
+  "executiveSummary": "3-4 OPINIONATED sentences. Lead with what this creator is doing that most people aren't. Name the strategic moat. Quantify the edge where possible. Do NOT just list what they post — explain the SYSTEM behind it and why it compounds over time.",
+  "bigStrategicOpportunity": "2-3 sentences identifying the single biggest untapped opportunity this creator has. Be specific and bold — what's the one move that would 2x their impact? This should feel like advice from a $10k/hr consultant."
 }}
 
-Merge duplicates and synonyms. Use consistent naming. Return ONLY JSON."""
+Rules:
+- Return exactly 3-5 pillars and exactly 3-4 archetypes — no more, no less
+- Merge duplicates and synonyms into the strongest version
+- Use consistent naming across pillars and archetypes
+- Return ONLY valid JSON, no markdown"""
 
     raw = await provider.generate(prompt)
     try:
@@ -436,81 +471,148 @@ Merge duplicates and synonyms. Use consistent naming. Return ONLY JSON."""
                 formula="Analysis unavailable", patterns=[], bestExamples=[]
             ),
             executiveSummary="Consolidation failed - using fallback data",
+            bigStrategicOpportunity="",
         )
 
 
-async def analyze_best_worst_posts(
+async def generate_agent_strategy(
     provider: LLMProvider,
-    top_posts: List[ScoredPost],
-    worst_posts: List[ScoredPost],
-    avg_reactions: float,
-    avg_comments: float,
-) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    profile_name: str,
+    pillars: List[ContentPillar],
+    archetypes: List[PostArchetype],
+) -> List[AgentWorkflow]:
     """
-    Analyze top 5 and worst 5 posts together in one call.
+    Generate 3 specific AI agent workflows a solo operator could use
+    to replicate this profile's content output — one per top pillar.
     """
-    top_5 = top_posts[:5]
-    worst_5 = worst_posts[:5]
-
-    top_data = [
+    pillars_data = [
         {
-            "text": p.text,
-            "likes": p.numLikes,
-            "comments": p.numComments,
-            "shares": p.numShares,
-            "score": round(p.ageAdjustedScore, 2),
+            "name": p.name,
+            "description": p.description,
+            "engagementLevel": p.engagementLevel,
+            "percentageOfPosts": p.percentageOfPosts,
         }
-        for p in top_5
+        for p in pillars[:3]
+    ]
+    archetypes_data = [
+        {"name": a.name, "description": a.description, "engagementLevel": a.engagementLevel}
+        for a in archetypes[:3]
     ]
 
-    worst_data = [
-        {
-            "text": p.text,
-            "likes": p.numLikes,
-            "comments": p.numComments,
-            "score": round(p.ageAdjustedScore, 2),
-        }
-        for p in worst_5
-    ]
+    prompt = f"""You are designing AI agent workflows for a solo operator who wants to replicate {profile_name}'s LinkedIn content machine using AI.
 
-    prompt = f"""Analyze the best and worst performing LinkedIn posts.
+The creator's top content pillars:
+{json.dumps(pillars_data, ensure_ascii=False, indent=2)}
 
-Average performance: {avg_reactions:.0f} reactions, {avg_comments:.0f} comments
+Their top post archetypes:
+{json.dumps(archetypes_data, ensure_ascii=False, indent=2)}
 
-TOP 5 POSTS (significantly outperformed average):
-{json.dumps(top_data, ensure_ascii=False, indent=2)}
+Prioritize the pillars with the highest engagementLevel and percentageOfPosts — those are where this creator already has proven leverage.
 
-WORST 5 POSTS (underperformed average):
-{json.dumps(worst_data, ensure_ascii=False, indent=2)}
+Design exactly 3 AI agent workflows — one per pillar. Each workflow is a specific, buildable agentic system.
 
-Return ONLY a JSON object:
-{{
-  "topPostsAnalysis": [
-    {{"text": "First 50 chars of post...", "reasons": ["Reason 1", "Reason 2", "Reason 3"]}},
-    ...
-  ],
-  "worstPostsAnalysis": [
-    {{"text": "First 50 chars of post...", "why_flopped": "1-2 sentence explanation"}},
-    ...
-  ]
-}}
+Return ONLY a JSON array:
+[
+  {{
+    "name": "Short memorable agent name (e.g. 'Trend Radar Agent')",
+    "pillar": "The content pillar this agent serves",
+    "archetype": "The post format/archetype this agent generates",
+    "description": "2-3 sentences: What this agent does, what inputs it takes, what it outputs, and WHY it creates 10x leverage for a solo operator. Be specific and concrete — reference the pillar and archetype.",
+    "prompt_skeleton": "A 3-5 line starter system prompt or workflow outline a builder could use to create this agent. Make it immediately actionable."
+  }},
+  ...
+]
 
-For top posts: Provide exactly 3 specific reasons why each outperformed.
-For worst posts: Provide 1-2 sentences explaining why each underperformed.
-Be specific to the actual content, not generic."""
+Rules:
+- Each agent must map to a DIFFERENT pillar
+- Make the agents feel like real products a founder would pay for
+- The prompt_skeleton should be copy-paste ready, not just a description
+- Return ONLY valid JSON array, no markdown"""
 
     raw = await provider.generate(prompt)
     try:
         data = extract_json(raw)
-        top_analysis = data.get("topPostsAnalysis", [])
-        worst_analysis = data.get("worstPostsAnalysis", [])
-        return (top_analysis, worst_analysis)
+        if not isinstance(data, list):
+            raise ValueError("Expected JSON array")
+        workflows = []
+        for item in data:
+            if isinstance(item, dict):
+                workflows.append(
+                    AgentWorkflow(
+                        name=str(item.get("name", "Agent")),
+                        pillar=str(item.get("pillar", "")),
+                        archetype=str(item.get("archetype", "")),
+                        description=str(item.get("description", "")),
+                        prompt_skeleton=str(item.get("prompt_skeleton", "")),
+                    )
+                )
+        return workflows[:3]
     except Exception:
-        top_analysis = [
-            {"text": p.text[:50], "reasons": ["Analysis unavailable"]} for p in top_5
-        ]
-        worst_analysis = [
-            {"text": p.text[:50], "why_flopped": "Analysis unavailable"}
-            for p in worst_5
-        ]
-        return (top_analysis, worst_analysis)
+        return []
+
+
+async def generate_steal_this_hooks(
+    provider: LLMProvider,
+    profile_name: str,
+    archetypes: List[PostArchetype],
+    hook_strategy: HookStrategy,
+    top_posts_context: str,
+) -> List[StealThisHook]:
+    """
+    Generate 5 pre-written LinkedIn hooks tailored to this profile's
+    best-performing archetypes — ready to copy, paste, and publish.
+    """
+    archetypes_data = [
+        {"name": a.name, "description": a.description, "engagementLevel": a.engagementLevel}
+        for a in archetypes[:3]
+    ]
+
+    prompt = f"""You are a world-class LinkedIn ghostwriter. Your job is to write 5 ready-to-publish hook lines tailored to {profile_name}'s content style and best-performing post archetypes.
+
+Their top archetypes:
+{json.dumps(archetypes_data, ensure_ascii=False, indent=2)}
+
+Their winning hook formula:
+{hook_strategy.formula}
+
+Top performing post hooks for reference:
+{top_posts_context}
+
+Write exactly 5 hooks. Each hook must:
+- Be a single punchy line (max 15 words) that stops the scroll
+- Be specific to one of their archetypes — not generic
+- Feel like it belongs in THIS creator's voice
+- Create immediate curiosity or tension
+
+Return ONLY a JSON array:
+[
+  {{
+    "hook": "The ready-to-use hook line",
+    "archetype": "Which archetype from their list this is modeled on",
+    "why_it_works": "One sentence naming exactly one trigger (curiosity gap / loss aversion / social proof / authority / urgency / pain) and explaining how this hook activates it"
+  }},
+  ...
+]
+
+Return ONLY valid JSON array, no markdown."""
+
+    raw = await provider.generate(prompt)
+    try:
+        data = extract_json(raw)
+        if not isinstance(data, list):
+            raise ValueError("Expected JSON array")
+        hooks = []
+        for item in data:
+            if isinstance(item, dict):
+                hooks.append(
+                    StealThisHook(
+                        hook=str(item.get("hook", "")),
+                        archetype=str(item.get("archetype", "")),
+                        why_it_works=str(item.get("why_it_works", "")),
+                    )
+                )
+        return hooks[:5]
+    except Exception:
+        return []
+
+

@@ -53,6 +53,12 @@ linkedin-analyzer pdf --file analysis.json --output report.pdf
 
 # Run analysis from local JSON (skip scraping)
 linkedin-analyzer profile --file local_posts.json --output analysis.json
+
+# Deconstruct a single post + generate PDF
+linkedin-analyzer post --url <post_url> --pdf report.pdf
+
+# Deconstruct a single post, JSON only
+linkedin-analyzer post --url <post_url> --output deconstruct.json
 ```
 
 ### Scraping Controls
@@ -131,7 +137,7 @@ Key Pydantic models:
 The CLI ([cli.py](linkedin_analyzer/cli.py)) has three commands:
 - `extract` - Scrape only, output raw JSON
 - `profile` - Full profile analysis pipeline, output JSON
-- `post` - Deconstruct a single viral post, output JSON
+- `post` - Deconstruct a single viral post, output JSON; supports `--pdf` to also generate a 2-page PDF (deconstruction + CTA page)
 - `pdf` - Generate PDF (can run full pipeline or use existing JSON)
 
 All commands support `--url` (scrape) or `--file` (use local JSON).

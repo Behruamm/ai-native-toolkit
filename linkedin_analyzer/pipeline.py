@@ -22,6 +22,9 @@ from .ai_insights import (
     chunk_posts,
     analyze_chunk_optimized,
     consolidate_chunk_results,
+    generate_agent_strategy,
+    generate_steal_this_hooks,
+    build_hook_cta_context,
 )
 from .types import FullAnalysis, HookStrategy, CTAStrategy
 
@@ -135,6 +138,7 @@ async def run_full(
                 hook_strategy = consolidated.hookStrategy
                 cta_strategy = consolidated.ctaStrategy
                 exec_summary = consolidated.executiveSummary
+                big_opportunity = consolidated.bigStrategicOpportunity
             except Exception as e:
                 print(f"[Analysis] WARNING: Consolidation failed: {e}")
                 content_pillars = []
@@ -142,23 +146,46 @@ async def run_full(
                 hook_strategy = HookStrategy(formula="Analysis failed", patterns=[], bestExamples=[])
                 cta_strategy = CTAStrategy(formula="Analysis failed", patterns=[], bestExamples=[])
                 exec_summary = "Analysis consolidation failed"
+                big_opportunity = ""
         else:
             content_pillars = []
             post_archetypes = []
             hook_strategy = HookStrategy(formula="Analysis failed", patterns=[], bestExamples=[])
             cta_strategy = CTAStrategy(formula="Analysis failed", patterns=[], bestExamples=[])
             exec_summary = "Chunk analysis failed"
+            big_opportunity = ""
 
-        # No top/worst post AI analysis needed - we just show the lists
+        # PHASE 3: Agent strategy + steal-this hooks (parallel)
+        profile_name_tmp = posts[0].authorName if posts[0].authorName else "this creator"
+        top_hooks_ctx = build_hook_cta_context(posts, scored_posts_age, limit=10)
+
+        print("[Analysis] Generating AI-Native Blueprint and Steal-These Hooks...")
+        agent_task = generate_agent_strategy(
+            provider, profile_name_tmp, content_pillars, post_archetypes
+        )
+        hooks_task = generate_steal_this_hooks(
+            provider, profile_name_tmp, post_archetypes, hook_strategy, top_hooks_ctx
+        )
+        agent_results = await asyncio.gather(agent_task, hooks_task, return_exceptions=True)
+
+        agent_workflows = agent_results[0] if not isinstance(agent_results[0], Exception) else []
+        steal_hooks = agent_results[1] if not isinstance(agent_results[1], Exception) else []
+        if isinstance(agent_results[0], Exception):
+            print(f"[Analysis] WARNING: Agent strategy failed: {agent_results[0]}")
+        if isinstance(agent_results[1], Exception):
+            print(f"[Analysis] WARNING: Steal-hooks failed: {agent_results[1]}")
 
     else:
         # Skip AI — provide placeholders
         print("[Analysis] Skipping AI generation. Using placeholders.")
         content_pillars = []
         exec_summary = "AI analysis skipped via --skip-ai flag."
+        big_opportunity = ""
         post_archetypes = []
         hook_strategy = HookStrategy(formula="AI skipped", patterns=[], bestExamples=[])
         cta_strategy = CTAStrategy(formula="AI skipped", patterns=[], bestExamples=[])
+        agent_workflows = []
+        steal_hooks = []
 
     # 4. Assemble FullAnalysis
     profile_name = posts[0].authorName if posts[0].authorName else "LinkedIn Creator"
@@ -183,6 +210,7 @@ async def run_full(
         textPatterns=text_patterns,
         commentAnalysis=comment_analysis,
         executiveSummary=exec_summary,
+        bigStrategicOpportunity=big_opportunity,
         contentPillars=content_pillars,
         postArchetypes=post_archetypes,
         topPosts=top_posts,
@@ -192,6 +220,8 @@ async def run_full(
         ctaAnalysis=cta_analysis,
         hookStrategy=hook_strategy,
         ctaStrategy=cta_strategy,
+        agentWorkflows=agent_workflows,
+        stealTheseHooks=steal_hooks,
     )
 
     return analysis

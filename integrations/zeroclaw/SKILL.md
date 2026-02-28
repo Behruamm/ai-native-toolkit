@@ -25,7 +25,10 @@ linkedin-analyzer profile --url <linkedin-profile-url> --output analysis.json
 ### 2. Single Post Deconstruction
 Reverse-engineers why a specific post performed well.
 ```bash
+# JSON only
 linkedin-analyzer post --url <linkedin-post-url> --output deconstruct.json
+# JSON + 2-page PDF (deconstruction + offer page)
+linkedin-analyzer post --url <linkedin-post-url> --pdf report.pdf
 # Optional: --skip-ai
 ```
 
@@ -83,4 +86,4 @@ If the repo doesn't exist, skip silently and continue.
    - Content pillar and archetype
    - Replication guide (step-by-step)
 
-6. **Offer PDF** after profile analysis.
+6. **Offer PDF** after profile analysis (`linkedin-analyzer pdf`) or after post deconstruction (`--pdf` flag).
