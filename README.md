@@ -71,17 +71,36 @@ A real PDF report is included so you can see the output before running anything:
 
 ## Agent Integrations
 
-This toolkit is designed to be a "skill" for AI agents. To install for your preferred agent:
+This toolkit installs as a native skill for AI agents. The install script auto-detects which agents are on your system and copies the right files.
 
 ```bash
+# Clone the repo (if you haven't already)
+git clone https://github.com/Behruamm/ai-native-toolkit.git
+cd ai-native-toolkit
+
+# Install the toolkit
+pip install -e .
+
+# Install skill for all detected agents
 python integrations/install.py --agent all
+
+# Or install for a specific agent
+python integrations/install.py --agent claude-code
 ```
 
-Supported Agents:
+See which agents are detected on your system:
 
-- **Claude Code**: Installs to `~/.claude/skills/`
-- **Codex**: Installs to `~/.codex/skills/`
-- **Cursor**: Installs as a `.cursorrule`
-- **Antigravity**: Installs to `~/.gemini/antigravity/skills/`
-- **OpenClaw**: Installs to `~/.openclaw/skills/`
-- **ZeroClaw**: Installs to `~/.zeroclaw/workspace/skills/`
+```bash
+python integrations/install.py --list
+```
+
+Supported agents and install locations:
+
+- **Claude Code**: `~/.claude/skills/linkedin-analyzer/`
+- **Codex**: `~/.codex/skills/linkedin-analyzer/`
+- **Cursor**: `~/.cursor/rules/linkedin-analyzer.mdc`
+- **Antigravity**: `~/.gemini/antigravity/skills/linkedin-analyzer/`
+- **OpenClaw**: `~/.openclaw/skills/linkedin-analyzer/`
+- **ZeroClaw**: `~/.zeroclaw/workspace/skills/linkedin-analyzer/`
+
+After installing, restart your agent and ask it to analyze a LinkedIn profile.
