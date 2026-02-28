@@ -293,11 +293,11 @@ def generate_pdf(a: FullAnalysis) -> bytes:
 
     pdf.set_font("Helvetica", "B", 30)
     pdf.set_text_color(*C_WHITE)
-    pdf.cell(0, 15, sanitize_pdf_text(a.profileName.upper()), align="C", ln=1)
+    pdf.cell(0, 15, "[PROFILE REDACTED]", align="C", ln=1)
 
     pdf.set_font("Helvetica", size=12)
     pdf.set_text_color(*C_CREAM)
-    pdf.cell(0, 8, sanitize_pdf_text(a.profileHeadline), align="C", ln=1)
+    pdf.cell(0, 8, "[Headline Redacted]", align="C", ln=1)
 
     date_str = (
         datetime.fromisoformat(a.analyzedAt.replace("Z", "+00:00")).strftime(

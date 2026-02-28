@@ -50,6 +50,7 @@ analysis.json
 report.pdf
 jon_*.json
 jon_*.pdf
+!jon_report_v2.pdf
 ian_*.json
 ian_*.pdf
 test_*.json

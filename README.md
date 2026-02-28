@@ -35,29 +35,39 @@ export GEMINI_API_KEY='your_gemini_key'  # or OPENAI_API_KEY or ANTHROPIC_API_KE
 ## CLI Usage
 
 ### 1. Extract Raw Data
+
 ```bash
 linkedin-analyzer extract --url <profile_url>
 # Optional: --limit-per-source 10 --scrape-until 2025-01-01 --deep-scrape --raw-data
 ```
 
 ### 2. Analyze a Profile
+
 ```bash
 linkedin-analyzer profile --url <profile_url> --output analysis.json
 # Optional: --limit-per-source 10 --scrape-until 2025-01-01 --skip-ai
 ```
 
 ### 3. Deconstruct a Single Post
+
 ```bash
 linkedin-analyzer post --url <post_url> --output deconstruct.json
 # Optional: --skip-ai
 ```
 
 ### 4. Generate PDF Report
+
 ```bash
 linkedin-analyzer pdf --file analysis.json --output report.pdf
 # Or run from URL directly:
 linkedin-analyzer pdf --url <profile_url> --output report.pdf
 ```
+
+## Sample Output
+
+A real PDF report is included so you can see the output before running anything:
+
+- [jon_report_v2.pdf](jon_report_v2.pdf) — 8-page PDF report (100 posts, 8 weeks, 3,777 reactions, AI-generated content pillars, archetypes, hook/CTA strategies)
 
 ## Agent Integrations
 
@@ -68,6 +78,7 @@ python integrations/install.py --agent all
 ```
 
 Supported Agents:
+
 - **Claude Code**: Installs to `~/.claude/skills/`
 - **Codex**: Installs to `~/.codex/skills/`
 - **Cursor**: Installs as a `.cursorrule`
