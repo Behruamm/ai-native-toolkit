@@ -1,40 +1,76 @@
-# AI Native Toolkit: LinkedIn Content Analyzer
+# AI Native Toolkit: LinkedIn Analyzer
 
-A native Python toolkit that analyzes any LinkedIn profile's content strategy. Designed both as a standalone CLI tool and as a deployable skill for 6 popular AI agents (Claude Code, OpenAI Codex, Cursor, Google Antigravity, OpenClaw, ZeroClaw).
+A powerful Python-based LinkedIn Content Strategy Analyzer. Analyze full profiles or deconstruct individual viral posts — then generate AI-driven growth strategies.
+
+Designed for creators, entrepreneurs, and AI agents.
 
 ## Features
-- **Deterministic Metrics**: Computes cadence, engagement, formatting, and scheduling profiles.
-- **AI Content Strategy**: Employs Gemini, OpenAI, or Anthropic to deduce content pillars, post archetypes, top/worst post analysis, hook/CTA formulas, and master strategies.
-- **Agent Integrations**: First-class support for native AI agent deployment.
-- **Report Generation**: Exports rich 8-page PDF summaries.
 
-## Getting Started
+- **Profile Analysis**: Cadence, engagement, post type breakdown, content pillars, archetypes, hook/CTA formulas.
+- **Viral Post Deconstructor**: Reverse-engineer any single LinkedIn post — why it worked, hook/CTA formulas, replication guide.
+- **AI Insights**: Executive summaries, content pillars, post archetypes, hook/CTA strategies powered by Gemini, OpenAI, or Anthropic.
+- **8-Page PDF Report**: Professional, visual report generated using `fpdf2`.
+- **Agent Native**: Built-in skill definitions for Claude Code, Codex, Cursor, Antigravity, OpenClaw, and ZeroClaw.
 
-### Installation
+## Installation
 
-**As a standalone CLI:**
 ```bash
-pip install ai-native-toolkit
+# Clone the repository
+git clone https://github.com/behramshukur/ai-native-toolkit.git
+cd ai-native-toolkit
+
+# Install in editable mode
+pip install -e .
 ```
 
-**As an AI Agent Skill:**
+## Setup
+
+You need an [Apify API Key](https://apify.com/) and at least one LLM Provider key:
+
 ```bash
-# Auto-detects installed agents and configures the skill
-python integrations/install.py
+export APIFY_API_KEY='your_apify_key'
+export GEMINI_API_KEY='your_gemini_key'  # or OPENAI_API_KEY or ANTHROPIC_API_KEY
 ```
 
-### Usage
-Extract raw data:
+## CLI Usage
+
+### 1. Extract Raw Data
 ```bash
-linkedin-analyzer extract --url "https://linkedin.com/in/someone"
+linkedin-analyzer extract --url <profile_url>
+# Optional: --limit-per-source 10 --scrape-until 2025-01-01 --deep-scrape --raw-data
 ```
 
-Perform a full analysis:
+### 2. Analyze a Profile
 ```bash
-linkedin-analyzer analyze --url "https://linkedin.com/in/someone"
+linkedin-analyzer profile --url <profile_url> --output analysis.json
+# Optional: --limit-per-source 10 --scrape-until 2025-01-01 --skip-ai
 ```
 
-Generate PDF report:
+### 3. Deconstruct a Single Post
 ```bash
-linkedin-analyzer pdf --url "https://linkedin.com/in/someone" --output report.pdf
+linkedin-analyzer post --url <post_url> --output deconstruct.json
+# Optional: --skip-ai
 ```
+
+### 4. Generate PDF Report
+```bash
+linkedin-analyzer pdf --file analysis.json --output report.pdf
+# Or run from URL directly:
+linkedin-analyzer pdf --url <profile_url> --output report.pdf
+```
+
+## Agent Integrations
+
+This toolkit is designed to be a "skill" for AI agents. To install for your preferred agent:
+
+```bash
+python integrations/install.py --agent all
+```
+
+Supported Agents:
+- **Claude Code**: Installs to `~/.claude/skills/`
+- **Codex**: Installs to `~/.codex/skills/`
+- **Cursor**: Installs as a `.cursorrule`
+- **Antigravity**: Installs to `~/.gemini/antigravity/skills/`
+- **OpenClaw**: Installs to `~/.openclaw/skills/`
+- **ZeroClaw**: Installs to `~/.zeroclaw/workspace/skills/`

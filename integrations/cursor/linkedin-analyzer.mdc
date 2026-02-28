@@ -1,0 +1,44 @@
+---
+description: Analyze LinkedIn profiles and deconstruct single posts for content strategy insights
+globs: ["**/linkedin*.json", "**/profile*.json", "**/deconstruct*.json"]
+alwaysApply: false
+---
+
+# LinkedIn Content Analyzer
+
+When the user asks to analyze a LinkedIn profile or deconstruct a LinkedIn post, use the `linkedin-analyzer` CLI tool in the built-in terminal.
+
+1. Check if the CLI is installed: `which linkedin-analyzer`. If not, tell the user to `pip install ai-native-toolkit`.
+
+2. **Profile URL** → run full profile analysis:
+   ```bash
+   linkedin-analyzer profile --url <linkedin-profile-url> --output analysis.json
+   # Optional: --limit-per-source 10 --scrape-until 2025-01-01
+   ```
+   Read `analysis.json` and present:
+   - Avg metrics (reactions, comments), cadence
+   - Best hook and CTA styles
+   - Top and worst posts with engagement scores
+   - Hook & CTA strategy patterns and examples
+
+3. **Post URL** → deconstruct a single post:
+   ```bash
+   linkedin-analyzer post --url <linkedin-post-url> --output deconstruct.json
+   ```
+   Read `deconstruct.json` and present:
+   - Hook type and formula
+   - CTA type and formula
+   - Why it worked, content pillar, archetype
+   - Step-by-step replication guide
+
+4. **PDF report** (after profile analysis):
+   ```bash
+   linkedin-analyzer pdf --file analysis.json --output report.pdf
+   ```
+
+## Setup requirements
+Needs API keys exported in your shell:
+```
+export APIFY_API_KEY="..."
+export GEMINI_API_KEY="..."   # or OPENAI_API_KEY / ANTHROPIC_API_KEY
+```

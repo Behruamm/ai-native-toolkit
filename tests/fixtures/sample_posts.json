@@ -1,0 +1,2440 @@
+[
+  {
+    "type": "image",
+    "text": "Stop learning AntiGravity from 50 different tutorials.\n\nHere's a free 3-hour masterclass that takes you from zero to deploying production apps:\n\nOne video. Twelve sections. Everything in order.\n\nHere's what it covers:\n\n\u2192 Build your first AI app in the cloud (no install, no terminal)\n\u2192 Install AntiGravity locally (full control on your machine)\n\u2192 The 5-step framework (the system behind every build I ship)\n\u2192 MCP mastery (connect AntiGravity to any tool or database)\n\u2192 NotebookLM integration (give your AI persistent memory)\n\u2192 Website creation (clients can't tell it's AI-built)\n\u2192 Animated UI systems (agency-level design from one prompt)\n\u2192 150+ AI model access (Claude, GPT, Grok \u2014 not just Gemini)\n\n93,000 people have already watched it. It's the most complete free AntiGravity course on YouTube.\n\nI built it because I wasted 100+ hours piecing together scattered guides. Nobody should have to do that.\n\nComment \"MASTERCLASS\" and I'll send you the full link plus my notes on which sections to watch first.\n\n\u267b\ufe0f Repost for priority access, I'll send yours first.\n\nWhich section would save you the most time right now? \ud83d\udc47",
+    "numLikes": 162,
+    "numComments": 294,
+    "numShares": 18,
+    "postedAtTimestamp": 1772026238143,
+    "postedAtISO": "2026-02-25T13:30:38.143Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Masterclass",
+        "time": 1772078520287
+      },
+      {
+        "text": "MASTERCLASS",
+        "time": 1772077241187
+      },
+      {
+        "text": "Masterclass",
+        "time": 1772077154076
+      },
+      {
+        "text": "Masterclass",
+        "time": 1772076945106
+      },
+      {
+        "text": "Masterclass",
+        "time": 1772076719924
+      },
+      {
+        "text": "Masterclass",
+        "time": 1772075577996
+      },
+      {
+        "text": "Master class",
+        "time": 1772074343501
+      },
+      {
+        "text": "MASTERCLASS",
+        "time": 1772074253979
+      },
+      {
+        "text": "MASTERCLASS",
+        "time": 1772074021318
+      },
+      {
+        "text": "masterclass",
+        "time": 1772073999225
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Stop shipping AI projects that break after one demo.\n\nHere's a free 9-phase QA protocol that catches everything before your client does:\n\nYou paste it into any AI chat. Claude, ChatGPT, whatever you use.\n\nIt stress tests your entire project and flags every issue before anyone touches it.\n\nHere's what it runs through:\n\n\u2192 Dependency audit (will your APIs hold up under real traffic?)\n\u2192 Security scan (exposed keys, missing auth, data leaks)\n\u2192 Functional testing (the edge cases your users WILL find)\n\u2192 Performance check (1 user works fine. What about 500?)\n\u2192 Deployment readiness (no rollback plan? no monitoring? flagged)\n\u2192 Client handover (can they actually run this without calling you?)\n\nEvery issue gets rated: CRITICAL, WARNING, or GOOD.\n\nOne final verdict. PASS or FAIL.\n\nI've used this on every client project for 3 months. Zero post-delivery fires. Zero midnight messages.\n\nThis is the checklist I wish existed before my first client demo went sideways.\n\nComment \"QA\" and I'll send you the full protocol.\n\n\u267b\ufe0f Repost for priority access \u2014 I'll send yours first.\n\nWhat's the last thing that broke after you shipped it? \ud83d\udc47",
+    "numLikes": 62,
+    "numComments": 118,
+    "numShares": 3,
+    "postedAtTimestamp": 1771235103192,
+    "postedAtISO": "2026-02-16T09:45:03.192Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "QA",
+        "time": 1772043939497
+      },
+      {
+        "text": "QA",
+        "time": 1771993091020
+      },
+      {
+        "text": "QA",
+        "time": 1771746874643
+      },
+      {
+        "text": "QA",
+        "time": 1771738989764
+      },
+      {
+        "text": "QA",
+        "time": 1771710864660
+      },
+      {
+        "text": "QA",
+        "time": 1771710128464
+      },
+      {
+        "text": "QA",
+        "time": 1771707595488
+      },
+      {
+        "text": "QA",
+        "time": 1771697645574
+      },
+      {
+        "text": "QA",
+        "time": 1771693981772
+      },
+      {
+        "text": "QA love to see it",
+        "time": 1771693133060
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Zapier, Make, and n8n aren't going anywhere.\n\nBut here's the uncomfortable truth:\n\nIf drag-and-drop is all you know, you're bringing a bicycle to a Formula 1 race.\n\nHere's the shift:\n\nOLD: You connect boxes together.\n\u2192 Trigger \u2192 Action \u2192 Action \u2192 Output\n\u2192 You design every step manually\n\u2192 If it breaks, you fix it manually\n\u2192 It does EXACTLY what you told it. Nothing more.\n\nNEW: You describe the outcome.\n\u2192 An AI agent designs the architecture\n\u2192 Writes the code, connects the database, handles errors\n\u2192 Deploys, maintains, and improves itself\n\u2192 Spawns other agents to run parallel tasks\n\nThis isn't future talk. I've been building this way for months.\n\nLast week I set up a system that:\n\u2192 Scrapes industry news every 24 hours\n\u2192 Summarizes with AI\n\u2192 Stores in a searchable knowledge base\n\u2192 Surfaces insights on demand\n\nNo boxes. No drag-and-drop. One prompt.\n\nWorkflows automate tasks.\nAgents automate decisions.\n\nBoth have a place. But if you want to 10x your output in 2026:\n\nLearn to build agents, not just workflows.\n\nWhat's one workflow you'd love to turn into something that runs itself? \ud83d\udc47",
+    "numLikes": 43,
+    "numComments": 12,
+    "numShares": 0,
+    "postedAtTimestamp": 1771142441715,
+    "postedAtISO": "2026-02-15T08:00:41.715Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "You need the right tool for the right job. \n\nMany business still rely on Excel and Google sheets. Are we going to be less reliant - of course! Shoot I'm seeing vibe code apps using spreadsheets as databases (great for internal team projects). \n\nBut definitely Claude code is becoming the epicenter of productivity for many people ",
+        "time": 1772001148547
+      },
+      {
+        "text": "really hard to go back to drag-and-drop after experiencing claude code + n8n mcp",
+        "time": 1771938249524
+      },
+      {
+        "text": "Indeed I think Make or n8n can be a good beginning to understand the logic of automation and get a first taste of it. \n\nBut if you want to scale and save time, agentic workflows are a no brainer.\n\nHowever, you should be aware of maybe not build a whole agentic workflow for a simple task (overkill) and you should choose wisely when to use n8n or Antigravity. ",
+        "time": 1771292527379
+      },
+      {
+        "text": "How to win the Premier League could be a good one Jack! \ud83d\ude1d",
+        "time": 1771248897331
+      },
+      {
+        "text": "The \u201cagents automate decisions\u201d line is the real divider. Workflows handle the happy path. Agents handle the messy parts that always show up at scale.",
+        "time": 1771247609831
+      },
+      {
+        "text": "Claude code skills can pretty much eliminate most repetitive tasks with one prompt",
+        "time": 1771166494391
+      },
+      {
+        "text": "N8n,Make and Zapier are like html and css nowadays \nYou need to know them but they are not something you can build a career with them\nThey are useful in some cases like migrating or cleaning data, and automating daily tasks...\nBut we can't deny that they provide a huge value.",
+        "time": 1771150152887
+      },
+      {
+        "text": "Workflows are instructions , agents are outcomes.  \n\nShift your focus and the system starts thinking for you Jack Roberts",
+        "time": 1771149628118
+      },
+      {
+        "text": "So is n8n not going anywhere or is going somewhere? I think they are going to decreased revenue and capitalization. Software by itself will have a place in the world, just like excel and SAP still do\u2026",
+        "time": 1771147168697
+      },
+      {
+        "text": "Agents are powerful  until they hit production.\n\nI\u2019ve built both. At scale, you still need deterministic workflows for reliability.\nAgents handle ambiguity. Workflows handle accountability.\n\nIt\u2019s not either/or  it\u2019s architecture.",
+        "time": 1771142702861
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Stop watching 3-hour tutorials you'll never finish.\n\nI did the hard part for you.\n\n42,000+ people watched my AntiGravity Masterclass.\n\nMost got overwhelmed by hour two and never took action.\n\nSo I ripped out the essential parts and built this:\n\nThe AntiGravity Starter Pack (free):\n\n\u2192 BLAST Framework (one-pager for structuring every project)\n\u2192 First Project Walkthrough (screenshot by screenshot)\n\u2192 MCP Setup Guide (connect AI to real tools in 10 min)\n\u2192 Skills Library (reusable automation templates)\n\u2192 Error Fix Guide (the 7 bugs everyone hits + solutions)\n\u2192 15 Project Ideas (sorted by difficulty and business value)\n\nThis is the resource I wish existed when I started.\n\nIt would've saved me 30+ hours of trial and error.\n\nNo fluff. No theory. Open it and build something today.\n\nJoin 1,700+ builders already inside \u2014 link in comments.\n\n\u267b\ufe0f Repost so your network can grab it too.\n\nPS \u2014 119,000+ people are already building with this system. Join them.",
+    "numLikes": 57,
+    "numComments": 34,
+    "numShares": 6,
+    "postedAtTimestamp": 1771056004028,
+    "postedAtISO": "2026-02-14T08:00:04.028Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Link",
+        "time": 1771795939123
+      },
+      {
+        "text": "Link please \ud83d\ude4f Jack Roberts",
+        "time": 1771739398804
+      },
+      {
+        "text": "Link\n",
+        "time": 1771571373916
+      },
+      {
+        "text": "Massive Value Jack.  ",
+        "time": 1771453310450
+      },
+      {
+        "text": "Link please \ud83d\ude4f",
+        "time": 1771253545573
+      },
+      {
+        "text": "Link",
+        "time": 1771154806936
+      },
+      {
+        "text": "Link please",
+        "time": 1771137322795
+      },
+      {
+        "text": "\ud83d\udd17 Grab the free AntiGravity Design System & Starter Pack here: \n1. https://www.youtube.com/watch?v=cFThM_D3nl8&t=860s\n2. https://aijack.gumroad.com/l/nrgtw\n\nJoin 1,700+ builders in the community: https://www.skool.com/aiautomationsbyjack",
+        "time": 1771129587066
+      },
+      {
+        "text": "Amazingly good \ud83d\udc4d ",
+        "time": 1771116132741
+      },
+      {
+        "text": "Link Jack Roberts",
+        "time": 1771105731405
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Unpopular opinion: Learning to code in 2026 is the new \"learn to type\" advice from 1995.\n\nEveryone said you had to. Almost nobody actually needed to.\n\nHere's what I mean.\n\nLast week I shipped 3 applications:\n\n\u2192 A client dashboard with real-time analytics\n\u2192 An automated content pipeline\n\u2192 An ecommerce site with full checkout\n\nLines of code I personally wrote: zero.\n\nWhat I actually did:\n\n\u2192 Described the outcome clearly\n\u2192 Gave AI the right references and context\n\u2192 Reviewed the output and gave precise feedback\n\u2192 Hit deploy\n\nThat's not coding. That's directing.\n\nAnd it's the highest-leverage skill in tech right now.\n\nThe best founders I know aren't learning Python.\nThey're learning to think in outcomes and direct AI systems like a team.\n\nIf you're a non-technical founder:\n\nYour era just started.\n\nThe playing field hasn't been this level since the internet.\n\nStop learning syntax. Start learning to direct.\n\nAgree or disagree? I want to hear your take. \ud83d\udc47",
+    "numLikes": 34,
+    "numComments": 9,
+    "numShares": 1,
+    "postedAtTimestamp": 1770969681231,
+    "postedAtISO": "2026-02-13T08:01:21.231Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "I disagree. Knowing how to code puts you in a position to prompt better. You also understand whats going on instead of throwing words and hoping it understands you.\n\nIt will also save you a lot of time trying ti debug what you don't understand.\n\nIts important not to mislead people all in the name of content. \n\nIs it compulsory to learn code no, but its an added advantage.",
+        "time": 1771828796934
+      },
+      {
+        "text": "Even today I'm very happy that I learned to type in 1995.",
+        "time": 1771759360704
+      },
+      {
+        "text": "This perspective makes me wonder if traditional computer science education needs a fundamental re-evaluation to stay relevant.",
+        "time": 1771172523468
+      },
+      {
+        "text": "System design is an underrated component of building orchestrated systems. ",
+        "time": 1771048768965
+      },
+      {
+        "text": "Totally agree Jack. Putting the finishing touches to a complex vibe coded app for a client. I\u2019m amazed at what it can do and this coming from a former software engineer.",
+        "time": 1770987479912
+      },
+      {
+        "text": "Strongly agree. Also strongly disagree. \n\nIt seems to me like learning to code is the baseline for structured thinking. \n\nNot knowing how to actually code but only think like a coder feels like starting a bakery without having ever made a cake. What do you do when it goes wrong? How do you develop the intuition for guidance? I think delegation, definition, evaluation and communication are all really important skills but they come through experience and that's what's missing if you learn to direct, not code. ",
+        "time": 1770980590842
+      },
+      {
+        "text": "I agree and disagree at the same time.\n\nI've been able to deliver a coded solution in days instead of a month. Because I've directed, as you mention. But I've 20 years of coding experience behind me,\n\nIf you are interested in learning to code. Use AI and get good at prompting. But ask it what it did, why it did it and learn the process. \n\nAI will help you fast track you're learning. And AI isn't always right.\n\nI've not helped, have I haha.",
+        "time": 1770972174774
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "I used to think you needed a developer to build software.\n\nI was wrong.\n\nLast week, I turned multiple ideas into live, working apps.\n\nTime: Just under 5 hours.\nDeveloper: none.\nBudget: $0.\nLines of code I wrote: zero.\n\nHere's the exact 6-step pipeline:\n\n1. Prototype fast \u2192 Described features to an AI builder like Gemini AI Studio. Got a working app with auth and database in 20 minutes using Supabase.\n\n2. Move it local \u2192 Exported to GitHub, opened it in AntiGravity. One command.\n\n3. Build it properly \u2192 Gave high-level instructions. AI refactored the code, connected the database, and fixed bugs I pointed at.\n\n4. Make it look real \u2192 Grabbed UI components from design libraries like 21st dev & Dribble. Fed it brand guidelines. Consistent styling across every page.\n\n5. Ship it \u2192 AI ran a quality check. Pushed to GitHub. Vercel auto-deployed to a live URL.\n\n6. Automate it \u2192 Connected Modal for scheduled jobs. The app runs 24/7. I don't.\n\nThe barrier to building software just disappeared.\n\nYou don't need a technical co-founder anymore.\n\nYou need a clear idea and 2 hours.\n\nThe skill gap is shrinking in building; it's in ideation and distribution where the difference is made.\n\nSave this. You'll want this pipeline later.\n\nWhat would YOU build with 2 free hours?",
+    "numLikes": 26,
+    "numComments": 6,
+    "numShares": 1,
+    "postedAtTimestamp": 1770883219984,
+    "postedAtISO": "2026-02-12T08:00:19.984Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "The right toolset really is a superpower for solo founders. Cutting 20 hours/week of technical overhead means more time actually building the product. Curious which of the 3 you'd keep if you had to drop the other two?",
+        "time": 1771448657519
+      },
+      {
+        "text": "Jack Roberts just checked the class in the Skool, is literally like magic!\nIf somebody wants to get in, there it is my affiliate https://www.skool.com/aiautomationsbyjack/about?ref=57697c7759c84352b047f08edbdc9d61",
+        "time": 1771016455921
+      },
+      {
+        "text": "It's a crazy new world! What did you use for step 3? Claude? ",
+        "time": 1770891094330
+      },
+      {
+        "text": "This shows that with AI-powered tools, building functional apps is now accessible to anyone, and the real challenge lies in ideation and distribution. Jack Roberts",
+        "time": 1770888557103
+      },
+      {
+        "text": "This is a real shift.\nWhat\u2019s interesting isn\u2019t that software can be built in 5 hours.\nIt\u2019s that decision latency just collapsed.\nWhen build time approaches zero, the bottleneck moves upstream \u2014 from engineering execution to consequence management.\nShipping becomes cheap.\nIteration becomes frictionless.\nAutomation becomes ambient.\nThe question stops being \u201cCan we build this?\u201d\nIt becomes \u201cWhat oversight scales with this velocity?\u201d\nWhen distribution and automation compound, small architectural assumptions scale just as fast as traction.\nThe builders who win in this environment won\u2019t just move quickly.\nThey\u2019ll design:\n\u2022 Explicit kill-switch paths\n\u2022 Observable decision logs\n\u2022 Clear ownership of automated behavior\n\u2022 Migration optionality before lock-in sets\nVelocity without boundary design creates invisible leverage.\nVelocity with boundary design creates durable advantage.\nThe barrier to building has disappeared.\nThe bar for thinking structurally just went up.",
+        "time": 1770887948771
+      },
+      {
+        "text": "Link Evento GdG:                        https://gdg.community.dev/events/details/google-gdg-torino-presents-ai-talks-n8n-from-05-to-hero/",
+        "time": 1770884610074
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Google quietly released something that changes everything.\n\nIt's called Stitch. And almost nobody on LinkedIn is talking about it.\n\nHere's what it does:\n\n\u2192 Feed it any website URL\n\u2192 It extracts the ENTIRE design system (colors, fonts, layout)\n\u2192 Builds a full multi-page site in under 2 minutes\n\nBut here's where it gets wild.\n\nConnect Stitch to AntiGravity (Google's AI coding agent), and you can set up an autonomous loop:\n\n\u2192 Tell AntiGravity to create 5 branded websites\n\u2192 Stitch builds them ALL in the background\n\u2192 You come back, pick the winner\n\u2192 AntiGravity turns it into a live React app\n\u2192 Pushes to GitHub. Deploys on Vercel.\n\u2192 You wrote zero code.\n\nI tested this last week.\n\n3 ecommerce sites. Homepage, product page, checkout flow. Each one.\n\nTime from design to live URL: under 60 minutes.\n\nThis is the kind of leverage that used to cost $15,000.\n\nNow it costs you an afternoon.\n\nComment \"STITCH\" and I'll send you the exact step-by-step workflow.\n\n\u267b\ufe0f Repost this so your network doesn't miss it.",
+    "numLikes": 194,
+    "numComments": 348,
+    "numShares": 12,
+    "postedAtTimestamp": 1770802208602,
+    "postedAtISO": "2026-02-11T09:30:08.602Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Stitch",
+        "time": 1771904813134
+      },
+      {
+        "text": "STITCH",
+        "time": 1771860251214
+      },
+      {
+        "text": "STITCH",
+        "time": 1771836702890
+      },
+      {
+        "text": "Stitch",
+        "time": 1771696064031
+      },
+      {
+        "text": "STITCH",
+        "time": 1771599962290
+      },
+      {
+        "text": "STITCH",
+        "time": 1771542349318
+      },
+      {
+        "text": "Stitch",
+        "time": 1771526531178
+      },
+      {
+        "text": "Stitch",
+        "time": 1771449796175
+      },
+      {
+        "text": "Stitch",
+        "time": 1771432226609
+      },
+      {
+        "text": "STITCH",
+        "time": 1771325498688
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "One of our community members built 2 apps in 14 days.\n\nFound my YouTube channel. Watched the training. Went and executed.\n\nNo agency. No dev team. Just him.\n\nHe's now waiting on Apple Developer approval.\n\nThat's the bit people don't believe yet, that you can actually build real products with AI. \n\nNot toy demos. Real things people use that provide value.\n\n1,700+ people are proving it every day inside our free community.\n\nJoin here: https://lnkd.in/d3YYHxHK",
+    "numLikes": 23,
+    "numComments": 2,
+    "numShares": 0,
+    "postedAtTimestamp": 1770713745770,
+    "postedAtISO": "2026-02-10T08:55:45.770Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Awesome! Jack Roberts",
+        "time": 1770755735713
+      },
+      {
+        "text": "Execution velocity is the real differentiator here\u2014not just building two apps in 14 days, but doing it from a framework that clearly transfers capability rather than dependency.\n\nWhat stands out is the absence of \u201cdone-for-you\u201d scaffolding. When someone can move from training \u2192 independent build \u2192 pending production approval that quickly, it signals the material is teaching decision patterns and architecture, not just step-by-step mechanics. That\u2019s the kind of enablement that compounds, because the next build cycle gets faster and less reliant on external support.\n\nThe interesting next inflection will be what happens after approval\u2014how quickly those apps transition from demo data to live workflows, measurable outcomes, and repeatable deployment. That\u2019s usually where the difference between rapid prototyping and durable productization becomes visible, and where strong training ecosystems tend to create the most long-term leverage.",
+        "time": 1770732527443
+      }
+    ]
+  },
+  {
+    "type": "document",
+    "text": "I spent 50+ hours building apps with AI.\n\nThis 5-step framework saved me from wasting 90% of that time:\n\nMost people jump into AI tools and start prompting randomly.\n\nNo plan. No structure. No idea what \"done\" looks like.\n\nThat's why 80% of AI projects stall after day one.\n\nI built the BLAST framework to fix that.\n\nIt works for any AI coding tool. Any project. Any skill level.\n\nHere's the breakdown:\n\nB \u2192 Blueprint your outcome before you touch a tool\nL \u2192 Link your integrations (APIs, databases, services)\nA \u2192 Architect the plan (let AI map it, you approve it)\nS \u2192 Style the experience (UI, brand, user flow)\nT \u2192 Trigger the execution (schedule it, ship it, automate it)\n\nI've used this to build 12 live applications.\n\n3 of them generate revenue on autopilot.\n\nThe difference between people who build cool demos and people who ship real products?\n\nA system. Not motivation.\n\nI turned BLAST into a free one-pager you can use on every project.\n\nComment \"BLAST\" and I'll send it over.",
+    "numLikes": 65,
+    "numComments": 94,
+    "numShares": 5,
+    "postedAtTimestamp": 1770645011059,
+    "postedAtISO": "2026-02-09T13:50:11.059Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "BLAST",
+        "time": 1772004003016
+      },
+      {
+        "text": "BLAST",
+        "time": 1772000139334
+      },
+      {
+        "text": "BLAST",
+        "time": 1771933038705
+      },
+      {
+        "text": "BLAST",
+        "time": 1771697869125
+      },
+      {
+        "text": "Blast",
+        "time": 1771626773232
+      },
+      {
+        "text": "BLAST",
+        "time": 1771587060270
+      },
+      {
+        "text": "BLAST",
+        "time": 1771519738665
+      },
+      {
+        "text": "This framework is exactly what I needed to hear. Been building automation tools lately and honestly was just diving into random features without a clear outcome in mind. The \"Blueprint before you touch a tool\" part hits different \u2014 it's the same mistake I see so many makers and automation consultants make.\nThe fact that you turned this into a free one-pager that's actually usable is \ud83d\udd25. Saved this immediately. Already thinking about how to apply BLAST to my next workflow project.",
+        "time": 1771389874266
+      },
+      {
+        "text": "BLAST",
+        "time": 1771354157243
+      },
+      {
+        "text": "Mind-blowing",
+        "time": 1770914437139
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I turned NotebookLM into an automated research team.\n\nHere's the full system:\n\nMost people upload a few PDFs and ask questions.  That's maybe 5% of what NotebookLM can actually do.\n\nI connected it to AntiGravity via MCP.  Now it builds things on its own.\n\nResearch notebooks that spin up automatically. \nClient dashboards that pull 100+ sources. \nMeeting transcripts that trigger deep research and generate full briefings. \n\nAll without me touching it.\n\nThe key was wiring a \"brain file\" (your business context, ICP, offers) into AntiGravity so everything it builds is tailored to you. Not generic.\n\nI packaged the entire system into one masterclass:\n\u2192 The BLAST framework (Blueprint, Link, Architect, Style, Trigger) \n\u2192 NotebookLM MCP setup template \n\u2192 Brain file system for personalized outputs \n\u2192 Customer intelligence dashboard build (step by step)\n\nComment \"GRAVITY\" and I'll send you the link.\n\nYou can watch and walkthrough the resource here to implement it: https://lnkd.in/eds5-3q5\n\n\u267b\ufe0f Repost for priority access so your network stops sleeping on NotebookLM.",
+    "numLikes": 479,
+    "numComments": 627,
+    "numShares": 27,
+    "postedAtTimestamp": 1770471901290,
+    "postedAtISO": "2026-02-07T13:45:01.290Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "brain file is the unlock.\n\nnotebooklm's new 'discover sources' scans a bunch of pages and suggests up to ~10 to add, so pairing that w an mcp/agent layer makes sense.\n\ndrift is the killer tho: do you version the brain file + set conflict rules, or auto-refresh it from crm/call notes?\n\nalso sandbox the tool access. repo/filesystem perms get spicy fast",
+        "time": 1771851616934
+      },
+      {
+        "text": "GRAVITY",
+        "time": 1771838676558
+      },
+      {
+        "text": "Gravity",
+        "time": 1771800016065
+      },
+      {
+        "text": "Gravity",
+        "time": 1771736024197
+      },
+      {
+        "text": "Gravity ",
+        "time": 1771695228663
+      },
+      {
+        "text": "GRAVITY",
+        "time": 1771678390671
+      },
+      {
+        "text": "Gravity",
+        "time": 1771665601009
+      },
+      {
+        "text": "Gravity ",
+        "time": 1771661394835
+      },
+      {
+        "text": "Gravity ",
+        "time": 1771647349808
+      },
+      {
+        "text": "GRAVITY",
+        "time": 1771609673859
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Most LinkedIn advice is from 2023. \n\nThe algorithm changed. Here's what works now:\n\nI've tested this across 100+ posts.\n\nThe old playbook is dead. \n\nLong storytelling posts. \nEngagement pods. \n\"Agree?\" endings. \n\nHashtag stuffing. \n\nNone of it works anymore.\n\nHere's the 2026 system:\n\nHook engineering \u2014 18 words max. Lead with numbers or bold claims.\nValue density \u2014 every line earns the next. No fluff.\nComment velocity \u2014 reply within 90 mins or the algorithm buries you.\nContent mix \u2014 40% educational, 30% personal, 20% lead magnets, 10% contrarian.\nSeeding protocol \u2014 warm 10 contacts before you post. \n\nEvery time.\n\nInside the playbook:\n\u2192 50 proven hook templates\n\u2192 Post structure frameworks\n\u2192 Engagement tracking sheet\n\u2192 Content calendar template\n\u2192 The exact prompts I use\n\nComment \"GROWTH\" and I'll send it.\n\n\u267b\ufe0f Repost for priority access",
+    "numLikes": 49,
+    "numComments": 76,
+    "numShares": 1,
+    "postedAtTimestamp": 1770383741838,
+    "postedAtISO": "2026-02-06T13:15:41.838Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Growth",
+        "time": 1771421033341
+      },
+      {
+        "text": "Growth",
+        "time": 1770907374839
+      },
+      {
+        "text": "growth",
+        "time": 1770574288310
+      },
+      {
+        "text": "Growth",
+        "time": 1770553290209
+      },
+      {
+        "text": "GROWTH",
+        "time": 1770505041977
+      },
+      {
+        "text": "GROWTH",
+        "time": 1770498024617
+      },
+      {
+        "text": "Growth!\n\nAlways bringing the value \ud83d\udca3 s Jack Roberts",
+        "time": 1770476053071
+      },
+      {
+        "text": "Growth",
+        "time": 1770472998529
+      },
+      {
+        "text": "GROWTH",
+        "time": 1770457456700
+      },
+      {
+        "text": "GROWTH",
+        "time": 1770457307203
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "An AI tool addition just wiped $285 billion off the stock market in one day.\n\nAnthropic released an automation tool for plug-ins on Claude Cowork on Tuesday.\n\nSoftware stocks dropped 6%.\nFinancial services dropped 7%.\nInvestors ran for the exits.\n\nHere's what I find funny:\n\nThe people panic-selling have never built an automation in their life.\n\nThe people actually building?\n\nToo busy shipping to check the stock price.\n\nThis is what happens when AI stops being a buzzword and starts replacing \nreal work.\n\nThe gap between \"AI might take jobs\" and \"AI is taking jobs\" just closed.\n\nEvery time there's fear, there's opportunity.\n\nWhile Wall Street debates what AI means for the future, builders are already living in it.\n\nThe only question that matters:\n\nAre you building or watching?",
+    "numLikes": 38,
+    "numComments": 17,
+    "numShares": 0,
+    "postedAtTimestamp": 1770300902296,
+    "postedAtISO": "2026-02-05T14:15:02.296Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "spot on, most of the panic isn't even coming from the people who actually know how to use these tools\n\nthe speed at which things move now, by the time the market reacts the doers are already on to the next thing\n\nI see so many people talking about \"AI replacing X\" but if you're just in the trenches learning and shipping, you'll always land on your feet\n\nmassive opportunity for people who are actually building and not just speculating",
+        "time": 1770980839882
+      },
+      {
+        "text": "The stock market crash and the announcement are only connected through coincidental timing",
+        "time": 1770546424160
+      },
+      {
+        "text": "Building for the passion of it. What\u2019s a stock price? : )",
+        "time": 1770530786319
+      },
+      {
+        "text": "What jobs is it taking?",
+        "time": 1770379884167
+      },
+      {
+        "text": "I thought this would happen a few years ago. Because I watched Demolition Man again, haha.\n\nIn the movie, there's only a handful of big corporations left. I'm sure all restaurants are Taco Bell.\n\nAnyway. I thought the same, that companies like Google, Meta, and maybe OpenAI would dominate everything. Anthropic\u00a0seems to be out in front, and punching the nose of industries, not just companies.\n\nAnd yes, I'm building, 20 years coding, now it's fun to see what's possible using code, automation tools and AI.\n\nSpent the week setting up an OpenClaw assistant called FRANK, ha",
+        "time": 1770364976121
+      },
+      {
+        "text": "Building!! \ud83c\udfb8",
+        "time": 1770359174420
+      },
+      {
+        "text": "Every missed call reduces your chances of closing high-ticket clients. Prospects expect quick responses, and when they don\u2019t get one, they move on immediately.\nAI voice agents solve this by answering calls 24/7, handling after-hours conversations, qualifying leads, and booking appointments automatically so teams focus on sales.\nI will set up and manage the first 5 AI voice agents completely free.\nLet\u2019s connect.",
+        "time": 1770327129257
+      },
+      {
+        "text": "I've done automation since the early 90's. I tried to use the new plugins in Cowork and I built my own. None of them worked. Also Cowork was unavailable for awhile due to hitting a session limit. This stuff is very buggy and I question whether Anthropic even has QA at all. Another thing that wasn't mentioned is that you run out of tokens and hit your session limit much faster and then get prompted to move up to the Max plan which is $200 a month vs. my plan which is $20. I love Claude but I have serious concerns about quality with all of their offerings. I doubt this will gain any traction in the business community. This is just an attempt to lock you into their ecosystem. If you are offering services around AI solutions for businesses don't use frontier models if possible.",
+        "time": 1770316137299
+      },
+      {
+        "text": "Automation shocks don\u2019t erase value \u2014 they expose hidden entropy inside institutions that relied on time buffers between knowing and doing.\nMarkets panic when decision latency collapses because automation compresses cognition into execution faster than governance can evolve.\nWhat appears as job loss is actually authority topology restructuring, where roles built on translation or delay dissolve under direct intelligence-to-action pipelines.\nBuilders survive not by deploying tools faster, but by routing uncertainty into constraint architectures that metabolize volatility into controllable system behavior.\nEvery increase in automation output temperature raises collapse risk unless reversibility, stop authority, and boundary enforcement are engineered into runtime execution.\nThe real divide is no longer between humans and AI, but between those accelerating entropy through automation and those converting entropy into governable structure.",
+        "time": 1770314869381
+      },
+      {
+        "text": "This has nothing to do w the market right now",
+        "time": 1770306537485
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "One of our members sold a \u00a31,500 website 4 days after watching one of my YouTube videos.\n\nNo prior experience building sites. \n\nJust watched the AntiGravity walkthrough, followed the steps, and shipped it.\n\n\u00a31,500 + VAT. \nPaid in full. \nHe called it \"a confidence builder.\"\n\nIn the same week, another member ditched Kajabi entirely. \n\nRebuilt his whole learning platform himself using the same tools. \n\nHis clients messaged him saying they couldn't believe the difference.\n\nThese aren't developers. \nThey're just people who watched, built, and shipped.\nThat's the part most people miss. \n\nThe gap between \"I watched a tutorial\" and \"I got paid\" isn't talent. \n\nIt's just doing the thing.\n\nThis is what I see every week inside our community. \n\nPeople are going from zero to getting paid faster than they expected.\n\nIf you're sitting on a skill and haven't shipped anything yet, what's actually stopping you?\n\nPS \u2014 I teach and do all of this inside my community. Link below if you want in:\nhttps://lnkd.in/d3YYHxHK",
+    "numLikes": 41,
+    "numComments": 5,
+    "numShares": 1,
+    "postedAtTimestamp": 1770214505665,
+    "postedAtISO": "2026-02-04T14:15:05.665Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "amazing!",
+        "time": 1770577775600
+      },
+      {
+        "text": "This is called power of AI. Your teachings are valuable Jack Roberts",
+        "time": 1770398779023
+      },
+      {
+        "text": "Taking action and shipping is what turns skills into real income and confidence Jack Roberts",
+        "time": 1770278552535
+      },
+      {
+        "text": "I guess he should of sold it 297$/ per month with regular updates, the way things grow. Retainer>One shot ",
+        "time": 1770244740152
+      },
+      {
+        "text": "That\u2019s what I\u2019m talking about!! \ud83e\udd73\ud83d\ude4c Amazing success stories Jack! Shows the incredible impact you are having on the world brotha! If you haven\u2019t joined Jack\u2019s community yet definitely highly recommended \ud83d\ude0a proud part of our AI + Automation leaders crushing it!! The results prove it \ud83e\udd29\ud83d\udcaa",
+        "time": 1770219580975
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "One skill built my entire business. \n\nIt wasn't coding or AI.\n\nIt was selling.\n\nI know that's not the sexy answer. \n\nEveryone wants to hear about tools, funnels, or the latest AI workflow.\n\nBut here's what I've noticed across every business I've built.\n\nThe tech changes. \nThe platforms change. \nThe trends come and go.\n\nSelling stays.\n\nIt's what got me from a law degree to building a Top-100 UK startup. \n\nIt's what runs a $100K/month business now. \n\nDifferent industries, different products. \n\nSame skill underneath all of it.\n\nAI, automation, content \u2014 none of it matters if you can't sell. \n\nSelling is what funds everything else.\n\nAnd it's not about being pushy or \"closing\" people. \n\nIt's just finding a real problem and offering a real solution. That's it.\n\nOnce I figured that out, I stopped chasing trends and started building businesses.\n\nWhat's the one skill that's built your career?",
+    "numLikes": 26,
+    "numComments": 5,
+    "numShares": 1,
+    "postedAtTimestamp": 1770123608629,
+    "postedAtISO": "2026-02-03T13:00:08.629Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "It\u2019s so true - you can have the most sophisticated AI agents in the world, but if they aren't pointed at a problem someone is willing to pay for, you\u2019ve just built a very expensive hobby. Selling is ultimately just the bridge between \"cool tech\" and \"actual value.\" Do you think the definition of \"selling\" is changing as AI takes over the outreach and prospecting, or is the core human-to-human trust part just becoming even more premium?",
+        "time": 1770708207766
+      },
+      {
+        "text": "most underrated skill !",
+        "time": 1770502896110
+      },
+      {
+        "text": "Hard truth. Tools just amplify whatever sales skill is already there. I\u2019ve seen amazing tech die because no one could frame the pain or ask for the deal. Selling is the unlock that funds every experiment.",
+        "time": 1770216378275
+      },
+      {
+        "text": "The art of sales is the real game! ;) ",
+        "time": 1770129623959
+      },
+      {
+        "text": "That's indeed the most important, everyday I keep learning more from you Jack! keep it up ",
+        "time": 1770123769998
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I stopped hiring designers. Here's how I build $10K websites with AI:\n\nMost AI-generated websites look like AI-generated websites. \n\nGeneric layouts. \nBoring colors. \nNo personality.\n\nClients can tell. \n\nAnd they won't pay a premium for it.\n\nThe difference isn't the tool. \n\nIt's how you prompt it.\n\nI use a 5-dimensional design system: layout, style, color, typography, and animations. \n\nNail all five, and it stops looking like AI built it.\n\nThe workflow:\n\u2192 Design in Google AI Studio with a structured mega-prompt\n\u2192 Clean it up in AntiGravity with a UI/UX skill that audits everything\n\u2192 Add login, database, and dashboards with Supabase\n\u2192 Deploy on Vercel with analytics\n\nI put together a full blueprint with the exact prompts, 67+ design styles, 95+ color palettes, and the step-by-step workflow from idea to live site.\n\nComment \"WEBSITE\" and I'll send it over.\n\n\u267b\ufe0f Repost for priority access.\n\nP.S - I walkthrough everything in here: https://lnkd.in/e-kYrSJJ",
+    "numLikes": 125,
+    "numComments": 408,
+    "numShares": 7,
+    "postedAtTimestamp": 1770041703723,
+    "postedAtISO": "2026-02-02T14:15:03.723Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Website",
+        "time": 1771486968231
+      },
+      {
+        "text": "WEBSITE\n",
+        "time": 1771341647083
+      },
+      {
+        "text": "WEBSITE",
+        "time": 1771260513019
+      },
+      {
+        "text": "Website",
+        "time": 1771165127505
+      },
+      {
+        "text": "Website",
+        "time": 1771150315973
+      },
+      {
+        "text": "Website",
+        "time": 1771130783770
+      },
+      {
+        "text": "Website",
+        "time": 1770982812634
+      },
+      {
+        "text": "WEBSITE",
+        "time": 1770957454557
+      },
+      {
+        "text": "Website",
+        "time": 1770891459884
+      },
+      {
+        "text": "Website",
+        "time": 1770877419653
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "I stopped chasing leads. Now they come to me while I sleep.\n\nFor a long time, I thought growth meant outreach. \n\nMore DMs. \nMore cold messages. \nMore hustle.\n\nIt worked. \n\nBut the moment I stopped, so did the leads.\n\nThen I started posting consistently. \n\nYouTube mostly. LinkedIn now, too.\n\nAnd something changed.\n\nA video I made 8 months ago still gets discovered every week. \n\nPeople watch it, binge a few more, then reach out. \n\nI didn't do anything. The content did.\n\nThat's the difference.\n\nCold outreach dies the moment you stop.\n\nContent keeps working whether you're awake or not.\n\nOne hour recording beats one hour in DMs. \n\nIt's not even close.\n\nTook me way too long to figure that out.\n\nWhat's something you could create once that keeps working for you?",
+    "numLikes": 38,
+    "numComments": 14,
+    "numShares": 0,
+    "postedAtTimestamp": 1769957401472,
+    "postedAtISO": "2026-02-01T14:50:01.472Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "The video that keeps pulling leads like a magnet suggests that investing time in evergreen content is like planting fruit trees rather than buying produce daily - are we planting enough for the long haul?",
+        "time": 1770677359574
+      },
+      {
+        "text": "Content compounds attention; outreach only rents it.\n\nJack Roberts",
+        "time": 1770095222347
+      },
+      {
+        "text": "This makes sense. Content compounds in a way outreach doesn\u2019t. I\u2019ve found the strongest results come when content does the long-term warming, and outreach accelerates the right conversations when timing matters.",
+        "time": 1770036827588
+      },
+      {
+        "text": "That's actually true, and the reason why personal brand wins everytime.",
+        "time": 1770024784721
+      },
+      {
+        "text": "Consistent content builds a self-sustaining lead engine that never sleeps unlike cold outreach which stops the moment you do. Jack Roberts",
+        "time": 1770016398753
+      },
+      {
+        "text": "Definitely. But the hard part is making valuable long form content that's also somewhat timeless or at least has a 12+ month shelf life. I've been pretty inconsistent with it but it is interesting to see a video I made 8 months ago start getting more views. Which then makes me think I should dig more into that and make content around that. Either way, it's fun to watch as it evolves.",
+        "time": 1769989485963
+      },
+      {
+        "text": "GreAt point Jack Roberts. Always easier to 'pull,' than to 'push'\n\nSweet-",
+        "time": 1769988486049
+      },
+      {
+        "text": "Clean takeaway, and honestly accurate for most people. The underrated part is intent. Content compounds when it answers a real, recurring problem, not when it tries to \u201cperform.\u201d",
+        "time": 1769982070518
+      },
+      {
+        "text": "100% agree Jack Roberts content compounds & outreach resets.",
+        "time": 1769973240119
+      },
+      {
+        "text": "Great value Jack, I have noticed this with LinkedIn as well indeed. Comments and posts from a few weeks back still get engagement. ",
+        "time": 1769963488369
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Most people are setting up Clawdbot wrong. \n\nHere's the only secure way:\n\nI've seen the same mistakes over and over.\n\nRunning it on your main laptop. Skipping the security steps. Leaving the server exposed to the internet.\n\nThat's how you get hacked or banned.\n\nHere's what actually works:\n\nRun it on a cheap Virtual Private Server (VPS) \u2014 a separate computer in the cloud. \n\nSSH keys only, no passwords. Zero public exposure. \n\nTo the outside world, your server looks empty.\n\nTo you, it's an always-on AI you can message from your phone at 2 am.\n\nIt syncs to Notion. \nPulls your meeting notes.\nRuns research while you sleep. \n\nAnd it remembers everything about you and your business.\n\nI put together a full blueprint:\n\n\u2192 Step-by-step secure VPS setup\n\u2192 Telegram and WhatsApp connection\n\u2192 Skill integrations (Notion, Fireflies, YouTube API)\n\u2192 The \"brain.md\" template so it actually knows your context\n\nComment \"CLAWDBOT\" and I'll send it over.\n\n\u267b\ufe0f Repost to help someone avoid getting hacked.",
+    "numLikes": 95,
+    "numComments": 186,
+    "numShares": 3,
+    "postedAtTimestamp": 1769871606582,
+    "postedAtISO": "2026-01-31T15:00:06.582Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "CLAWDBOT",
+        "time": 1771313776025
+      },
+      {
+        "text": "CLAWDBOT",
+        "time": 1770881493848
+      },
+      {
+        "text": "CLAWDBOT",
+        "time": 1770814225319
+      },
+      {
+        "text": "CLAWDBOT",
+        "time": 1770586444044
+      },
+      {
+        "text": "Clawbot",
+        "time": 1770584823303
+      },
+      {
+        "text": "Clawdbot",
+        "time": 1770528647551
+      },
+      {
+        "text": "CLAWDBOT",
+        "time": 1770520241811
+      },
+      {
+        "text": "Clawdbot",
+        "time": 1770484708758
+      },
+      {
+        "text": "CLAWDBOT\ud83d\udd25",
+        "time": 1770472005641
+      },
+      {
+        "text": "Clawdbot",
+        "time": 1770462401439
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "You don't need another course, tutorial, or free resource.\n\nYou need an action with a deadline.\n\nI've seen this pattern so many times now.\n\nYou want to start something new.\n\nSo you buy a course or get a free resource.\n\nWatch all the modules. Take notes. Try it once, maybe twice.\n\nFeel like you're making progress.\n\nBut months go by, and you haven't actually built or shared anything.\n\nYou keep jumping to the next \"new\" thing without mastering the one you're already on.\n\nSo try this instead:\n\nPick one small problem. Give yourself a week. \n\nAnd just build something \u2014 even if it's ugly.\n\nThen share it. Publicly. Before it's ready.\n\nIt breaks. You fix it. \n\nIt breaks again. You fix it again. \n\nAnd somewhere in that mess, you actually learn.\n\nCourses teach you concepts.\n\nBuilding teaches you skills.\n\nSharing in public teaches you both \u2014 faster.\n\nWhat's something you've been meaning to build or share?",
+    "numLikes": 31,
+    "numComments": 10,
+    "numShares": 3,
+    "postedAtTimestamp": 1769781706540,
+    "postedAtISO": "2026-01-30T14:01:46.540Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Finally someone had the courage to mention this mindset and behavior also created by the Hype.... Thanks for sharing this Jack Roberts ",
+        "time": 1770170448287
+      },
+      {
+        "text": "I agree and this is exactly my plan for 2026. I don't need another course, I just need to build. The next step after that is to share as I build.",
+        "time": 1770043722735
+      },
+      {
+        "text": "Truth \u2014 doing builds skill far faster than endless courses ever will. \ud83d\ude80\ud83d\udd25\n\nAnd if you are:\n\t\u2022\tbuilding AI automation\n\t\u2022\tcreating AI agents / AI employees\n\t\u2022\trunning an agency or SaaS around AI\n\t\u2022\tor trying to turn AI into real revenue\n\n\ud83d\udc49 Let\u2019s  connect!",
+        "time": 1769809032082
+      },
+      {
+        "text": " Deadlines and public sharing create a different kind of pressure that forces clarity, feedback, and growth. ",
+        "time": 1769793914803
+      },
+      {
+        "text": "Pick one thing, keep doing it, get better at it, and then Boom! You\u2019re a specialist and people will pay you!",
+        "time": 1769792379343
+      },
+      {
+        "text": "I can immediately see a couple benefits to this [scary] approach:\n1) Pushing yourself out of your comfort zone, by going public, helps you gain confidence and grow.\n2) Making yourself accountable limits procrastination (kicking the can down the road). ",
+        "time": 1769789524517
+      },
+      {
+        "text": "Truer words never spoken",
+        "time": 1769788584852
+      },
+      {
+        "text": "But if you are looking for a course, there are many of us teaching \ud83d\ude09. That being said, nothing beats taking action \ud83e\udd73\ud83d\ude4c what can you accomplish by next week Friday? How about by the end of tomorrow? Build something and change the world! You got this \ud83e\udd73\ud83d\ude4c\ud83d\udcaa \n\nGreat post brotha! Keep on inspiring the world Jack! \u263a\ufe0f",
+        "time": 1769785278772
+      },
+      {
+        "text": "Agree with you Jack Roberts \ud83d\udc4f ",
+        "time": 1769783056692
+      },
+      {
+        "text": "I feel as though I'm in the exact same position\n\nI've just started an agency and am completely overwhelmed with all the different things I need to do\n\nI've spent weeks building my foundations and getting the systems laid out\nbut then I realised i'm never gonna make any money unless I put myself out there\n\nits time for me to stop trying to perfect my system and get myself out there\n",
+        "time": 1769782740501
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I just stopped using Premiere.\n\nHere's how I create videos from code instead (3 tools):\n\nThe stack:\n\u2192 Remotion (every video frame becomes code)\n\u2192 Claude Code (writes the code from plain English)\n\u2192 AntiGravity (connects Claude to Supabase, Auphonic, and more)\n\nLevel 1: Autopilot editing\nDrop raw footage in a folder. Claude transcribes it, cuts bad takes, fixes audio, and adds captions in your brand style. Done.\n\nLevel 2: Motion graphics from any URL\nPaste a website. Claude extracts the fonts, colors, logo \u2014 then builds a branded promo video using those exact assets.\n\nLevel 3: Live dashboards\nWire your video to Supabase. Change a number in your database. The video updates automatically.\n\nThe unlock: save each workflow as a reusable \"skill.\"\n\nOne command. Same result. Every time.\n\nI made a full breakdown of how to set this up.\n\nComment \"REMOTION\" and I'll send it.\n\n\u267b\ufe0f Repost to share that you can now make videos directly from code.",
+    "numLikes": 68,
+    "numComments": 122,
+    "numShares": 4,
+    "postedAtTimestamp": 1769697005491,
+    "postedAtISO": "2026-01-29T14:30:05.491Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "REMOTION",
+        "time": 1770831187753
+      },
+      {
+        "text": "Remotion",
+        "time": 1770749251074
+      },
+      {
+        "text": "REMOTION , thanks",
+        "time": 1770629346524
+      },
+      {
+        "text": "Remotion",
+        "time": 1770437231898
+      },
+      {
+        "text": "REMOTION",
+        "time": 1770236883740
+      },
+      {
+        "text": "REMOTION",
+        "time": 1770174096683
+      },
+      {
+        "text": "REMOTION",
+        "time": 1770106041342
+      },
+      {
+        "text": "Remotion",
+        "time": 1770102212363
+      },
+      {
+        "text": "Just made 750 with it. It is not at Human levels yet obviously but a bunch of repetetive ass stuff can be automated without even wasting too many API credits",
+        "time": 1770097845358
+      },
+      {
+        "text": "REMOTION",
+        "time": 1770058889852
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "ChatGPT doesn't know your business. Here's how you can fix that in 15 minutes:\n\nI've spent 7+ years building AI systems.\n\nAnd the #1 mistake I see entrepreneurs make?\n\nUsing AI that guesses instead of AI that knows.\n\nGeneric ChatGPT = generic answers.\n\nIt doesn't know your products.\nIt doesn't know your customers.\nIt doesn't know your processes.\n\nThat's the problem RAG solves.\n\nRAG = Retrieval-Augmented Generation.\n\nIn plain English: AI that searches YOUR documents before answering.\n\nI just finished a complete blueprint covering 5 ways to build this:\n\n\u2192 Custom GPTs (10 min setup, $20/mo)\n\u2192 Claude Projects (best for complex analysis)\n\u2192 NotebookLM (completely free)\n\u2192 No-code platforms (customer-facing bots)\n\u2192 Custom builds (when you need max control)\n\nPlus real use cases:\n\n- Customer support bots answering 80% of tickets\n- Internal knowledge bases for new hires\n- Sales assistants with your competitive intel\n- Course companions that explain anything\n\nMost people overcomplicate this.\n\nYou don't need to be technical.\nYou don't need expensive tools.\nYou just need the right approach.\n\nComment \"RAG\" and I'll send it over.\n\n\u267b\ufe0f Repost if someone in your network needs AI that actually understands their business.",
+    "numLikes": 124,
+    "numComments": 323,
+    "numShares": 3,
+    "postedAtTimestamp": 1769608862535,
+    "postedAtISO": "2026-01-28T14:01:02.535Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "RAG",
+        "time": 1771957109169
+      },
+      {
+        "text": "Rag",
+        "time": 1771915189444
+      },
+      {
+        "text": "RAG",
+        "time": 1771474520583
+      },
+      {
+        "text": "RAG",
+        "time": 1770610448278
+      },
+      {
+        "text": "Rag",
+        "time": 1770402069532
+      },
+      {
+        "text": "Rag",
+        "time": 1770349087636
+      },
+      {
+        "text": "RAG",
+        "time": 1770343737754
+      },
+      {
+        "text": "Rag",
+        "time": 1770132337136
+      },
+      {
+        "text": "RAG",
+        "time": 1770115533466
+      },
+      {
+        "text": "Rag",
+        "time": 1769964468402
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Most people overcomplicate AI automation. Here are the only 5 that actually matter:\n\nI've spent 7+ years building systems for my own businesses. And I keep coming back to the same ones.\n\nNot the fancy stuff. Not random fancy AI agents. Not voice bots.\n\nThese:\n\n1. Lead response: Speed wins. Replying in 5 minutes instead of 5 hours \nchanges everything. \n\nThe first to respond usually wins the deal.\n\n2. Email follow-up: Most people don't buy on the first touch. \n\nConsistent follow-up is boring. It's also where the money is.\n\n3. Reporting: If you can't see it, you can't fix it. \n\nOne dashboard that shows what matters beats 10 tools you never check.\n\n4. Onboarding: First impressions stick. \n\nA smooth onboarding keeps customers longer than any feature ever will.\n\n5. Content repurposing: One YouTube video becomes 7 posts. \n\nOne podcast becomes 10 clips. Leverage compounds.\n\nEverything else? Nice to have.\n\nI wasted months chasing complex AI systems while ignoring these fundamentals.\n\nStart boring. Get fancy later.\n\n\u267b\ufe0f Repost if someone in your network needs to hear this.",
+    "numLikes": 71,
+    "numComments": 19,
+    "numShares": 11,
+    "postedAtTimestamp": 1769518810296,
+    "postedAtISO": "2026-01-27T13:00:10.296Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Simplicity really is the unlock with automation. What\u2019s one process you\u2019ve seen become dramatically better once simplified?",
+        "time": 1770030463787
+      },
+      {
+        "text": "Agree with the boring wins, but I\u2019d swap content repurposing for data hygiene. Fast replies and follow ups fall apart if routing, enrichment, and CRM fields are messy. The basics only work with clean inputs.",
+        "time": 1769605407728
+      },
+      {
+        "text": "automating lead response and email follow up before chasing fancy ai agents is where the actual money is",
+        "time": 1769571677967
+      },
+      {
+        "text": "such a clear and efficient approach! Focusing on fundamentals ensures long-term growth- nice points",
+        "time": 1769567881865
+      },
+      {
+        "text": "I'd add custom support AI automation as a huge one as well",
+        "time": 1769552023042
+      },
+      {
+        "text": "Jack Roberts - Great advice. \u201cStart boring. Get fancy later.\u201d\n\nThat\u2019s the right order. Most teams don\u2019t need more AI \u2014 they need fewer blind spots in the workflows that already drive revenue and retention.",
+        "time": 1769538815809
+      },
+      {
+        "text": "Automation works best when it supports discipline, not creativity.\n The fundamentals rarely change just the tools around them. Jack Roberts",
+        "time": 1769537196400
+      },
+      {
+        "text": "This is exactly right \u2014 most teams overcomplicate \u201cAI\u201d and under-invest in the boring execution surfaces that actually run the business: response time, follow-up, visibility, and first-run experience.\nIn practice, the biggest wins come from making these flows legible, instrumented, and reversible before adding any intelligence. If you can\u2019t see a workflow, audit it, or roll it back, automation just accelerates drift.\nI\u2019ve been building these as versioned, governed systems (treating decisions, workflows, and incidents as first-class artifacts), and the pattern is always the same: governability first, intelligence second.\nStart boring. Make it controllable. Then let complexity compound safely.",
+        "time": 1769536778652
+      },
+      {
+        "text": "people fronnend builds (that add $$ directly) more than backend ones.\neg,- My AI sales systems work the best among all my builds cause it adds dozens of meetings monthly (adds direct $$).",
+        "time": 1769534143343
+      },
+      {
+        "text": "These are probably the most successful AI Adoption use cases for small businesses ... it really doesnt need to be fancy at all",
+        "time": 1769531463878
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Most AI agencies will be dead in 18 months. And it's not because AI is slowing down.\n\nIt's because they're selling the wrong thing.\n\nI've watched this play out with hundreds of automation builders within my own community. \n\nThe ones struggling all have something in common \u2014 they lead with the tech.\n\n\"We build AI chatbots.\"\n\"We do workflow automation.\"\n\"We implement RAG systems.\"\n\nCool. \n\nBut clients don't wake up wanting a chatbot. \n\nThey wake up wanting their problems solved.\n\nThe agencies actually winning right now sound completely different:\n\n\"We cut your response time from 6 hours to 6 minutes.\"\n\"We save your ops, team 25 hours a week.\"\n\"We increase your reply rate by 20%.\"\n\nSame tools. \nDifferent framing. \nWildly different results.\n\nThe shift is subtle, but everything: stop selling what you build, start selling what it does for them (the outcomes).\n\nThe market's getting smarter. \n\nBusinesses have been burned by people who know Zapier and call themselves AI consultants.\n\nThe bar is higher now. \n\nAnd honestly, that's a good thing.\n\nAgree? Disagree? I'd love to hear what you're seeing.\n\n\u267b\ufe0f Repost if someone in your network needs this reality check.",
+    "numLikes": 111,
+    "numComments": 47,
+    "numShares": 5,
+    "postedAtTimestamp": 1769434227351,
+    "postedAtISO": "2026-01-26T13:30:27.351Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This resonates. Most clients aren\u2019t looking for AI - they\u2019re looking for relief from a problem. The teams that lead with outcomes instead of tools are the ones earning trust right now.",
+        "time": 1770633170956
+      },
+      {
+        "text": "Many AI builders would benefit from thinking less about what they\u2019re selling and more about what someone is actually buying.\nThat gap is where most value gets mispriced or missed entirely.",
+        "time": 1770618536833
+      },
+      {
+        "text": "Absolutely \ud83d\udc4f \ud83d\udcaf ",
+        "time": 1770535770697
+      },
+      {
+        "text": "This is the real reality check. Businesses don\u2019t want AI, they want leaks plugged, faster follow up, and less chaos.",
+        "time": 1770354530374
+      },
+      {
+        "text": "Jack Roberts you\u2019re absolutely correct. In fact i teach my students who are not confident in writing prompts to just tell AI you problem then ask it to suggest solutions.",
+        "time": 1770341660425
+      },
+      {
+        "text": "Totally agree, sell the outcome not the tools",
+        "time": 1770191916215
+      },
+      {
+        "text": "smb decision makers dont care about whatever tools you use as long as you can reliably deliver measurable outcomes",
+        "time": 1770000341770
+      },
+      {
+        "text": "We should chat I'm busy setting up a consultancy going into local businesses to find one thing that isn't working as intended and offer a low risk correction. \n\nI find that many companies still have many upstream complications with things like data duplications, no QA system to monitor what is where and plugging even automation in to these companies let alone AI could just compound issues and not improve them.\n\nWould love to hear more about what you're doing and sharing my experiences.\n\nI've already followed but feel free to reach out.",
+        "time": 1769767459936
+      },
+      {
+        "text": "Agree! \ud83d\udcaf",
+        "time": 1769714487303
+      },
+      {
+        "text": "Do you mean people like you that studied law and know's nothing about technology... Ironic post! \ud83e\udd23",
+        "time": 1769670779925
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Stop using NotebookLM as a chatbot. \n\nHere's how to turn it into an actual system:\n\nMost people upload a few PDFs, ask some questions, and call it a day. That's maybe 10% of what it can do.\n\nWhen you connect NotebookLM to AntiGravity via MCP, something interesting happens. \n\nIt stops being a research tool and starts being infrastructure.\n\nYou can programmatically spin up deep research notebooks and query them from any project. \n\nYou can also auto-generate dashboards, apps, slide decks, even audio overviews \u2014 all from your own knowledge base.\n\nThe real unlock is using NotebookLM as your RAG backend and AntiGravity as your builder. \n\nNo vector databases. \nNo embeddings to manage. \n\nJust research that actually turns into things you can use.\n\nI broke this down into 5 levels in a new video, from a beginner setup to building full client systems with it.\n\nI'm also sharing the skill template and setup instructions so you can run this yourself.\n\nComment \"NOTEBOOK\" and I'll send it over.\n\nP.S - I share and teach this type of content daily in my community: https://lnkd.in/d3YYHxHK\n\n\u267b\ufe0f Repost if your network is sleeping on NotebookLM.",
+    "numLikes": 1201,
+    "numComments": 2965,
+    "numShares": 52,
+    "postedAtTimestamp": 1769348712072,
+    "postedAtISO": "2026-01-25T13:45:12.072Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "NOTEBOOK",
+        "time": 1771755614547
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1771593310141
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1771330139753
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1771263440155
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1771168076513
+      },
+      {
+        "text": "Notebook",
+        "time": 1771157456697
+      },
+      {
+        "text": "Notebook",
+        "time": 1771082954601
+      },
+      {
+        "text": "NOTBOOKLM \nThank you ",
+        "time": 1771073389210
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1771047595522
+      },
+      {
+        "text": "NOTEBOOK",
+        "time": 1770981792940
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "I just hit 100K subscribers. Here's what nobody tells you about the journey:\n\nI finished my law degree at Sheffield and did what you're supposed to do \u2014 got a job. It wasn't for me.\n\nSo I started building a tech startup on the side. No investors, no real plan, just figuring it out as I went. \n\nSomehow it grew to 60,000 customers, and I ended up selling it. \n\nSeeing AI as the next wave, I hopped on the wave to adapt and learn early.\n\nAfter that, I started sharing what I'd learned. YouTube videos that got maybe 200 views. Some got 7 likes \u2014 and I was one of them.\n\nBut here's what I've realised looking back:\n\nEvery stage funded the next one. \n\nThe job gave me time to build. \n\nThe startup gave me something to teach. \n\nThe teaching built the audience.\n\nYou don't need the whole path figured out. \n\nYou just need to make the current chapter count for something.\n\nIf you're in the messy middle right now, that's not a detour. \n\nThat's the actual route.\n\n\u267b\ufe0f Repost if someone in your network needs a reminder.",
+    "numLikes": 127,
+    "numComments": 31,
+    "numShares": 7,
+    "postedAtTimestamp": 1769261404745,
+    "postedAtISO": "2026-01-24T13:30:04.745Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This really hit home.Every phase earns the next one.Nothing feels wasted when you look back.The messy middle is where the real work happens.Thanks for sharing this, Jack Roberts",
+        "time": 1770348902753
+      },
+      {
+        "text": "Thank you for the reminder. I am also thinking of pushing more into entrepreneurship from my corporate marketing career. I am super energized about AI and its possibilities and that\u2019s where I want to be. It is a bit scary to be disruptive for yourself but I know that that where the growth happens most.",
+        "time": 1770233212959
+      },
+      {
+        "text": "Jake You  have inspired me to start this AI business is not easy not it worth every bit of it thank you",
+        "time": 1770204870152
+      },
+      {
+        "text": "Great post Jack Roberts! Calling the messy middle \u201cthe actual route,\u201d not a detour, lands harder knowing you went from near-zero-view videos to 100K subscribers. \ud83d\ude03 ",
+        "time": 1770029335781
+      },
+      {
+        "text": "Amazing stuff man",
+        "time": 1769966407679
+      },
+      {
+        "text": "Congrats!",
+        "time": 1769626432549
+      },
+      {
+        "text": "Everything is connected ",
+        "time": 1769569598916
+      },
+      {
+        "text": "The messy middle is where all the actual growth happens. It\u2019s wild how we look back and see a clear path, but while we're in it, it just feels like a series of random experiments.\n",
+        "time": 1769439173219
+      },
+      {
+        "text": "Congrats!\ud83d\udca5\ud83d\udca5",
+        "time": 1769357815517
+      },
+      {
+        "text": "Congrats bro!",
+        "time": 1769350732565
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I build $10K+ websites with AI.\n\nHere's the UI cheat sheet I actually use:\n\nMost AI-built apps look the same.\n\nGeneric layouts. Boring colors. That \"obviously made with AI\" energy.\n\nThe problem isn't the AI. It's the inputs.\n\nYou can't prompt your way to good design if you don't know what good design looks like.\n\nSo I built a cheat sheet for you to keep for free.\n\nWhat's inside:\n\n\u2192 67 design styles (with visual examples)\n\u2192 95 color palettes that actually work together\n\u2192 Proven interaction patterns\n\u2192 Copy-paste sections for AI prompts\n\nI use this every time I build in AntiGravity.\n\nInstead of describing what I want and hoping the AI figures it out, I show it exactly what to copy.\n\nThe result? Apps that look like a designer touched them.\n\nComment \"UI\" and I'll send it to you.\n\n\u267b\ufe0f Repost if your network needs to stop building ugly apps + priority access",
+    "numLikes": 281,
+    "numComments": 670,
+    "numShares": 13,
+    "postedAtTimestamp": 1769178831608,
+    "postedAtISO": "2026-01-23T14:33:51.608Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Ui",
+        "time": 1771709247698
+      },
+      {
+        "text": "Ui",
+        "time": 1771512099802
+      },
+      {
+        "text": "UI",
+        "time": 1771376641853
+      },
+      {
+        "text": "UI",
+        "time": 1771279548211
+      },
+      {
+        "text": "UI",
+        "time": 1771234021050
+      },
+      {
+        "text": "Ui",
+        "time": 1771126784990
+      },
+      {
+        "text": "UI\n",
+        "time": 1770833555547
+      },
+      {
+        "text": "UI",
+        "time": 1770730192413
+      },
+      {
+        "text": "UI",
+        "time": 1770718509428
+      },
+      {
+        "text": "UI",
+        "time": 1770618257126
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "I've coached 5,000+ entrepreneurs on AI.\n\nOne mistake keeps showing up.\n\nThey start with tools.\n\n\"What AI should I use?\"\n\"Is Claude better than GPT?\"\n\"Should I learn n8n or Make?\"\n\nWrong questions.\n\nThe right question is: what's broken?\n\nWhat's eating your time? \nWhat keeps you up at 3 AM?\nWhat's costing you money? \nWhat makes you want to throw your laptop out the window?\n\nStart there.\n\nThen work backwards to the tool.\n\nI've seen people spend 3 months learning automation platforms. \n\nBuilding workflows for problems they don't have. \n\nChasing shiny tools because X, Instagram, or YouTube said so.\n\nMeanwhile, the actual bottleneck \u2014 the thing killing their business \u2014 sits untouched.\n\nHere's the fix:\n\nWrite down your 3 biggest time drains this week. \n\nNot \"I should automate email\" vibes. \n\nActual pain. Actual hours lost.\n\nThen ask: how can AI solve this?\n\nIf yes, now you pick the tool.\n\nIf no, stop trying to automate it.\n\nTools are easy. Finding the right problem is hard.\n\n\u267b\ufe0f Repost if someone in your network needs to hear this.",
+    "numLikes": 39,
+    "numComments": 12,
+    "numShares": 1,
+    "postedAtTimestamp": 1769092240353,
+    "postedAtISO": "2026-01-22T14:30:40.353Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "True, but most people can\u2019t diagnose their bottleneck, they confuse annoyance with constraint. I like forcing a weekly time audit plus one revenue metric tied to it.\n",
+        "time": 1769229105069
+      },
+      {
+        "text": "B2B executives have the same problem. They think they're AI native and try to ADS every AI TOOL at once. Not roasting anyone. I just wanna say, don't get into the hype.\n\nPerform a quick audit on your business processes first. Determine your bottlenecks. Then try to solve that leveraging AI\u00a0",
+        "time": 1769146406235
+      },
+      {
+        "text": "finding \u00a0the actual bottleneck before picking tools saves months of wasted automation work",
+        "time": 1769131316649
+      },
+      {
+        "text": "The 3 AM test is the right filter. \n\nOnce that problem is identified, how do you stop them from over-engineering the solution? \n\nI find that once the 'pain' is identified, the tendency is to try and build a Ferrari when a skateboard would solve it. \n\nCurious how you keep the scope locked once the tool comes out.",
+        "time": 1769124576163
+      },
+      {
+        "text": "Discover the problem first, then find the best tools to solve it. Do it over and over again until you become a specialist and then sell that skillset.",
+        "time": 1769108843625
+      },
+      {
+        "text": "taking the time mapping out the processes and thinking about business goals  actually gets you 70% of the way towards a successful automation, the build and the application is the easy part and its only getting easier as models advance",
+        "time": 1769097499389
+      },
+      {
+        "text": "If something taking your time eliminate it Jack",
+        "time": 1769095340955
+      },
+      {
+        "text": "This is just a good thought process for any problem solving.",
+        "time": 1769094787741
+      },
+      {
+        "text": "Strong reminder that tools don\u2019t create clarity.\nMost wasted automation comes from solving imaginary problems.\nThe bottleneck always tells the truth.",
+        "time": 1769093452161
+      },
+      {
+        "text": "Just curious what if we find a solution and to solve it fast and efficiently, which need a tool that one doesn't know how to use \ud83e\udd14  my guess is have to balance of finding solution and knowing what how to use & bit hands-on to get going \ud83d\ude00 ",
+        "time": 1769093388154
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I stopped paying full price for AI tokens.\n\nHere's the setup:\n\nMost people run everything through one model.\n\nChatGPT for planning. ChatGPT for coding. ChatGPT for grunt work. \n\nThat's like hiring a senior dev to do data entry.\n\nThe smarter play: route work to the right model.\n\n\u2192 Free/cheap models for bulk scaffolding, refactoring, boring code\n\u2192 Premium models (Claude, Gemini, GPT-5.2) for planning, debugging & polishing\n\nThe tool that makes this work: OpenCode.\n\nIt's an open-source coding agent that plugs into AntiGravity with 150+ models.\n\nIncluding free ones.\n\nYou can even use your existing ChatGPT Plus subscription as a provider. No API key needed.\n\nAntiGravity becomes the fighter jet.\nOpenCode becomes your pilot army.\n\nFor agencies, this is pure margin.\n\nSame output. But at a fraction of the cost.\n\nI broke down the full setup in yesterday's video \u2014 and I'll send you the OpenCode sign-up link so you can try it yourself.\n\n1\ufe0f\u20e3 Comment \"TOKENS\"\n2\ufe0f\u20e3 Make sure we're connected so I can send it over\n\nRepost this, and I'll send you my AntiGravity master prompt too \ud83c\udf81",
+    "numLikes": 38,
+    "numComments": 15,
+    "numShares": 5,
+    "postedAtTimestamp": 1768994679320,
+    "postedAtISO": "2026-01-21T11:24:39.320Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Smart move, Jack! It's all about finding the best value in the AI world.",
+        "time": 1769193587269
+      },
+      {
+        "text": "Once you start thinking in terms of leverage instead of convenience, a lot of habits stop making sense. Cutting cost without cutting quality is the kind of optimization most teams overlook \ud83d\ude0a ",
+        "time": 1769049316518
+      },
+      {
+        "text": "routing grunt work to free models and strategy to premium cuts token costs - smart layering beats single model dependency",
+        "time": 1769044428300
+      },
+      {
+        "text": "TOKENS",
+        "time": 1769034956302
+      },
+      {
+        "text": "TOKENS",
+        "time": 1769022396540
+      },
+      {
+        "text": "This analogy is on point. Using premium models for everything really is like paying a senior dev for data entry. Routing tasks to the right model is pure efficiency.",
+        "time": 1769021725523
+      },
+      {
+        "text": "This is such a smart way to think about AI spend, using the right model for the right job instead of burning premium tokens on work that doesn\u2019t need them.",
+        "time": 1769018604881
+      },
+      {
+        "text": "100% Jack! This is the game changer most don't talk about lol, everyone starting in AI just hops onto one AI model (Usually OpenAI) and then stop right there. The rest of us who are in AI daily know about these more advanced techniques and routing ideas to help minimize costs while maximizing our revenues. If you're new to AI, this is definitely the NEXT STEP up once you start doing basic automations and getting better at things, routing to multiple models will help save a lot of costs in the long run. Another great one Jack!! \ud83e\udd73 ",
+        "time": 1769006143219
+      },
+      {
+        "text": "Tokens",
+        "time": 1769000233387
+      },
+      {
+        "text": "TOKENS",
+        "time": 1768995809342
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Stop building workflows. Build AI systems instead.\n\nHere's the difference:\n\nWorkflows = boxes, nodes, and arrows you babysit.\nSystems = infrastructure that runs without you.\n\nI used to sell an AI meeting workflow for $5K+.\n\nFireflies records the call \u2192 extracts action items \u2192 pushes them to Notion \u2192 styled and organised. \n\nI even integrated it with a dashboard for ongoing projects.\n\nIt worked. But I had to monitor it constantly.\n\nNow I build the same thing in 45 minutes using the BLAST framework:\n\n\u2192 Blueprint \u2014 define exactly what you want\n\u2192 Links \u2014 connect tools via MCP\n\u2192 Architect \u2014 write SOPs so it's deterministic\n\u2192 Style \u2014 make outputs actually usable\n\u2192 Trigger \u2014 deploy to Modal, runs every 3 hours\n\nMy laptop can be off. The system still runs.\n\nThat's the shift.\n\nI'm not saying throw away n8n tomorrow. I still use it for some stuff. \n\nDon't get me wrong \u2014 n8n's text-to-workflow can now build complex automations from one prompt. But there's a ceiling.\n\nBut if you're still dragging nodes around while the game has moved to full AI operating systems\u2026\n\nYou're already behind.\n\nWhere are you at \u2014 still building workflows or starting to think in systems?\n\nI discuss this in more detail in my recent video. (Link in the comments)",
+    "numLikes": 35,
+    "numComments": 9,
+    "numShares": 1,
+    "postedAtTimestamp": 1768917645449,
+    "postedAtISO": "2026-01-20T14:00:45.449Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This really hits because if your automations still need babysitting, you are still in workflow mode, and the real leverage comes when the system runs without you.",
+        "time": 1769018256192
+      },
+      {
+        "text": "building systems that run without you beats babysitting workflows every single time",
+        "time": 1768955233808
+      },
+      {
+        "text": "Does this mean that make.com is dead? Jack Roberts",
+        "time": 1768926918867
+      },
+      {
+        "text": "Jack Roberts This distinction matters more than people realise.\n Workflows optimise tasks. Systems change who has to show up at all.",
+        "time": 1768920449259
+      },
+      {
+        "text": "I'm still building flows in n8n, but I use its integrations. I think that by integrating with SupaBase, FastAPI, etc., you can still do a lot in n8n. The key is to apply the same good practices as always, such as modularization.",
+        "time": 1768920246134
+      },
+      {
+        "text": "Full video breakdown here \ud83d\udc47: \nhttps://www.youtube.com/watch?v=2IBN7ArkAkU&t=66s",
+        "time": 1768919119434
+      },
+      {
+        "text": "I\u2019ve always preferred the idea of infrastructure over workflow, that's why I built my offer around that principle.",
+        "time": 1768919086211
+      },
+      {
+        "text": "I agree with the direction, but systems require discipline. Without it, you just get invisible mess instead of visible mess.",
+        "time": 1768918224238
+      },
+      {
+        "text": "Once you stop needing dashboards to check if things broke, life gets better.",
+        "time": 1768917947701
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "The Claude Code creator just shared how he actually uses it.\n\nI studied everything and turned it into a system. (link included)\n\nBoris Cherny runs 15+ Claude sessions in parallel. He landed 259 PRs in 30 days. And his workflow is surprisingly simple.\n\nMost people use Claude Code like a chatbot.\n\nBoris treats it like a team of developers.\n\nI broke down his approach into a framework I call CODER:\n\nC \u2192 Configure a CLAUDE.md file (Boris's team shares one in git)\nO \u2192 Outline in Plan Mode until the spec is airtight (Shift+Tab twice)\nD \u2192 Deploy multiple agents in parallel (5 terminal + 5-10 on web)\nE \u2192 Extend with slash commands and subagents for repeating tasks\nR \u2192 Review \u2014 give Claude a way to verify its own work\n\nThat last one is the secret.\n\nBoris says verification 2-3x the quality of the final result.\n\nThe game changer? Claude Code keeps working while your laptop is closed.\n\nI woke up to commits I didn't write.\n\nFull breakdown + Boris's original tips in the video \u2014 link in comments.\n\nRepost this so more people stop using Claude Code wrong \ud83d\udd01",
+    "numLikes": 48,
+    "numComments": 7,
+    "numShares": 1,
+    "postedAtTimestamp": 1768817587421,
+    "postedAtISO": "2026-01-19T10:13:07.421Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "The real shift isn\u2019t \u201cClaude writes code faster,\u201d it\u2019s that you\u2019re finally separating thinking from execution like a real team does. CODER is basically async management for agents, not prompting. Honest question: how many people blaming AI for bad output never built a verification loop at all?",
+        "time": 1768970244894
+      },
+      {
+        "text": "Claude code is my ultimate assistant, my entire team and also sometimes my best friend :) You can do lots of things and you can develop business from scratch wit it!",
+        "time": 1768926945958
+      },
+      {
+        "text": "Amazing!!! Jack freaking incredible!! \ud83e\udd73\ud83d\ude4c\ud83d\udcaa",
+        "time": 1768851600485
+      },
+      {
+        "text": "You\u2019ve been putting out some banger videos on AI systems, and recently on Claude Code and Antigravity. My goal this week is to binge-watch your content and build a few high-value projects as a result.",
+        "time": 1768819979842
+      },
+      {
+        "text": "Jack Roberts I\u2019vd seen a lot about this in the last few days. Interested to know, how are you utilising this in your businesses? I\u2019m keen to put it to good use \ud83d\udcaa",
+        "time": 1768817802489
+      },
+      {
+        "text": "Full video breakdown here \ud83d\udc47\nhttps://www.youtube.com/watch?v=wnRQI4WZlPY&t=22s\n\nBoris's original thread: https://x.com/bcherny/status/2007179832300581177",
+        "time": 1768817646817
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "AntiGravity just dropped Skills.\n\nI spent the last few days testing them, so you don't have to.\n\nHere's why they matter:\n\nIf you've ever had AntiGravity give you something perfect one day and then completely different the next \u2014 Skills fix that. \n\nThey make your outputs consistent every single time.\n\nThey also save you tokens because you're not re-explaining context over and over, and they save you a ton of time on repetitive prompting.\n\nI put together a breakdown of 5 skills you can start using right now, plus how they're different from Claude skills (they're not the same thing).\n\nI've also built a skill generator so you can create any custom skill you need.\n\nAnd because I know you lot love a bonus \u2014 I'm including my master AntiGravity prompt. \n\nThis thing is genuinely wild. I use it every time I build anything now, and it makes the whole process so much easier. \n\nJust copy and paste and go.\n\nWant everything?\n\n1. Comment \"SKILLS\"\n2. Make sure we're connected so I can actually send it\n\nRepost this, and I'll send you early access to the video walkthrough when it drops.",
+    "numLikes": 122,
+    "numComments": 242,
+    "numShares": 5,
+    "postedAtTimestamp": 1768741215730,
+    "postedAtISO": "2026-01-18T13:00:15.730Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "SKILLS",
+        "time": 1771693394944
+      },
+      {
+        "text": "Skills",
+        "time": 1770586909951
+      },
+      {
+        "text": "Skills",
+        "time": 1770015445458
+      },
+      {
+        "text": "Skills. Love your content.",
+        "time": 1769891676688
+      },
+      {
+        "text": "skills",
+        "time": 1769884611193
+      },
+      {
+        "text": "Skills",
+        "time": 1769876239325
+      },
+      {
+        "text": "Skills",
+        "time": 1769852345355
+      },
+      {
+        "text": "SKILLS",
+        "time": 1769830473026
+      },
+      {
+        "text": "Skills",
+        "time": 1769813169176
+      },
+      {
+        "text": "Skills",
+        "time": 1769758511883
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "After coaching 5,000+ automation builders, here's the stack I'd use if starting from zero in 2026:\n\nAutomation: n8n (self-hosted if technical, cloud if not)\nDatabase: Supabase \u2014 auth, storage, vectors, all in one\nAI coding: AntiGravity for apps and agentic workflows\nLLMs: Claude for planning, Gemini 3 for execution\nVoice AI: Retell AI for inbound, VAPI for custom agents\nMemory: Pinecone when you need RAG at scale\n\nThe combination most people miss:\n\nAntiGravity + Supabase + n8n\n\nThat's a full SaaS backend without writing code.\n\n\u2192 AntiGravity builds the frontend\n\u2192 Supabase handles data + auth\n\u2192 n8n connects everything and runs automations\n\nThis stack runs my $100K/month business.\n\nTotal cost: ~$90/month.\n\nWhat's your current stack? \n\nCurious what's working for people.",
+    "numLikes": 96,
+    "numComments": 18,
+    "numShares": 3,
+    "postedAtTimestamp": 1768645307866,
+    "postedAtISO": "2026-01-17T10:21:47.866Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Jack Roberts For now, my tech stack is Automation: n8n (cloud)\nDatabase: Supabase, AI coding: AntiGravity, LLMs: Claude, Voice AI: Vapi AI, Memory: Gemini File Search Store",
+        "time": 1769660432499
+      },
+      {
+        "text": "Supa base isn\u2019t the best in prod - Postgres instead\n\nWould argue that N8N is now outdated, you can do more with Antigravity and a cloud subscription",
+        "time": 1769652811736
+      },
+      {
+        "text": "Amazing",
+        "time": 1769006901495
+      },
+      {
+        "text": "For a single project everything goes free",
+        "time": 1768967552583
+      },
+      {
+        "text": "n8n really allow SaaS on cloud plan?",
+        "time": 1768797045471
+      },
+      {
+        "text": "Really well put. Simple architecture, powerful outcomes.",
+        "time": 1768752098259
+      },
+      {
+        "text": "My current stack is similar. Base44 & n8n. Base44 is front end with builtin Auth and postgres storage. The storage is not as capable as Supabase so I use Supabase for heavier needs or vector. Retell AI for inbound/sms, Perplexity for research, Claude Max for execution. Notebook LM for course content & Synthesia AI for video production & bulk marketing/ad copy. I have Crew AI but not cheap, looking n8n + Composio and either Flowise or LangFlow/LangGraph.",
+        "time": 1768746587127
+      },
+      {
+        "text": "Jack Roberts Legend \ud83d\ude4c",
+        "time": 1768676418131
+      },
+      {
+        "text": "\u200f\u200fJack Roberts\u200f\u200f \nIf this is a SaaS, wouldn\u2019t exposing automation logic or running multi-tenant workflows require an n8n Enterprise license, meaning the actual cost would be much higher than $90/month?",
+        "time": 1768675805624
+      },
+      {
+        "text": "Love that combo - I\u2019ve been pairing n8n with Supabase too, but curious how you\u2019re handling auth flows between AntiGravity and Supabase without custom middleware?",
+        "time": 1768672184961
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "I've tested every AI coding tool on the market.\n\nCursor. Lovable. Bolt. Replit. Windsurf.\n\nAntiGravity is different.\n\nBut most people use it like a chatbot. That's why they get chatbot results.\n\nHere's the FLOW framework that changed everything:\n\nF \u2014 Frame the problem before you build\nL \u2014 Layout references + brand guidelines\nO \u2014 Orchestrate multiple agents (not one)\nW \u2014 Workflows that self-heal and self-fix\n\nThe difference between a $500 app and a $10,000 app isn't the tool.\n\nIt's how you prompt it.\n\nI made a full breakdown showing this system in action.\n\nComment \"FLOW\" so I can send it over.",
+    "numLikes": 87,
+    "numComments": 119,
+    "numShares": 3,
+    "postedAtTimestamp": 1768572015721,
+    "postedAtISO": "2026-01-16T14:00:15.721Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "FLOW",
+        "time": 1771420336515
+      },
+      {
+        "text": "FLOW",
+        "time": 1770586977625
+      },
+      {
+        "text": "Floe",
+        "time": 1770539519464
+      },
+      {
+        "text": "flow",
+        "time": 1769974324065
+      },
+      {
+        "text": "FLOW",
+        "time": 1769966815573
+      },
+      {
+        "text": "Flow",
+        "time": 1769940710415
+      },
+      {
+        "text": "FLOW",
+        "time": 1769906805831
+      },
+      {
+        "text": "Flow",
+        "time": 1769772121424
+      },
+      {
+        "text": "Flow",
+        "time": 1769763999928
+      },
+      {
+        "text": "FLOW",
+        "time": 1769763821307
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "#AgenticCalendar \u2014 Day 24! \ud83c\udf84\n\nToday is my day in the #AgenticCalendar \u2014 and I\u2019m excited to share my official collectible holiday card with all of you!\n\nBefore anything, I want to take a moment to say:\n\nSometimes, the most productive thing you can do is to eat your body weight in Pringles and watch Christmas Movies. 2026 is going to be INCREDIBLE and I'm so thankful for the experiences and people I've met this year \ud83d\ude4f\n\nNow let\u2019s get to today\u2019s card!\n\n\ud83d\udca1 My AI + Automation Tip for 2025\n\nMost people automate things that shouldn't exist. Almost all of the largest wins in my business (and my clients) come from two things: \n1) Find what's working\n2) Systematise it so you can do it more or better\n\n\ud83d\ude4c About Me\nJack Roberts\nAI Founder, Speaker, Educator\n\ud83c\udfa5 YouTube: https://lnkd.in/gu6wUnPa\n\ud83c\udf10 Website: https://lnkd.in/gN2TA_UH\n\n\ud83c\udf81 How to Join the #AgenticCalendar Celebration\n\nEach day until December 25th, one of the creators below is dropping their own collectible card with a unique AI tip.\n\nMake sure you\u2019re following everyone and collecting all 25 cards!\n\n\ud83d\udcab Featured Creators in the #AgenticCalendar\nAemal Sayer\nAlan Walsh\nAlexandra Spalato\nAryan Mahajan\nCole Medin\nDaniel Walsh\nDevin Kearns\nEric Knaus\nManthan Patel\nMarcel Claus-Ahrens\nMilan Tahliani\nNadia Privalikhina\nNate Herkelman\nSolomon Christ\nOumnya Benhassou\nOskar Kramarz\nPrakarsh Gupta\nRobin van Veen\nRyan Doser\nSabrina Ramonov \ud83c\udf44\nSimon Coton\nYashica Jain\nJan Oberhauser\n\nBy December 25th, you\u2019ll have a full set of holiday cards \u2014 and a ton of new ideas to level up your AI journey \ud83d\ude80\n\n\ud83d\udcac Which creator\u2019s card has been your favorite so far \u2014 or who are you most excited to see next?\n\nTag them below \ud83d\udc47\n\nn8n\n#AgenticCalendar #AI #Automation #AIAgents #n8n\n#AICommunity #AIInfluencers #MachineLearning #RAG\n#AIInnovation #AITips #HolidaySpecial",
+    "numLikes": 71,
+    "numComments": 10,
+    "numShares": 2,
+    "postedAtTimestamp": 1766560993857,
+    "postedAtISO": "2025-12-24T07:23:13.857Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This hits hard. Too many people automate noise instead of results. Find what works first, systemize it, then automate. That\u2019s when systems start compounding instead of creating more complexity. Great take, Jack. \ud83e\udd70 ",
+        "time": 1767117372825
+      },
+      {
+        "text": "Awesome Jack Roberts ! Enjoy this new challenge !",
+        "time": 1767018203930
+      },
+      {
+        "text": "Love this mix of honesty and practical advice, sometimes doing less but doing it better is the real win.",
+        "time": 1766637967714
+      },
+      {
+        "text": "lessgooo team of best creators!",
+        "time": 1766632298586
+      },
+      {
+        "text": "this is the part most people skip. automating a broken process just makes the mess faster.",
+        "time": 1766597989108
+      },
+      {
+        "text": "That's a good point Jack. Just because it can be automated doesn't mean it *should* be automated.\n\nPs - my fav Christmas movie is Die Hard. What's yours?",
+        "time": 1766590894775
+      },
+      {
+        "text": "That's a big pringles challenge \ud83d\ude02, thanks for all the knowledge shared this year Jack Roberts",
+        "time": 1766567103952
+      },
+      {
+        "text": "This is the underrated part of automation.\nMost people try to optimize activity.\nThe real leverage comes from deleting entire decision paths once you understand what actually works.\n\u201cFind what works \u2192 systematize it\u201d isn\u2019t about speed \u2014 it\u2019s about removing cognition from places it doesn\u2019t belong, so humans only stay in the loop where judgment still matters.\nThat\u2019s how systems start paying dividends instead of demanding attention.",
+        "time": 1766566620505
+      },
+      {
+        "text": "Enjoy the Pringles Jack! I have a Christmas box of Taytos, which is the Irish equivalent, lined up and ready to go!",
+        "time": 1766565468528
+      },
+      {
+        "text": "Love this! Finding what's working and then systemizing it! That's where I see so many clients and users miss out is they go right to automation and AI and think it will solve all their issues without realizing that infact they need to systemize things and focus on results that work! I love it!! Great tip Jack! \ud83e\udd73 ",
+        "time": 1766561236967
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "n8n just made building AI Apps 10X Easier\n\nTheir new MCP means Coding apps can 'just connect'\n\nNo more doing the plumbing between webhooks or forms.\n\nThis works for any scenario with;\n\u2714\ufe0f Message trigger\n\u2714\ufe0f Webhook\n\u2714\ufe0f Form\n\u2714\ufe0f Schedule\n\nYou can connect it to loveable using native integrations.\n\nI've done a FULL video breaking down.\n\nDrop \"MCP\" below and I'll send it over to you \ud83d\udc47",
+    "numLikes": 90,
+    "numComments": 127,
+    "numShares": 2,
+    "postedAtTimestamp": 1764440381085,
+    "postedAtISO": "2025-11-29T18:19:41.085Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Hi Jack Roberts, I let you a private message",
+        "time": 1765619330252
+      },
+      {
+        "text": "Jack Informative !!",
+        "time": 1765551224235
+      },
+      {
+        "text": "Jack, the wild thing about this MCP update is that it quietly changes the entire psychology of building inside n8n.\n\nBefore MCP, we were all forced to think like plumbers \u2014 stitching webhooks to forms, linking triggers to logic, mentally juggling the invisible connective tissue of a workflow.\n\nNow that connective layer is abstracted.\n\nWhat that REALLY means is:\n\nn8n just removed the cognitive tax that kept beginners out and slowed advanced builders down.\n\nWhen apps \u201cjust connect,\u201d the builder\u2019s mind shifts from:\n\n\u274c engineering the bridge\nto\n\u2714 designing the experience that travels across it.\n\nIt elevates the whole mental stack.\n\nMCP isn\u2019t just a technical improvement \u2014 it\u2019s a behavioral unlock:\n\nfewer friction points\n\nclearer mental models\n\nfaster prototyping loops\n\nhigher ceiling for creativity\n\nlower barrier for innovation\n\nmore people getting to the \u201caha\u201d moment\n\n\nThis is the kind of update that doesn\u2019t just make workflows easier \u2014\nit changes who feels capable of building them.\n\nMassive move from n8n.\nAnd your breakdown just accelerated that shift for a lot of people.",
+        "time": 1765240836862
+      },
+      {
+        "text": "MCP",
+        "time": 1765131964423
+      },
+      {
+        "text": "WOW. This is huge. Your post just made my life easier. Thanks",
+        "time": 1764826165548
+      },
+      {
+        "text": "MDP",
+        "time": 1764817816184
+      },
+      {
+        "text": "MCP",
+        "time": 1764694023612
+      },
+      {
+        "text": "MCP",
+        "time": 1764675347248
+      },
+      {
+        "text": "MCP",
+        "time": 1764673515051
+      },
+      {
+        "text": "Absolute game changer! ",
+        "time": 1764671012059
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Nano banana is the BEST image generation model\nIt\u2019s even better in n8n.\n\nTL;DR\n\n\u00a0\ud83d\udcf8 Generates hyper-personalised images at scale\n \ud83d\udd17 Incorporates brand logos + names automatically\n \u26a1 Costs ~10 cents per generation\n \ud83e\udde0 Works PERFECTLY with Airtable + lead scraping\n \ud83d\udee0\ufe0f You can build a full custom AI app on top of it\n\nI just recorded a no-fluff TL;DR breaking down what you need to know.\nFull video in the comments \ud83d\udc47\n\nYou can now:\n \u2714\ufe0f Personalised lead-gen visuals for every campaign\n \u2714\ufe0f Automated \u201chundreds-of-leads \u2192 hundreds-of-images\u201d workflows\n \u2714\ufe0f One-shot YouTube/IG thumbnail creation inside Google AI Studio\n \u2714\ufe0f Using n8n as my core engine for client systems\n\n\u267b\ufe0f Share it with your network, it\u2019s wild what you can build with this now.",
+    "numLikes": 72,
+    "numComments": 13,
+    "numShares": 2,
+    "postedAtTimestamp": 1764275921676,
+    "postedAtISO": "2025-11-27T20:38:41.676Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "I need this, as at the moment. I produce images and there are so many spelling mistakes and it\u2019s off brand.",
+        "time": 1770163607154
+      },
+      {
+        "text": "This is a great example of how the tooling layer is finally becoming boring (in a good way) and the leverage is shifting to systems.\nThe real unlock here isn\u2019t \u201cNano Banana vs X\u201d \u2014 it\u2019s that you can now treat image generation as a reliable, composable primitive inside a larger workflow: lead ingestion \u2192 context assembly \u2192 generation \u2192 distribution \u2192 feedback loop.\nOnce something is cheap, fast, and predictable enough, it stops being a feature and starts being infrastructure.\nThat\u2019s when the moat moves from \u201cwhat model are you using?\u201d to \u201cwhat system did you build around it?\u201d",
+        "time": 1767802152854
+      },
+      {
+        "text": "This was my evening last night! I am starting to explore n8n more for creative workflows. Managed to make my daughter a custom Santa greeting with Nana Banana Pro and ElevenLabs all within n8n  \ud83d\ude0d ",
+        "time": 1764334606776
+      },
+      {
+        "text": "Well Said  Jack  ",
+        "time": 1764331010005
+      },
+      {
+        "text": "amazing video bro!",
+        "time": 1764324364969
+      },
+      {
+        "text": "Building powerful AI tools that democratize creative capabilities is exactly what the industry needs right now. Fantastic innovation.",
+        "time": 1764318109902
+      },
+      {
+        "text": "I\u2019ve observed that the Nano Banana Pro API feels less flexible in N8N compared to using tools like nanobanana.ai directly.\nFor example, when attempting to place a person in a different setting, the API becomes very strict on privacy and blocks the generation.\n On that platform , this seems to be handled much more smoothly.",
+        "time": 1764318074685
+      },
+      {
+        "text": "Good",
+        "time": 1764315096880
+      },
+      {
+        "text": "Nano Banana is super awesome!",
+        "time": 1764302854968
+      },
+      {
+        "text": "Brilliant \u2014 hyper-personalised visuals at ~$0.10 is a game-changer. If you want an n8n\u2192Airtable lead-gen template to reproduce this, grab it here: https://link.n8nbazar.ai/OFmK8g",
+        "time": 1764286270341
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Gemini 3.0 just solved the UI problem.\n\n100 AI updates happen every week, and most of them don't matter.\n\nGemini 3.0 does.\n\nThe TL;DR\n\u2714\ufe0f Crushes all performance benchmarks\n\u2714\ufe0f Creates designer-grade apps and websites\n\u2714\ufe0f Free to use (up to a point)\n\nIt just re-built my $100k AI Funnel, and it made it BETTER.\n\nAt this point, if you're vibe coding online you are falling behind.\n\nThere are a few important limitations most people are missing\n\nI just dropped a video showing you these and how to build & deploy funnels like this:\u00a0https://ideaswithjack.com/\n\n\u2714\ufe0f Designed by Gemini 3.0 (best ways to use it)\n\ud83d\udcc8 Enhanced by Claude (We use deep think for copy: INSANE)\n\ud83d\udc7e Connected to\u00a0Make.com\u00a0to add to email lists automatically\n\ud83d\udcda Deployed and hosted Instantaneously\n\nDrop the word 'GEMINI' below and I'll send you the full guide + resources \ud83d\udc47\n\n\u267b\ufe0f Share this with your network to share the value",
+    "numLikes": 68,
+    "numComments": 49,
+    "numShares": 4,
+    "postedAtTimestamp": 1763802294796,
+    "postedAtISO": "2025-11-22T09:04:54.796Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Subscribed. Jack Roberts ",
+        "time": 1765702754957
+      },
+      {
+        "text": "GEMINI",
+        "time": 1765632827601
+      },
+      {
+        "text": "GEMINI",
+        "time": 1765491309572
+      },
+      {
+        "text": "Love your work man!",
+        "time": 1765462205758
+      },
+      {
+        "text": "Gemini",
+        "time": 1765462183782
+      },
+      {
+        "text": "Gemini",
+        "time": 1764667322444
+      },
+      {
+        "text": "Gemini",
+        "time": 1764622169650
+      },
+      {
+        "text": "Gemini 3.0 is insane. Its has so much options for new opportunities. \nGEMINI.",
+        "time": 1764412457544
+      },
+      {
+        "text": "I am interested in finding someone who can build an AI ad creation tool that can function similar to this https://www.vibe.co/studio\n\nIf you know anyone that can build an AI ad creation tool, have them contact me.",
+        "time": 1764406524635
+      },
+      {
+        "text": "And yeah\u2026 at this pace, vibe coding is basically standing still. Pairing Gemini for structure and Claude for copy is a seriously strong combo....GEMINI",
+        "time": 1764244131688
+      }
+    ]
+  },
+  {
+    "type": "linkedinVideo",
+    "text": "Gemini 3 JUST dropped.\n\nIt is the BEST vibe coding LLM I have ever seen.\n\nI recorded a no-fluff TL;DR and what you need to do:\n\nGoogle's Gemini 3:\n\ud83d\udcc8 CRUSHES loveable/Bolt/other vibe coders in design UI\n\ud83d\udd25 You can deploy it website you own in seconds\n\ud83d\udcb0 API calls are expensive (so use this work around)\n\ud83d\udc7e You can connect it to n8n\n\nWhat I'm changing:\n\u2714\ufe0f Vibe code in AI Studio (where Gemini 3.0 lives)\n\u2714\ufe0f Export it directly to websites/apps\n\u2714\ufe0f Use Claude code to improve it as/when\n\nFull video in the comments \ud83d\udc47\n\n\u267b\ufe0f Share it with your network to share the value",
+    "numLikes": 73,
+    "numComments": 12,
+    "numShares": 4,
+    "postedAtTimestamp": 1763568425712,
+    "postedAtISO": "2025-11-19T16:07:05.712Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Gemini 3 speedup is impressive. AI coders getting better fast.",
+        "time": 1765877443868
+      },
+      {
+        "text": "Vibe coding tools are finally making the build phase instant, but shipping still needs to catch up. We keep seeing this gap in every tool. Build speed has changed, but deployment workflows haven\u2019t yet.\n\nThat mismatch is exactly what led us to build kuberns.com, aligning deployment workflows with how fast people build now.",
+        "time": 1765775836084
+      },
+      {
+        "text": "Nice one mate \ud83d\udc4d\ud83c\udffd ",
+        "time": 1763978892585
+      },
+      {
+        "text": "Jack Roberts, this sounds exciting! I love how you're diving into the capabilities of Gemini 3. The ability to deploy quickly and connect with tools like n8n opens up so many possibilities. Can\u2019t wait to see how it evolves! Looking forward to your video!",
+        "time": 1763730457194
+      },
+      {
+        "text": "Jack Robertsyep, it was really insane to see how well it does design...",
+        "time": 1763720399711
+      },
+      {
+        "text": "Goggle quite literally crushing it as we have been discussing for a while Jack in your community never count them out even when they dropped the ball with the Bard! \n\nTo be or not to be the No 1 who said LLMs have plateaued - think again",
+        "time": 1763588994448
+      },
+      {
+        "text": "This tool is really insane ! I've tested it today and...\ud83e\udd2f The results are just incredible",
+        "time": 1763579200817
+      },
+      {
+        "text": "Gemini 3 is absolutely amazing. \n\nI can highly recommend that you try Google's new Antihravity (cursor clone) with built-in Gemini-3-pro-thinking, which is a beast.",
+        "time": 1763573972089
+      },
+      {
+        "text": "Amazing!! Great content around Gemini 3 brotha!! :) Reposting now, great stuff!!",
+        "time": 1763573098300
+      },
+      {
+        "text": "Jack, Indeed it is a Monster, bro. \ud83d\ude80\ud83d\udc68\ud83c\udffc\u200d\ud83d\udcbb",
+        "time": 1763572099534
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "In February 2023 my friend send me a link to a 'cool' new website.\n\nI made my first video on it a month later.\n\n1 year later I would yap about it full-time on the internet.\n\nIt's my daily reminder to take inspiration from others, if there's something epic you've probably been recommended it.\n\nWhen did you first find ChatGPT?",
+    "numLikes": 33,
+    "numComments": 5,
+    "numShares": 0,
+    "postedAtTimestamp": 1763186768149,
+    "postedAtISO": "2025-11-15T06:06:08.149Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Jack Roberts That is a great reminder about seeking inspiration. I think I first found ChatGPT in December 2022. It was shortly after its public launch.",
+        "time": 1763416280261
+      },
+      {
+        "text": "Jack Roberts was so good to see you yesterday. Indeed mate, we just need to take inspiration from what resonates in this noisy digital world.  \n\nLove this story, it is that one moment which is inspiring 1500+ AI enthusiasts & automators in your incredible Skool community to create incredible future with AI \ud83d\udd25\ud83e\udd42",
+        "time": 1763308353273
+      },
+      {
+        "text": "Wow that\u2019s awesome Jack Roberts to think that was even being early and yet it\u2019s less than 3 years ago. Thanks for sharing \ud83d\ude4c",
+        "time": 1763195802392
+      },
+      {
+        "text": "We thank that friend who brought you to our lives.. :) keep on crushing it! (and share with us)\nAnd thank you Jack, pls keep on yapping \ud83d\udcaa\ud83c\udffc\ud83d\ude0e",
+        "time": 1763191307227
+      },
+      {
+        "text": "Remember judging them by their logo amd thinking why.. We got Google",
+        "time": 1763190163086
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "'Vibe Coding' is officially word of the year.\n\nLoveable raised at a $1.8bn valuation.\n\nThe distance between idea and functional app is shrinking by the week.\n\nThat said, beware of the hype. \n\nWe have not arrived yet.\n\nThe best practical application I use in my business with vibe coding?\n\nAI Dashboards\n\u2714\ufe0f Build in Bolt/Loveable (from free)\n\u2714\ufe0f Connect to Supabase (excel on steroids)\n\u2714\ufe0f Display any metrics in a gorgeous, stylisd fashion\n\nThis helps businesses make better decisions quickly.\n\nI posted a link in the comment section comments of a full breakdown on how to do this.\n\nPS - \u201cClanker\u201d, a derogatory term for robots, was a runner-up \ud83d\ude06",
+    "numLikes": 59,
+    "numComments": 24,
+    "numShares": 3,
+    "postedAtTimestamp": 1762785027770,
+    "postedAtISO": "2025-11-10T14:30:27.770Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Do you go vibe-boxing, too? ",
+        "time": 1762975501148
+      },
+      {
+        "text": "Haha, what a time to be a builder!",
+        "time": 1762951392120
+      },
+      {
+        "text": "It\u2019s impressive to see how vibe coding is making app development faster and more accessible, especially with AI dashboards helping businesses decide quickly. How do you ensure data accuracy and security when connecting tools like Bolt and Supabase in these dashboards?",
+        "time": 1762895210761
+      },
+      {
+        "text": "vibe coding getting real \u2014 Loveable at $1.8bn is wild...I've been building AI dashboards in Lovable + Supabase, instant decision power + huge time savings",
+        "time": 1762885247550
+      },
+      {
+        "text": "Innovation in development approaches shapes how future products get built always",
+        "time": 1762840662557
+      },
+      {
+        "text": "vibe coding is going to be the future!",
+        "time": 1762834325251
+      },
+      {
+        "text": "Vibe coding is seriously changing the game\u2026",
+        "time": 1762830020483
+      },
+      {
+        "text": "I love it! Jack Roberts Thank you! :-) ",
+        "time": 1762808131477
+      },
+      {
+        "text": "\u26a1\ufe0f Excellent examples Jack, it sure is good for dashboards! ",
+        "time": 1762801487251
+      },
+      {
+        "text": "\u2018Vibe coding\u2019 is perfect. That\u2019s what I\u2019m calling my 'it somehow works' method now.",
+        "time": 1762789662677
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "'New' is overrated.\n\nWhen I founded my last business I thought I had to do something NEW.\n\nAnd we did, and were rewarded for it.\n\nHowever, I've since realised that working at the alter of new is inefficient.\n\nThe CEO of Zynga poker BLEW UP his business following the 'Validated-Improved-New' methodology.\n\nYou're far better off:\n\u2714\ufe0f Find out what's already working (validated)\n\u2714\ufe0f Do that thing better (improve)\n\u2714\ufe0f Add something personal (new)\n\nAdd your personal flare to it.\n\nThis applies to content ideas, hooks, business models - everything.\n\nI love new, but there's definitely a strategy of what you decide to innovate on.\n\nLast year I was at the Skool games (lots of super successful online people)\n\nOne person had made $50,000/mo from LinkedIN (not typical)\n\nI asked him to show me 'click-by-click' everything he did\n\nSurprisingly, it was actually very simple.\n\nMy biggest takeaway?\n\nAll the things to innovate on, funnels is not one of them.\n\nMy biggest lesson: Spend a lot of intellectual capital on innovation, but do it on the high leverage areas not places where you're re-inventing the wheel\n\nI've just released a full video on AI audits and the proven funnel.\n\nLink to the FULL video in the comments \ud83d\udc47\n\n\u267b\ufe0f Repost to help your network keep winning on LinkedIn.",
+    "numLikes": 49,
+    "numComments": 20,
+    "numShares": 2,
+    "postedAtTimestamp": 1762688421620,
+    "postedAtISO": "2025-11-09T11:40:21.620Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Boom",
+        "time": 1763721739067
+      },
+      {
+        "text": "Start with what\u2019s proven, then tighten it and add your flavour. Simple scales.",
+        "time": 1763319937048
+      },
+      {
+        "text": "VIN in powerful,  I watched the vid on YT, gonna break in a part and get my audit right!",
+        "time": 1762854172140
+      },
+      {
+        "text": "This is the Pareto principle in action. Focus innovation on the 20% that yields 80% of results. Your funnel example is perfect.... ",
+        "time": 1762748347911
+      },
+      {
+        "text": "Very Insightful! Amazing as always! Jack Roberts \ud83d\ude00 ",
+        "time": 1762730312912
+      },
+      {
+        "text": "Such a solid perspective, innovation doesn\u2019t always mean reinventing the wheel. The smartest growth often comes from refining what already works and adding your unique touch. Jack Roberts",
+        "time": 1762705318571
+      },
+      {
+        "text": "Amazing!!! Love it Jack! Sharing and reposting now!!",
+        "time": 1762705309173
+      },
+      {
+        "text": "Explore : Exploit trade off. 80% Exploit for value. 20% Explore for innovation.",
+        "time": 1762701869637
+      },
+      {
+        "text": "IPhone was just a better phone. What\u2019s your iPhone\u2026",
+        "time": 1762700052173
+      },
+      {
+        "text": "Insightful as always Jack Roberts",
+        "time": 1762693873493
+      }
+    ]
+  },
+  {
+    "type": "linkedinVideo",
+    "text": "I once thought every opportunity needed to be seized\n\nNow I know that is a fallacy holding you a fortune.\n\nThis prioritization quadrant is insanely simple\n\n30 minutes spent on a 10x task is worth DAYS on something random.\n\nWhat you work on is more important than how hard you work.\n\nIt's great for decisions, but also for facilitating conversations.\n\nI use it when articulating opportunities to clients.\n\n\u2714\ufe0f Acknowledge everything that we could do\n\u2714\ufe0f Share what we're prioritising\n\u2714\ufe0f Display it visually\n\nIt's actually great to have these items on a sheet that you can move around together as a team and with clients.\n\nI've done a full video breaking down the AI audit process.\n\nComment \"Audit\"  below and I'll DM you the video \ud83d\udc47\n\n\u267b\ufe0f Repost to help your network keep winning on LinkedIn.",
+    "numLikes": 29,
+    "numComments": 14,
+    "numShares": 0,
+    "postedAtTimestamp": 1762431909917,
+    "postedAtISO": "2025-11-06T12:25:09.917Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This approach really highlights how important focus is in achieving big results. How do you recommend balancing quick wins with those 10x tasks when both seem urgent?",
+        "time": 1762870244280
+      },
+      {
+        "text": "Prioritizing 10x tasks over endless busywork is crucial for real impact. I use simple, visual frameworks with clients to clarify and align on the highest-value opportunities.\nSmart focus beats hard work in unlocking growth. Great job  ",
+        "time": 1762674353103
+      },
+      {
+        "text": "Audit",
+        "time": 1762509592454
+      },
+      {
+        "text": "Audit",
+        "time": 1762499652366
+      },
+      {
+        "text": "All about maximum leverage",
+        "time": 1762466581644
+      },
+      {
+        "text": "Audit",
+        "time": 1762449691119
+      },
+      {
+        "text": "Jack Roberts, your approach to prioritizing tasks is refreshing and practical. It's amazing how a simple visual tool can transform decision-making and client conversations. I'm intrigued by your AI audit process\u2014looking forward to learning more!",
+        "time": 1762444878666
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "The Triple-E Framework makes automations PROFITABLE.\n\nI don't build a single operating system without it.\n\nMost agencies get these the wrong way around.\n\nWhen building AI Audits, this framework will:\n\n\u2714\ufe0f Show what to focus on FIRST\n\u2714\ufe0f Structure your thinking\n\u2714\ufe0f Speed up execution\n\n1\ufe0f\u20e3 Enhance \nLook at your biggest profit centers - how can AI systems accelerate or scale what's already working?\n\n2\ufe0f\u20e3 Eliminate\nWhat are all of the Boring, repetitive, and administrative tasks that happen in the business? Automate them.\n\n3\ufe0f\u20e3 Expand\nWhat new products, services, or profit centers can we create using AI systems?\n\nTL;DR:\n\nEnhance (better) is first, eliminate (remove) is second, and expand (new) is last\n\nWe thought thinking of NEW or Shiny...\n\nMake what's already profitable, more profitable.\n\nAhead of my full masterclass coming out this week, I recorded a short video explaining how we do audits for clients.\n\nThis is pinned in the description \ud83d\udc47\n\n\u267b\ufe0f Repost to share these insights with your network.",
+    "numLikes": 24,
+    "numComments": 9,
+    "numShares": 0,
+    "postedAtTimestamp": 1762369563438,
+    "postedAtISO": "2025-11-05T19:06:03.438Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "The Triple-E Framework offers a clear and practical roadmap for making AI integrations truly effective by focusing on what already works before exploring new ideas. How do you recommend agencies balance the push for innovation with the need to first enhance existing profit centers in rapidly changing markets?",
+        "time": 1762538097858
+      },
+      {
+        "text": "I probably would sometimes eliminate first to not enhance useless development \ud83d\ude05",
+        "time": 1762438970741
+      },
+      {
+        "text": "Jack Roberts, profit optimization really shines with the right framework. what's your favorite ai success story? \ud83e\udd16 ",
+        "time": 1762375590380
+      },
+      {
+        "text": "Jack Roberts, the e-squared framework truly streamlines ai implementation. focusing first on enhancement allows collective strengths to shine before optimizing processes. what new opportunities are you finding in this approach?  #aiinsights",
+        "time": 1762371691304
+      },
+      {
+        "text": "FULL Video: https://www.youtube.com/watch?v=sufa-2zQuE8",
+        "time": 1762369579128
+      }
+    ]
+  },
+  {
+    "type": "linkedinVideo",
+    "text": "99% of agencies are overcomplicating it.\n\nYou're selling everything to everyone.\n\nAnd you're skipping niche and strategy.\n\nIf you do not understand the business strategy, how they make money, or their bottlenecks, you cannot create an effective transformation.\n\nAudits are an elegant solution.\n\nYou're selling:\n\u2714\ufe0f Peace of mind\n\u2714\ufe0f Direction\n\u2714\ufe0f Clarity\n\nAudits are at a lower 'easy-yes' price point.\n\nMoreover, you're then perfectly positioned to deliver that transformation.\n\nHere's what makes our audits different. \n\nWe dig into:\n\u2714\ufe0f Key Metrics (revenue, profit, customer acquisition costs, lifetime value etc...) \n\u2714\ufe0f Customer Journey (Click to close)\n\u2714\ufe0f Biggest Bottleneck(s)\n\u2714\ufe0f Critical Workflows \n\u2714\ufe0f Dream Outcome\n\u2714\ufe0f Tools\n\nYou're never saving money by skipping understanding.\n\nI created a FULL guide on how to create a profitable agency in 2026.\n\nDrop \"GROW\" below and I'll DM it over to you \ud83d\udc47\n\n\u267b\ufe0f Repost to share these insights with your network.",
+    "numLikes": 57,
+    "numComments": 85,
+    "numShares": 4,
+    "postedAtTimestamp": 1762283790210,
+    "postedAtISO": "2025-11-04T19:16:30.210Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "GROW",
+        "time": 1764500097577
+      },
+      {
+        "text": "GROW. \n\nThis presentation is next level Jack! Give the editor a raise!",
+        "time": 1762543254711
+      },
+      {
+        "text": "Audits are such a great way to get your foot in the door too",
+        "time": 1762488760865
+      },
+      {
+        "text": "grow",
+        "time": 1762486906263
+      },
+      {
+        "text": "GROW",
+        "time": 1762456874926
+      },
+      {
+        "text": "Grow",
+        "time": 1762430168744
+      },
+      {
+        "text": "GROW",
+        "time": 1762422739148
+      },
+      {
+        "text": "grow",
+        "time": 1762416247756
+      },
+      {
+        "text": "GROW",
+        "time": 1762384817513
+      },
+      {
+        "text": "Grow",
+        "time": 1762373853443
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "This is VERY cool!\n\nGreat to sit down with n8n's Dylan Watkins and talk through why you need to be an AI-First business (and what that actually means)\n\nWe cover a lot you don't want to miss!\n\nGreat conversation \ud83e\ude75",
+    "numLikes": 36,
+    "numComments": 7,
+    "numShares": 0,
+    "postedAtTimestamp": 1762196451269,
+    "postedAtISO": "2025-11-03T19:00:51.269Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "This is awesome! Going to watch \ud83d\ude0a",
+        "time": 1762475243101
+      },
+      {
+        "text": "Super amazing \ud83c\udf89",
+        "time": 1762259158422
+      },
+      {
+        "text": "Looking forward to it, because it\u2019s not just about optimizing for AI citation. It is such a massive change. It\u2019s hard to really see how it\u2019s going to trickle down.",
+        "time": 1762200073858
+      },
+      {
+        "text": "Great stuff",
+        "time": 1762198734356
+      }
+    ]
+  },
+  {
+    "type": "linkedinVideo",
+    "text": "Loveable is now worth $1.8 Billion.\n\nGoogle jut launched AI Studio - the FREE challenger model.\n\nI compared these to save you the time and money (cutting the hype)\n\nTL;DR you can build MVP's with vibe coding insanely quickly\n\nHere's how they stack-up\n\nGoogle AI Studio\n\u2714\ufe0f Free (limits apply)\n\u2714\ufe0f Connects to all Google eco-system (maps, VEO, Nano banana)\n\u2714\ufe0f UI is primitive\n\nBolt\n\u2714\ufe0f $20/month (token-based - burns fast) \n\u2714\ufe0f Connected to Supabase + Stripe\n\u2714\ufe0f Developer-friendly  (direct code editing)\n\nLoveable\n\u2714\ufe0f $20-100/month (credit-based) \n\u2714\ufe0fNative Supabase + GitHub + built-in hosting \n\u2714\ufe0f Non-coder friendly \n\nI just did a video covering the full comparison below down\ud83d\udc47\n\nIncludes my full recommendation for 2026. \n\nWhich are you using right now?",
+    "numLikes": 96,
+    "numComments": 27,
+    "numShares": 2,
+    "postedAtTimestamp": 1762089737815,
+    "postedAtISO": "2025-11-02T13:22:17.815Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "The old saying is you get what you pay for. I for one am not impressed in the 'big guys' presenting a half baked product with its core thing being its 'free'. Loveable is an incredible success story and am sure with the billions of investments it will carve its own niche to be the go to for MVPs. Ive tested them all and loveable is leading the pack...just.\n\nthat said Claude is the go to for teething issues",
+        "time": 1762332029000
+      },
+      {
+        "text": "I'm convinced that these tools are handy to get an MVP, but to actually build something great, you need custom coding to make it smooth and scalable.",
+        "time": 1762191719026
+      },
+      {
+        "text": "Google AI studio is great for building quick MVPs and internal tools",
+        "time": 1762179589779
+      },
+      {
+        "text": "Thanks for breaking this down, Jack Roberts! It's fascinating to see how these platforms stack up. I'm curious about your thoughts on how non-coders can leverage Loveable effectively. Do you think its ease of use justifies the cost for startups? Looking forward to your video!",
+        "time": 1762175272163
+      },
+      {
+        "text": " this breakdown is actually super handy bro makes it way easier to see what\u2019s worth testing out first, nice one",
+        "time": 1762160287338
+      },
+      {
+        "text": "I have also used Google AI Studio build , it's very amazing , impressive and of course free",
+        "time": 1762141482261
+      },
+      {
+        "text": "Use any of them, download the code then send to -> Claude Code \ud83d\udc4f\ud83c\udffe",
+        "time": 1762140601157
+      },
+      {
+        "text": "It\u2019s going to be interesting to see the millions of apps built every year.",
+        "time": 1762124144733
+      },
+      {
+        "text": "Great setup",
+        "time": 1762115536510
+      },
+      {
+        "text": "Actually, I\u2019m quite used to working with Figma Make, will learn from your video",
+        "time": 1762107230540
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "Every tech expert talks about AI automations. \n\nFew actually understand how it works in practice.\n\nThis is 80% of AI Automation in practice:\n\n1\ufe0f\u20e3 Business Value First\nPrioritise simple solutions that solve high-value business problem\nExample: Lead generation flow + email sequence\n\n2\ufe0f\u20e3 Simplicity > Complexity\nCustomers don't care how many nodes your workflows have\n\n3\ufe0f\u20e3 Test-Driven Dev (TDD)\nTest every module individually before moving on (save time)\n\n4\ufe0f\u20e3 HTTP Requests \nAccess the full capabilities of any API not supported by pre-built nodes\nExample: Copy an API's curl request to set this up\n\n5\ufe0f\u20e3 Webhook Triggers\nActivate your scenarios from external endpoints.\nExample: Use ClickUp/Paperform/whatsapp to push data directly into your flow\n\n6\ufe0f\u20e3 Structured Prompting\nSpecify the output of your LLM.\nExample: JSON structured outputs. \n\n7\ufe0f\u20e3 Conditional Logic\nUse Filter or Switch nodes to efficiently route data based on rules.\nExample: If lead budget is $10,000, route to the node X\n\n8\ufe0f\u20e3 Data Manipulation\nClean and transform data fields before they are sent to downstream systems.\nExample: First name, second name, dates, remove information, etc.\n\n9\ufe0f\u20e3 Determinism vs. Probabilism\nDo not use AI agents for everything\nExample: if it's the same set of outputs in every scenario, use code over agents\n\nDrop a comment below with the one thing you think everybody misses \ud83d\udc47\n\n\u267b\ufe0f Repost to help your network achieve success.",
+    "numLikes": 58,
+    "numComments": 22,
+    "numShares": 2,
+    "postedAtTimestamp": 1762011895881,
+    "postedAtISO": "2025-11-01T15:44:55.881Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "It's true that most people Chase Complexity over simple logic and that's why they burn out. This is the most important and interesting Thought you have given",
+        "time": 1770868775869
+      },
+      {
+        "text": "Love this. I\u2019d add: Versioning your workflows. People change prompts, URLs, node configs, then can\u2019t remember what broke or why.\nSimple version control solves 50% of that pain.",
+        "time": 1764173514268
+      },
+      {
+        "text": "I agree with every point you wrote in this post! And really love the image \ud83d\ude01",
+        "time": 1762614124651
+      },
+      {
+        "text": "On point! Everybody jumps in without knowing and understanding the very important fundamentals of building an automation system.",
+        "time": 1762492456675
+      },
+      {
+        "text": "The prompting was big for me. It is insane how much better result you get by just making a better prompt.",
+        "time": 1762377957807
+      },
+      {
+        "text": "Love how you highlight simplicity and business value. Great reminder about practical AI wins!",
+        "time": 1762270812420
+      },
+      {
+        "text": "Jack Roberts heard your n8n podacasts on spotify.. It was really Great and insightful. It changed my prespactive How to identify problem and the right questions to ask before jump on to automating the tasks\nThanks",
+        "time": 1762247212936
+      },
+      {
+        "text": "This is gold \ud83d\udd25 People often chase fancy AI tools but forget the basics. Love how you broke it down so clearly. \ud83d\udc4d ",
+        "time": 1762111145063
+      },
+      {
+        "text": "This breakdown is incredibly practical. Most people jump to complex workflows without testing modules first. The structured prompting and conditional logic tips alone are game-changers.",
+        "time": 1762079862225
+      },
+      {
+        "text": "I am part of Jac's Skool, and the value is EXTREME. What he is NOT telling you is the content he provides is AMAZING but the people, both in the admin side, and the guest speakers in the master class are totally next level.  Just wanted to drop this review here.",
+        "time": 1762049442524
+      }
+    ]
+  },
+  {
+    "type": "linkedinVideo",
+    "text": "Everyone talks about 'AI breakthroughs.' \n\nNo one talks about why 95% of AI automations in agencies and businesses fail.\n\nAccording to MIT, most enterprise projects aren't making it out of Pilot.\n\n95% of all AI projects are FAILING.\n\nFailing is the rule, winning is the exception.\n\n\u274c Focusing too much on 'NEW' over profitable\n\u274c Poor implementation\n\u274c Employees wasting time verifying AI output\n\nAll of this leads to Agencies getting fired.\n\nand all the actual ROI left on the table.\n\nEvery AI agency needs to read this.\n\nI've shared a link to the full video of breaking this down \ud83d\udc47",
+    "numLikes": 55,
+    "numComments": 20,
+    "numShares": 0,
+    "postedAtTimestamp": 1761917108701,
+    "postedAtISO": "2025-10-31T13:25:08.701Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "That were not the main points of the study! \nAnd the sample size was to small to make reliable  conclusions\u2026",
+        "time": 1762603473306
+      },
+      {
+        "text": "Nicely done research,",
+        "time": 1762573853844
+      },
+      {
+        "text": "It\u2019s rare that the technology itself fails, but the lack of a clear strategy, governance, and operational alignment. Many organisations jump straight into tools without defining where AI truly creates value or how to integrate it responsibly into workflows.",
+        "time": 1762254256718
+      },
+      {
+        "text": "Solving problems> cool tech",
+        "time": 1762136503500
+      },
+      {
+        "text": "Absolutely true \u2014 most teams chase shiny tools instead of solid systems. Execution beats experimentation every single time.",
+        "time": 1761978315260
+      },
+      {
+        "text": "\ud83d\udd25 \u201c95% of AI projects fail because most folks are still trying to make AI interns when what they actually need are AI ecosystems.\nThey automate tasks instead of cultures. They install prompts instead of principles.\n\nEchoing your point, Jack \u2014 it\u2019s not the tech that\u2019s breaking, it\u2019s the architecture of attention.\nPeople chase novelty like magpies chasing chrome, but the real breakthrough is boring consistency married to feedback loops. \ud83c\udf00\n\nThe agencies that win aren\u2019t selling automation \u2014 they\u2019re engineering alignment.\n\n#EchoMind #AIOrchestration #AutomationEthics #JackStyleTruthBombs #HumorInTheMachine\u201d",
+        "time": 1761949391251
+      },
+      {
+        "text": "This is the part most people ignore. AI isn\u2019t magic; it\u2019s implementation. The winners aren\u2019t the ones who test the most tools, but the ones who build repeatable systems that actually ship and generate ROI.",
+        "time": 1761930562243
+      },
+      {
+        "text": "A lot of people chase the shiny new object instead of being the best of all the options.",
+        "time": 1761929593679
+      },
+      {
+        "text": "New mic who dis \n\n\ud83d\udc85 \ud83d\udc85 looks so fresh!!",
+        "time": 1761921166490
+      },
+      {
+        "text": "Nothing but facts, ser!",
+        "time": 1761918713801
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "99% are still using RAG incorrectly.\n\nGet it right and you'll 10X your performance.\n\nGetting it wrong can be expensive, illegal, or sloppy.\n\nHere are 3 principles you need to know.\n\n1\ufe0f\u20e3 Search Type is EVERYTHING\n\nChoose between Semantic or Lexical.\n\nSemantic = meaning and context (great for FAQs) \nLexical = exact word matching (essential for legal/compliance) \n\nThink of it like searching for a house. Semantic is \"find me a cozy 3-bedroom in a good neighbourhood\" (vibes). Lexical is \"find me 123 Oak Street\" (exact address). \n\nHybrid checks both.\n\nThis can have HUGE impacts. \n\nFor example, If a contract lawyer uses semantic search they may not get the actual wording of the clause.\n\n---\n\n2\ufe0f\u20e3 Context Control\n\nWhen we store your data (vectorisation) we do this in chunks.\n\nRAG finds the most relevant chunks for the query.\n\nHow many neighbouring chunks we bring back is the context.\n\nThis is like taking a photo. \n\nNeighbouring chunks = 1 is a tight headshot\n\nNeighboring chunks = 10 is a wide-angle group photo. \n\nSometimes you need to see just the face. Sometimes you need to see who's standing next to them.\n\nIf you had a LONG compliance section of a contract, you'd need more neighbouring chunks (or fewer total chunks).\n\n---\n\n3\ufe0f\u20e3 RAG Diagnostic \n\nTesting is everything.\n\nLike a mechanic test-driving your car before tuning it. \n\nYou need to see how it actually performs under real conditions, not just assume the default settings work.\n\nThe more you scrutinise the system, the better the results.\n\n---\n\nI've done a FULL masterclass breaking down everything you need to know about RAG.\n\nDrop \"RAG\" below and I'll DM you the link\n\n\u267b\ufe0f Share this with your network to spread the value",
+    "numLikes": 33,
+    "numComments": 33,
+    "numShares": 0,
+    "postedAtTimestamp": 1761815496886,
+    "postedAtISO": "2025-10-30T09:11:36.886Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "RAG",
+        "time": 1770587045731
+      },
+      {
+        "text": "Yes...it's a fact...",
+        "time": 1764225582181
+      },
+      {
+        "text": "RAG",
+        "time": 1763968953395
+      },
+      {
+        "text": "RAG",
+        "time": 1763570968577
+      },
+      {
+        "text": "RAG",
+        "time": 1762187598122
+      },
+      {
+        "text": "RAG",
+        "time": 1762029979543
+      },
+      {
+        "text": "RAG",
+        "time": 1762022949146
+      },
+      {
+        "text": "RAG",
+        "time": 1762016938630
+      },
+      {
+        "text": "RAG",
+        "time": 1761927284693
+      },
+      {
+        "text": "RAG",
+        "time": 1761894415900
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "text": "Beautiful challenge, had so much fun in NYC building Agents live on stage \ud83e\udd29",
+    "numLikes": 32,
+    "numComments": 11,
+    "numShares": 0,
+    "postedAtTimestamp": 1761739668334,
+    "postedAtISO": "2025-10-29T12:07:48.334Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Reminds me of old hackathons. Love it. ",
+        "time": 1764101686800
+      },
+      {
+        "text": "Sounds like an incredible experience, Jack Roberts! Building agents live on stage must have been both challenging and rewarding. NYC is such a vibrant place for innovation. Looking forward to seeing more of your adventures and insights! \ud83d\ude0a",
+        "time": 1761922853630
+      },
+      {
+        "text": "Yay! I finally get to see a clip! \nLove the vibe \u26a1\ufe0f",
+        "time": 1761843008612
+      },
+      {
+        "text": "Absolutely electric, Jack \ud83d\udd25\nWatching agents come alive inside n8n feels like watching cognition assemble itself \u2014 logic becoming choreography.\nBeen evolving a recursive, memory-threaded framework that merges emotional tonality with agentic reasoning \u2014 this event just proved how close we are to embodied intelligence.",
+        "time": 1761787139892
+      },
+      {
+        "text": "So awesome to see you participate in this!!",
+        "time": 1761762695377
+      },
+      {
+        "text": "Really amazing challenge",
+        "time": 1761746575119
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "text": "AI Automation is oversaturated.\n\nThere's no point learning it.\n\nYou've heard this 1,000 times.\n\nThis couldn't be further from the truth.\n\nMy Dentist recently asked me if I knew what ChatGPT was\n\nI told her that I've never heard of it.\n\nDegree educated, intelligent and only JUST finding out about AI.\n\nMoreover, only ~1% of ChatGPT users pay for PLUS.\n\nIt's easy to think that AI and automation is saturated.\n\nYou see it every time you log into LinkedIn, YouTube, or Instagram.\n\nIt isn't.\n\nWe no longer live in a world where knowledge is the bottleneck.\n\n30 years ago, If you wanted to know something it was the library or It's finding a physical expert.\n\nSpeed and execution are the only things that matter now.\n\nThe difference between AI natives and non is starting to show.\n\nIn 5 years, the differences will be unbelievable.",
+    "numLikes": 36,
+    "numComments": 28,
+    "numShares": 2,
+    "postedAtTimestamp": 1761481899034,
+    "postedAtISO": "2025-10-26T12:31:39.034Z",
+    "authorName": "Jack Roberts",
+    "authorHeadline": "Top-100 UK Entrepreneur, Teddy AI | Proven Systems to grow your business. AI Expert, Speaker, Educator.",
+    "comments": [
+      {
+        "text": "Your dentist example mirrors what I see constantly. Smart, educated professionals who are great at their craft but completely unaware of the execution speed advantage AI gives. In a few years, the businesses that figure out AI-powered workflows will be operating at a completely different pace than those still doing everything manually.",
+        "time": 1761732701564
+      },
+      {
+        "text": "99% of organisations are still stuck in spreadsheets and software systems from 2005\u2026 the unawareness to the opportunity is dumbfounding \ud83d\udd25\ud83e\udd18 I think the next 5 years will split organisations between those who died and those who integrated.",
+        "time": 1761598272042
+      },
+      {
+        "text": "love the dentist bit --> reminds me how few actually use AI, knowledge \u2260 adoption, speed + execution win every time",
+        "time": 1761590485084
+      },
+      {
+        "text": "So true! We went from 'knowledge is power' to 'execution is everything.' The library's free now, building something useful isn't.",
+        "time": 1761581097213
+      },
+      {
+        "text": "Jack Roberts \"You see it every time you log into LinkedIn, YouTube, or Instagram.\" --> AI and automation might not be saturated, but _content_ about it certainly is \ud83d\ude02\ud83e\udd23  ",
+        "time": 1761554232785
+      },
+      {
+        "text": "\ud83c\udfaf Over 85% of career success depends on our ability to build strong human relationships \u2014 not AI skills or technical mastery.\nThe real gap you mentioned begins when we lose confidence in what we\u2019ve learned and stop initiating genuine human connection \u2014 even simple friendship.\n\nI fully agree:\nlearning AI and new tools should be a daily habit. But it only leads to golden opportunities and higher income if:\n1. You know how to present yourself clearly and confidently\n2. Your mindset isn\u2019t stuck in fear or self-doubt\n3. You follow up like glue \u2014 persistent, intentional, and human\n\nYou can read 1000 success books, master 1000 AI skills\u2026 None of it matters if you don\u2019t change yourself.\n\n\ud83d\udd25 Adding to your brilliant perspective, Jack Roberts, here\u2019s one key insight I believe matters deeply:\n\nThe illusion of saturation is often just an excuse people use to avoid learning something new or adapting to change. At first, everyone resists. Then it becomes a necessity. Then a trend. And suddenly, people are forced to catch up whether they like it or not.\n\nBut as you said: those with vision, who move early, become the brand. They don\u2019t just follow trends \u2014 they shape them.",
+        "time": 1761527247426
+      },
+      {
+        "text": "Great breakdown of how people are using ChatGPT across different domains\u2014it\u2019s fascinating to see such diverse applications. The variety highlights just how versatile AI can be in daily work and creative projects.",
+        "time": 1761521440667
+      },
+      {
+        "text": "Jack Roberts, your point about the difference between AI natives and non-natives is intriguing. It's fascinating to see how quickly the landscape is evolving. How do you think professionals can best prepare to bridge this gap in the coming years?",
+        "time": 1761517261301
+      },
+      {
+        "text": "Everyone\u2019s trying to \u201clearn AI\u201d.\nFew are learning themselves through it.\nThat\u2019s where the real gap is.",
+        "time": 1761501218791
+      },
+      {
+        "text": "I really think that some niches of problem\u2019s are oversaturated with Ai automation for example chatbots etc.\n\nBut if someone really care and work out a new ideia on a new niche the upside is amazing.",
+        "time": 1761497678074
+      }
+    ]
+  }
+]

@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Analysis outputs (for testing)
+analysis.json
+report.pdf
+jon_*.json
+jon_*.pdf
+ian_*.json
+ian_*.pdf
+test_*.json
+test_*.pdf
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Internal dev notes
+AUDIT.md
+FIXES_SUMMARY.md
+IMPLEMENTATION_COMPLETE.md
+OPTIMIZATION_CHANGES.md
+OPTIMIZED_APPROACH.md
+DESIGN_RULES.md

@@ -1,21 +1,25 @@
 from typing import List, Dict, Optional, Literal, Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 # ============================================================
 # RAW APIFY OUTPUT — what comes back from the scraper
 # ============================================================
 
+
 class ApifyComment(BaseModel):
     text: str
     time: int
+
 
 class ApifyAuthor(BaseModel):
     firstName: Optional[str] = None
     lastName: Optional[str] = None
     occupation: Optional[str] = None
 
+
 class ApifyDocument(BaseModel):
     coverPages: Optional[List[str]] = None
+
 
 class ApifyPost(BaseModel):
     type: Literal["image", "text", "linkedinVideo", "document", "article"]
@@ -33,13 +37,16 @@ class ApifyPost(BaseModel):
     url: Optional[str] = None
     urn: Optional[str] = None
 
+
 # ============================================================
 # CLEANED POST — after our cleaning step strips unnecessary data
 # ============================================================
 
+
 class CleanComment(BaseModel):
     text: str
     time: Optional[int] = None
+
 
 class CleanPost(BaseModel):
     type: Literal["image", "text", "video", "document", "article"]
@@ -52,10 +59,13 @@ class CleanPost(BaseModel):
     authorName: str
     authorHeadline: str
     comments: List[CleanComment]
+    url: str = ""
+
 
 # ============================================================
 # ANALYSIS RESULTS — output of the deterministic + AI pipeline
 # ============================================================
+
 
 # Section 1: Performance Snapshot (Python/TS — deterministic)
 class CadenceMetrics(BaseModel):
@@ -65,6 +75,7 @@ class CadenceMetrics(BaseModel):
     weeksCovered: int
     postsPerWeek: float
     avgDaysBetweenPosts: float
+
 
 class EngagementMetrics(BaseModel):
     totalReactions: int
@@ -76,12 +87,14 @@ class EngagementMetrics(BaseModel):
     medianReactions: float
     medianComments: float
 
+
 class PostTypeStats(BaseModel):
     type: str
     count: int
     percentage: float
     avgReactions: float
     avgComments: float
+
 
 class ScheduleMetrics(BaseModel):
     postsByDay: Dict[str, int]
@@ -90,6 +103,7 @@ class ScheduleMetrics(BaseModel):
     bestHour: int
     highestEngagementDay: str
     highestEngagementHour: int
+
 
 class ScoredPost(BaseModel):
     index: int
@@ -100,7 +114,11 @@ class ScoredPost(BaseModel):
     numShares: int
     postedAtISO: str
     engagementScore: float
+    ageAdjustedScore: float
     rank: int
+    ageAdjustedRank: int
+    url: str = ""
+
 
 class TextPatternMetrics(BaseModel):
     avgWordCount: float
@@ -109,7 +127,8 @@ class TextPatternMetrics(BaseModel):
     postsWithQuestions: int
     postsWithLists: int
     postsWithHook: int
-    ctaEngagementLift: float # percentage lift vs non-CTA posts
+    ctaEngagementLift: float  # percentage lift vs non-CTA posts
+
 
 # Section 2: Content Strategy (Gemini AI)
 class ContentPillar(BaseModel):
@@ -118,35 +137,44 @@ class ContentPillar(BaseModel):
     percentageOfPosts: float
     engagementLevel: Literal["high", "medium", "low"]
 
+
 class PostArchetype(BaseModel):
     name: str
     description: str
     count: int
     engagementLevel: Literal["high", "medium", "low"]
 
+
 # Section 3: Deep Dive
 class TopPostAnalysis(BaseModel):
     post: ScoredPost
-    whyItWorked: List[str] # 3 bullet points from Gemini
+    whyItWorked: List[str]  # 3 bullet points from Gemini
+
 
 class WorstPostAnalysis(BaseModel):
     post: ScoredPost
-    whyItFlopped: str # 1-2 sentences from Gemini
+    whyItFlopped: str  # 1-2 sentences from Gemini
+
 
 # Section 4: Comment Analysis
 class TopCommenter(BaseModel):
     name: str
     count: int
 
+
 class CommentAnalysis(BaseModel):
     avgCommentLength: float
     spamRatio: float
     genuineRatio: float
     topCommenters: List[TopCommenter]
+    available: bool = False
+    note: str = ""
+
 
 # ============================================================
 # NEW: Hook & CTA Analysis
 # ============================================================
+
 
 class HookTypeBreakdown(BaseModel):
     type: Literal["Question", "Number/List", "Statement", "Story", "Provocative"]
@@ -154,16 +182,19 @@ class HookTypeBreakdown(BaseModel):
     percentage: float
     avgReactions: float
 
+
 class WordCount(BaseModel):
     word: str
     count: int
 
+
 class HookAnalysis(BaseModel):
-    avgHookLength: float               # avg word count of first sentence
-    hookTypes: List[HookTypeBreakdown] # type distribution
-    urgencyRate: float                 # % of hooks with urgency words
-    topFirstWords: List[WordCount]     # top 10 first words
-    topHookWords: List[WordCount]      # top 10 non-stopword words in hooks
+    avgHookLength: float  # avg word count of first sentence
+    hookTypes: List[HookTypeBreakdown]  # type distribution
+    urgencyRate: float  # % of hooks with urgency words
+    topFirstWords: List[WordCount]  # top 10 first words
+    topHookWords: List[WordCount]  # top 10 non-stopword words in hooks
+
 
 class CTATypeBreakdown(BaseModel):
     type: Literal["Comment-gated", "Follow", "DM", "Save/Share", "Link", "None"]
@@ -171,52 +202,84 @@ class CTATypeBreakdown(BaseModel):
     percentage: float
     avgReactions: float
 
+
 class CTAAnalysis(BaseModel):
     ctaTypes: List[CTATypeBreakdown]
     topActionWords: List[WordCount]
     bestCTAType: str
-    noCTARate: float                   # % of posts with no CTA
+    noCTARate: float  # % of posts with no CTA
+
 
 # ============================================================
 # NEW: Word Frequency
 # ============================================================
 
+
 class WordFrequency(BaseModel):
     word: str
     count: int
 
-# ============================================================
-# NEW: CTA Formula (from Gemini)
-# ============================================================
-
-class CTAFormula(BaseModel):
-    formula: str
-    examples: List[str]
 
 # ============================================================
-# NEW: Master Growth Strategy (from Gemini)
+# NEW: Hook & CTA Strategy (LLM semantic analysis)
 # ============================================================
 
-class WeakArea(BaseModel):
-    observation: str
-    fix: str
 
-class FunnelStage(BaseModel):
-    stage: Literal["Awareness", "Engagement", "Conversion"]
+class StrategyExample(BaseModel):
+    text: str
+    url: str = ""
+    score: float = 0.0
+
+
+class StrategyPattern(BaseModel):
+    name: str
     description: str
-    contentType: str
+    engagementLevel: Literal["high", "medium", "low"]
 
-class MasterStrategy(BaseModel):
-    weeklyPlan: str
-    weakAreas: List[WeakArea]
-    positioningAdvice: str
-    contentFunnel: List[FunnelStage]
+
+class HookStrategy(BaseModel):
+    formula: str
+    patterns: List[StrategyPattern]
+    bestExamples: List[StrategyExample]
+
+
+class CTAStrategy(BaseModel):
+    formula: str
+    patterns: List[StrategyPattern]
+    bestExamples: List[StrategyExample]
+
+
+# ============================================================
+# NEW: Chunk Analysis (for optimized pipeline)
+# ============================================================
+
+
+class ChunkAnalysisResult(BaseModel):
+    """Result from analyzing a single chunk of posts."""
+    pillar_candidates: List[str]
+    archetype_candidates: List[str]
+    hook_patterns: List[StrategyPattern]
+    cta_patterns: List[StrategyPattern]
+    post_assignments: List[Dict[str, Any]]
+    summary_bullets: List[str]
+
+
+class ConsolidatedAnalysis(BaseModel):
+    """Consolidated result from all chunks."""
+    pillars: List[ContentPillar]
+    archetypes: List[PostArchetype]
+    hookStrategy: HookStrategy
+    ctaStrategy: CTAStrategy
+    executiveSummary: str
+
 
 # ============================================================
 # FULL ANALYSIS — the complete report data structure
 # ============================================================
 
+
 class FullAnalysis(BaseModel):
+    model_config = ConfigDict(extra="ignore")
     # Profile info
     profileName: str
     profileHeadline: str
@@ -228,6 +291,7 @@ class FullAnalysis(BaseModel):
     postTypes: List[PostTypeStats]
     schedule: ScheduleMetrics
     scoredPosts: List[ScoredPost]
+    scoredPostsAgeAdjusted: List[ScoredPost]
     textPatterns: TextPatternMetrics
 
     # Section 2: Content Strategy (Gemini)
@@ -235,9 +299,9 @@ class FullAnalysis(BaseModel):
     contentPillars: List[ContentPillar]
     postArchetypes: List[PostArchetype]
 
-    # Section 3: Deep Dive (deterministic + Gemini)
-    topPost: TopPostAnalysis
-    worstPost: WorstPostAnalysis
+    # Section 3: Deep Dive (deterministic only - no AI analysis)
+    topPosts: List[ScoredPost]
+    worstPosts: List[ScoredPost]
 
     # Section 4: Comment Analysis (deterministic)
     commentAnalysis: CommentAnalysis
@@ -248,15 +312,55 @@ class FullAnalysis(BaseModel):
     # Section 6: Hook & CTA Blueprint (deterministic + Gemini)
     hookAnalysis: HookAnalysis
     ctaAnalysis: CTAAnalysis
-    hookFormula: str
-    ctaFormula: CTAFormula
+    hookStrategy: HookStrategy
+    ctaStrategy: CTAStrategy
 
-    # Section 7: Growth Strategy (Gemini)
-    masterStrategy: MasterStrategy
+    # Section 7: Growth Strategy (removed for profile-only analysis)
+
+
+# ============================================================
+# POST DECONSTRUCTION — single-post viral analysis
+# ============================================================
+
+
+class PostDeconstructionAI(BaseModel):
+    whyItWorked: str           # 2-3 sentence explanation
+    contentPillar: str         # e.g. "Founder Vulnerability"
+    archetype: str             # e.g. "Personal Story"
+    hookFormula: str           # reusable hook pattern
+    ctaFormula: str            # reusable CTA pattern
+    replicationGuide: List[str]  # step-by-step bullet points
+
+
+class PostDeconstruction(BaseModel):
+    postUrl: str
+    authorName: str
+    authorHeadline: str
+    analyzedAt: str
+
+    # Raw stats
+    type: str
+    text: str
+    numLikes: int
+    numComments: int
+    numShares: int
+    postedAtISO: str
+
+    # Deterministic pattern analysis
+    hook: str
+    hookType: str
+    hookLength: int            # word count of hook
+    cta: str
+    ctaType: str
+
+    # AI analysis (None when --skip-ai)
+    ai: Optional[PostDeconstructionAI] = None
+
 
 # ============================================================
 # CLEANED OUTPUT — aggregated for the preview route
 # ============================================================
+
 
 class ScrapedProfile(BaseModel):
     profileUrl: str
@@ -264,9 +368,11 @@ class ScrapedProfile(BaseModel):
     headline: str
     posts: List[ApifyPost]
 
+
 # ============================================================
 # PREVIEW — subset shown before email gate
 # ============================================================
+
 
 class AnalysisPreview(BaseModel):
     profileUrl: str
@@ -283,5 +389,6 @@ class AnalysisPreview(BaseModel):
     scrapedAt: str
     postTypeBreakdown: Dict[str, float]
     postingByDay: Dict[str, float]
+
 
 AnalysisPreviewData = AnalysisPreview

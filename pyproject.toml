@@ -1,9 +1,36 @@
 [project]
 name = "ai-native-toolkit"
 version = "0.1.0"
-description = "LinkedIn profile content strategy analyzer"
+description = "LinkedIn content strategy analyzer with AI-powered insights and PDF reports"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    {name = "Behram Shukur", email = "behramshukur@gmail.com"}
+]
+keywords = [
+    "linkedin",
+    "content-strategy",
+    "ai",
+    "analytics",
+    "scraping",
+    "pdf-reports",
+    "gemini",
+    "openai",
+    "anthropic"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Office/Business",
+]
 dependencies = [
     "httpx>=0.27",
     "pydantic>=2.0",
@@ -13,8 +40,16 @@ dependencies = [
     "fpdf2>=2.8",
 ]
 
+[project.urls]
+Homepage = "https://github.com/behramshukur/ai-native-toolkit"
+Repository = "https://github.com/behramshukur/ai-native-toolkit"
+Issues = "https://github.com/behramshukur/ai-native-toolkit/issues"
+
 [project.scripts]
 linkedin-analyzer = "linkedin_analyzer.cli:main"
+
+[tool.setuptools]
+packages = ["linkedin_analyzer"]
 
 [build-system]
 requires = ["setuptools>=61.0"]

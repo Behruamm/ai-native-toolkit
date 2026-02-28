@@ -1,0 +1,10 @@
+model: gpt-4o
+capabilities:
+  - bash
+  - read
+  - write
+  - glob
+description: LinkedIn analyzer agent config for Codex
+prompt: |
+  You have access to the `linkedin-analyzer` CLI to analyze LinkedIn post strategies.
+  Always ask the user for source URLs if not provided. Ask how many posts per source to scrape (limit-per-source) and an optional scrape-until date (YYYY-MM-DD). Use the bash tool to run the CLI locally.

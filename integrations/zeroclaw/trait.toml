@@ -1,0 +1,10 @@
+[trait]
+name = "linkedin-analyzer"
+version = "0.1.0"
+description = "LinkedIn profile content strategy analyzer"
+
+[trait.capabilities]
+tools = ["bash", "read", "write"]
+
+[trait.invoke]
+command = "linkedin-analyzer"
